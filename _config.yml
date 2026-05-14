@@ -1,8 +1,8 @@
 title: Crypto Pulse
 description: Data-driven crypto and algorithmic trading
 theme: minima
-baseurl: ""
-url: "https://cryptopulse.io"
+baseurl: "/cryptopulse"
+url: "https://siavashsed.github.io"
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 show_excerpts: true
