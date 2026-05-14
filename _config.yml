@@ -1,0 +1,10 @@
+title: Crypto Pulse
+description: Data-driven crypto and algorithmic trading
+theme: minima
+baseurl: ""
+url: "https://cryptopulse.io"
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+show_excerpts: true
+minima:
+  skin: dark
