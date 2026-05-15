@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About — CryptoPulse</title>
+<title>About Marcus Chen - CryptoPulse</title>
 <meta name="description" content="Evidence-based analysis for algorithmic traders and crypto researchers.">
 <style>
+/* === reset === */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{  --bg:#050908;--bg2:#081009;--sur:#0c1710;
   --pri:#00e676;--pri2:#00b85a;
@@ -12,61 +13,216 @@
   --fh:system-ui,sans-serif;--fb:system-ui,sans-serif;--fm:'Courier New',Courier,monospace;}
 html,body{min-height:100%;font-family:var(--fb);background:var(--bg);color:var(--txt);font-size:15px;line-height:1.7}
 a{color:var(--pri);text-decoration:none}a:hover{text-decoration:underline}
+/* === nav === */
 .trm-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 40px;border-bottom:1px solid var(--brd);background:var(--bg2);position:sticky;top:0;z-index:99}
 .trm-logo{font-family:var(--fm);font-size:17px;font-weight:700;color:var(--pri);text-decoration:none}
 .trm-logo em{color:var(--mut);font-style:normal;font-weight:400;font-size:12px;margin-left:8px}
 .trm-nav-links{display:flex;gap:28px}.trm-nav-links a{font-size:13px;color:var(--mut);font-family:var(--fm);transition:color .2s}.trm-nav-links a:hover{color:var(--txt);text-decoration:none}
-.abt-wrap{max-width:760px;margin:0 auto;padding:60px 40px}
-.abt-avatar{width:72px;height:72px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:#000;font-family:var(--fm);margin-bottom:24px}
-.abt-name{font-size:28px;font-weight:700;margin-bottom:4px}
-.abt-title{font-family:var(--fm);font-size:13px;color:var(--pri);margin-bottom:28px}
-.abt-section{margin-bottom:32px}
-.abt-section-label{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:14px}
-.abt-section p{color:var(--mut);font-size:15px;line-height:1.85;margin-bottom:14px}
-.abt-nl{background:var(--bg2);border:1px solid var(--brd);border-radius:3px;padding:24px;margin-top:40px}
+/* === author header === */
+.abt-header{background:var(--bg2);border-bottom:1px solid var(--brd);padding:40px 40px 32px}
+.abt-header-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:24px}
+.abt-avatar{width:72px;height:72px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:#000;font-family:var(--fm);flex-shrink:0}
+.abt-name{font-size:26px;font-weight:700;margin-bottom:4px}
+.abt-title{font-family:var(--fm);font-size:12px;color:var(--pri)}
+/* === body === */
+.abt-wrap{max-width:760px;margin:0 auto;padding:48px 40px}
+.abt-section{margin-bottom:36px}
+.abt-section-label{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--brd)}
+.abt-p{color:var(--mut);font-size:15px;line-height:1.9;margin-bottom:14px}
+/* === credentials box === */
+.abt-cred{background:var(--bg2);border:1px solid var(--brd);border-left:3px solid var(--pri);border-radius:3px;padding:18px 20px;margin-bottom:36px}
+.abt-cred-label{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:10px}
+.abt-cred-text{font-family:var(--fm);font-size:13px;color:var(--txt)}
+/* === newsletter === */
+.abt-nl{background:var(--bg2);border:1px solid var(--brd);border-radius:3px;padding:24px;margin-top:8px}
 .abt-nl h3{font-family:var(--fm);font-size:13px;font-weight:700;color:var(--txt);margin-bottom:8px}
 .abt-nl p{font-size:13px;color:var(--mut);margin-bottom:16px}
 .trm-nl-input{width:100%;background:var(--bg);border:1px solid var(--brd);border-radius:2px;padding:9px 12px;color:var(--txt);font-size:13px;font-family:var(--fm);outline:none;margin-bottom:8px;transition:border-color .2s}
 .trm-nl-input:focus{border-color:var(--pri)}.trm-nl-input::placeholder{color:var(--mut)}
 .trm-nl-btn{background:var(--pri);color:#000;border:none;border-radius:2px;padding:10px 20px;font-size:12px;font-weight:700;font-family:var(--fm);cursor:pointer;text-transform:uppercase;letter-spacing:1px;transition:background .2s}
-.trm-nl-btn:hover{background:var(--pri2)}
-.trm-nl-ok{font-family:var(--fm);font-size:12px;color:var(--pri);padding:6px 0}
+.trm-nl-btn:hover{background:var(--pri2)}.trm-nl-ok{font-family:var(--fm);font-size:12px;color:var(--pri);padding:6px 0}
+/* === footer === */
 .trm-foot{margin-top:60px;border-top:1px solid var(--brd);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
 .trm-foot-copy{font-family:var(--fm);font-size:11px;color:var(--mut)}
 .trm-foot-links{display:flex;gap:18px}.trm-foot-links a{font-size:11px;color:var(--mut);font-family:var(--fm)}
-@media(max-width:600px){.trm-nav{padding:12px 16px}.abt-wrap{padding:36px 16px}.trm-foot{padding:16px;flex-direction:column;text-align:center}}
+@media(max-width:600px){.trm-nav{padding:12px 16px}.abt-header{padding:28px 16px 24px}.abt-header-inner{flex-direction:column;align-items:flex-start;gap:14px}.abt-wrap{padding:32px 16px}.trm-foot{padding:16px;flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
+
+<!-- nav -->
 <nav class="trm-nav">
-  <a href="/" class="trm-logo">CryptoPulse<em>/ Crypto & Trading</em></a>
-  <div class="trm-nav-links"><a href="/">Home</a><a href="/about.html">About</a></div>
+  <a href="./" class="trm-logo">CryptoPulse<em>/ Crypto & Trading</em></a>
+  <div class="trm-nav-links"><a href="./">Home</a><a href="about.html">About</a></div>
 </nav>
+
+<!-- author-header -->
+<div class="abt-header">
+  <div class="abt-header-inner">
+    <div class="abt-avatar">MC</div>
+    <div>
+      <div class="abt-name">Marcus Chen</div>
+      <div class="abt-title">Quant Trader & Market Analyst</div>
+    </div>
+  </div>
+</div>
+
+<!-- pexels-banner -->
+<!-- pexels-banner: loads if pexelsKey is in localStorage -->
+<div id="pxl-wrap" style="width:100%;height:240px;overflow:hidden;position:relative;background:var(--bg2);">
+  <img id="pxl-img" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s;" alt="">
+  <a id="pxl-cred" href="https://www.pexels.com" target="_blank" rel="noopener" style="position:absolute;bottom:6px;right:10px;font-size:10px;color:rgba(255,255,255,.5);opacity:0;transition:opacity .6s;text-decoration:none;">Photo: Pexels</a>
+</div>
+
+<!-- main-content -->
 <div class="abt-wrap">
-  <div class="abt-avatar">MC</div>
-  <div class="abt-name">Marcus Chen</div>
-  <div class="abt-title">Quant Trader & Market Analyst</div>
+
+  <!-- section: background story -->
   <div class="abt-section">
     <div class="abt-section-label">// background</div>
-    <p>I spent eight years running automated crypto strategies at a prop desk in Vancouver before going independent. The edge I found wasn't in being smarter — it was in being more systematic.</p>
-    <p>This site is where I publish the analysis that takes longer than 280 characters to explain: on-chain signals, bot logic, and the setups I'm actually watching.</p>
+    <p class="abt-p">I grew up in a household where money was taken seriously. My parents had immigrated and built everything from nothing, and that shaped how I thought about risk before I ever traded a single position. Not as something to avoid, but as something to size correctly.</p>
+    <p class="abt-p">My path into trading started through software. I studied mathematics at university and got hired by a small prop trading firm in Vancouver as a data analyst. Within eight months I was running my own book. Within two years I had blown it up, rebuilt it, and finally started making consistent returns.</p>
+    <p class="abt-p">Crypto entered my world in 2016. I spent about six months watching on-chain data before building my first automated strategy. It lost money for four months before I understood the gap between what I thought I was measuring and what actually drove price. That gap is the real curriculum in this space.</p>
+    <p class="abt-p">Running automated strategies at a prop desk for eight years gave me perspective on the full lifecycle of a trading idea - conception, backtesting, live deployment, degradation, and retirement. Most edges have a shelf life. The discipline is recognizing when to retire a strategy rather than explaining away its losses.</p>
+    <p class="abt-p">I went independent three years ago. CryptoPulse is where I publish the longer analysis - on-chain research, strategy breakdowns, and market structure observations that take more than a short post to explain properly. No hype, no calls, no FOMO. Just the systematic work.</p>
   </div>
+
+  <!-- section: credentials -->
+  <div class="abt-cred">
+    <div class="abt-cred-label">// credentials</div>
+    <div class="abt-cred-text">Quant Trader & Market Analyst</div>
+  </div>
+
+  <!-- section: what this site covers -->
   <div class="abt-section">
-    <div class="abt-section-label">// this site</div>
-    <p>On-chain data, systematic signals, and algo trade breakdowns for serious crypto traders.</p>
+    <div class="abt-section-label">// what this site covers</div>
+    <p class="abt-p">On-chain data, systematic signals, and algo trade breakdowns for serious crypto traders.</p>
+    <p class="abt-p">Evidence-based analysis for algorithmic traders and crypto researchers.</p>
   </div>
+
+  <!-- section: newsletter -->
   <div class="abt-nl">
     <h3>The Weekly Alpha Report</h3>
-    <p>Systematic signals, on-chain data, and trade setups — no filler, no hype.</p>
+    <p>Systematic signals, on-chain data, and trade setups - no filler, no hype.</p>
     <form id="abt-nl" onsubmit="nlSub(event)">
       <input type="email" class="trm-nl-input" placeholder="your@email.com" required>
       <button type="submit" class="trm-nl-btn">Subscribe</button>
     </form>
   </div>
+
 </div>
+
+<!-- section: contributors -->
+<div class="abt-wrap" style="padding-top:0">
+  <div class="abt-section" style="margin-top:0">
+    <div class="abt-section-label">// contributors</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+      <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
+      <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">LF</div>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:var(--txt)">Lena Fischer</div>
+        <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">International Contributor</div>
+        <div style="font-size:12px;color:var(--mut);line-height:1.6">Based in Frankfurt. Covers European regulatory developments, cross-border market dynamics, and emerging market capital flows.</div>
+      </div>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
+      <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">JT</div>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:var(--txt)">James Thorne</div>
+        <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Technical Contributor</div>
+        <div style="font-size:12px;color:var(--mut);line-height:1.6">Full-stack developer who switched to financial writing. Covers the engineering reality behind products and platforms.</div>
+      </div>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
+      <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">DO</div>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:var(--txt)">Daniel Osei</div>
+        <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Field Correspondent</div>
+        <div style="font-size:12px;color:var(--mut);line-height:1.6">On the ground covering conferences, product launches, and industry events. Focuses on what the press releases leave out.</div>
+      </div>
+    </div>
+    <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
+      <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">RK</div>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:var(--txt)">Rachel Kim</div>
+        <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Contributing Analyst</div>
+        <div style="font-size:12px;color:var(--mut);line-height:1.6">Former hedge fund researcher. Covers quantitative methods and market microstructure. Has contributed to three academic finance papers.</div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- section: comments -->
+<div class="abt-wrap" style="padding-top:0">
+  <div class="abt-section">
+    <div class="abt-section-label">// reader comments</div>
+    <div style="margin-top:12px">
+      <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">C</div>
+        <span style="font-size:13px;font-weight:600;color:var(--txt)">Chris V.</span>
+        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
+      </div>
+      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">Refreshing to read something that acknowledges uncertainty instead of pretending everything is obvious in hindsight.</div>
+    </div>
+    <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">N</div>
+        <span style="font-size:13px;font-weight:600;color:var(--txt)">Nadia F.</span>
+        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
+      </div>
+      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">The writing here treats readers as intelligent adults. No dumbing down, no sensationalism, just clear analysis.</div>
+    </div>
+    <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">S</div>
+        <span style="font-size:13px;font-weight:600;color:var(--txt)">Serena T.</span>
+        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
+      </div>
+      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">I have shared this with three colleagues already. The kind of analysis that used to be locked behind expensive research subscriptions.</div>
+    </div>
+    <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">M</div>
+        <span style="font-size:13px;font-weight:600;color:var(--txt)">Mike H.</span>
+        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
+      </div>
+      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">The level of detail here is what keeps me coming back. You actually back up the claims instead of just asserting them.</div>
+    </div>
+    <div style="padding:14px 0;border-bottom:none">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">O</div>
+        <span style="font-size:13px;font-weight:600;color:var(--txt)">Omar K.</span>
+        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
+      </div>
+      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">I have read things here that changed how I think about the field. That is a high bar and this site clears it regularly.</div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
 <footer class="trm-foot">
   <span class="trm-foot-copy">© CryptoPulse</span>
-  <div class="trm-foot-links"><a href="/">Home</a><a href="/about.html">About</a></div>
+  <div class="trm-foot-links"><a href="./">Home</a><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="sms.html">SMS Policy</a><a href="meta-policy.html">Meta Policy</a></div>
 </footer>
-<script>function nlSub(e){e.preventDefault();e.target.innerHTML='<div class="trm-nl-ok">✓ Subscribed. Thank you.</div>';}</script>
+
+<script>
+function nlSub(e){e.preventDefault();e.target.innerHTML='<div class="trm-nl-ok">✓ Subscribed. Thank you.</div>';}
+/* pexels banner loader */
+(function(){
+  var q='cryptocurrency trading charts financial data',k=localStorage.getItem('pexelsKey');
+  if(!k)return;
+  fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent(q)+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
+    .then(function(r){return r.json();}).then(function(d){
+      if(!d.photos||!d.photos[0])return;
+      var el=document.getElementById('pxl-img');
+      var cr=document.getElementById('pxl-cred');
+      if(!el)return;
+      el.onload=function(){el.style.opacity='1';if(cr)cr.style.opacity='1';};
+      el.src=d.photos[0].src.large;
+    }).catch(function(){});
+})();
+</script>
 </body></html>
