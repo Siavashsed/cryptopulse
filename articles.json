@@ -37,5 +37,18 @@
       "deribit.com",
       "papers.ssrn.com"
     ]
+  },
+  {
+    "title": "On-Chain Metrics That Preceded the Last Three Crypto Market Tops",
+    "slug": "on-chain-metrics-crypto-market-tops",
+    "meta_description": "Ex-quant trader Marcus Chen breaks down the on-chain signals that flashed before Bitcoin's 2018, 2021, and 2022 tops. Numbers don't lie.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
+    "author": "Marcus Chen",
+    "image": "https://images.pexels.com/photos/8370426/pexels-photo-8370426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "glassnode.com",
+      "lookintobitcoin.com"
+    ]
   }
 ]
