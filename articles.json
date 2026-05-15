@@ -11,5 +11,18 @@
       "jfe.journals.elsevier.com",
       "ssrn.com"
     ]
+  },
+  {
+    "title": "How Exchange APIs Power Fully Automated Crypto Trading Strategies",
+    "slug": "exchange-apis-automated-crypto-trading",
+    "meta_description": "Ex-quant trader Marcus Chen breaks down how exchange APIs enable automated crypto strategies \u2014 the mechanics, the limits, and what actually works.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
+    "author": "Marcus Chen",
+    "image": "https://images.pexels.com/photos/5831512/pexels-photo-5831512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "binance.com",
+      "jfinancialmarkets.com"
+    ]
   }
 ]
