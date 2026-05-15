@@ -50,5 +50,18 @@
       "glassnode.com",
       "lookintobitcoin.com"
     ]
+  },
+  {
+    "title": "Grid Bots vs Trend-Following Bots: A Real Head-to-Head Comparison",
+    "slug": "grid-bots-vs-trend-following-bots",
+    "meta_description": "Marcus Chen breaks down grid bots vs trend-following bots with real data, honest trade-offs, and a clear verdict for algorithmic crypto traders.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
+    "author": "Marcus Chen",
+    "image": "https://images.pexels.com/photos/5833747/pexels-photo-5833747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "kaiko.com",
+      "ssrn.com"
+    ]
   }
 ]
