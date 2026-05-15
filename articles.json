@@ -24,5 +24,18 @@
       "binance.com",
       "jfinancialmarkets.com"
     ]
+  },
+  {
+    "title": "Bitcoin Volatility Patterns Institutional Traders Actually Track (Not the Ones You Read About)",
+    "slug": "bitcoin-volatility-patterns-institutional-traders",
+    "meta_description": "Ex-quant Marcus Chen breaks down the real Bitcoin volatility signals institutional desks monitor, with data and direct trading experience.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
+    "author": "Marcus Chen",
+    "image": "https://images.pexels.com/photos/30268013/pexels-photo-30268013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "deribit.com",
+      "papers.ssrn.com"
+    ]
   }
 ]
