@@ -1,0 +1,52 @@
+[
+  {
+    "id": "c1760",
+    "name": "Marcus T.",
+    "initials": "MT",
+    "color": "#ec4899",
+    "date_iso": "2026-05-16",
+    "date_display": "May 16, 2026",
+    "text": "Finally someone explaining the latency issues with exchange APIs. I've been debugging connection timeouts for weeks on Binance's WebSocket feeds. Great breakdown of how order placement speed actually matters.",
+    "likes": 8
+  },
+  {
+    "id": "c2704",
+    "name": "Sarah K.",
+    "initials": "SK",
+    "color": "#ef4444",
+    "date_iso": "2026-05-19",
+    "date_display": "May 19, 2026",
+    "text": "Question: does anyone else run multiple bot instances across different exchanges simultaneously? I'm worried about capital allocation conflicts between my algos.",
+    "likes": 5
+  },
+  {
+    "id": "c3970",
+    "name": "David P.",
+    "initials": "DP",
+    "color": "#3ecf8e",
+    "date_iso": "2026-05-21",
+    "date_display": "May 21, 2026",
+    "text": "Solid article but you glossed over authentication security. API keys sitting in environment variables is risky. I learned that the hard way losing 0.5 BTC to a compromised bot last year.",
+    "likes": 12
+  },
+  {
+    "id": "c4765",
+    "name": "Elena R.",
+    "initials": "ER",
+    "color": "#a78bfa",
+    "date_iso": "2026-05-25",
+    "date_display": "May 25, 2026",
+    "text": "The rate limiting section saved me hours. Started getting 429 responses constantly before reading this and implementing proper backoff logic.",
+    "likes": 3
+  },
+  {
+    "id": "c5167",
+    "name": "James W.",
+    "initials": "JW",
+    "color": "#6366f1",
+    "date_iso": "2026-05-30",
+    "date_display": "May 30, 2026",
+    "text": "Disagree that REST APIs are sufficient for serious trading. Switched to WebSockets exclusively and my slippage dropped 40%. Real-time data is non-negotiable.",
+    "likes": 9
+  }
+]
