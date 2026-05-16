@@ -63,5 +63,18 @@
       "binance.com",
       "coghlan-capital.com"
     ]
+  },
+  {
+    "title": "Funding Rates Explained: What Every Futures Trader Actually Needs to Know",
+    "slug": "funding-rates-crypto-futures-traders",
+    "meta_description": "Funding rates silently drain or reward crypto futures traders. Marcus Chen breaks down the mechanics, the traps, and how to trade them intelligently.",
+    "date": "May 16, 2026",
+    "date_iso": "2026-05-16",
+    "author": "Marcus Chen",
+    "image": "https://images.pexels.com/photos/6777564/pexels-photo-6777564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "glassnode.com",
+      "binance.com"
+    ]
   }
 ]
