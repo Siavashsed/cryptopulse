@@ -2,214 +2,374 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About Marcus Chen - CryptoPulse</title>
+<title>About Marcus Chen · CryptoPulse</title>
 <meta name="description" content="Evidence-based analysis for algorithmic traders and crypto researchers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-/* === reset === */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{  --bg:#050908;--bg2:#081009;--sur:#0c1710;
   --pri:#00e676;--pri2:#00b85a;
   --txt:#d8f0e0;--mut:#5a8468;--brd:#122216;
-  --fh:system-ui,sans-serif;--fb:system-ui,sans-serif;--fm:'Courier New',Courier,monospace;}
-html,body{min-height:100%;font-family:var(--fb);background:var(--bg);color:var(--txt);font-size:15px;line-height:1.7}
-a{color:var(--pri);text-decoration:none}a:hover{text-decoration:underline}
-/* === nav === */
-.trm-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 40px;border-bottom:1px solid var(--brd);background:var(--bg2);position:sticky;top:0;z-index:99}
-.trm-logo{font-family:var(--fm);font-size:17px;font-weight:700;color:var(--pri);text-decoration:none}
-.trm-logo em{color:var(--mut);font-style:normal;font-weight:400;font-size:12px;margin-left:8px}
-.trm-nav-links{display:flex;gap:28px}.trm-nav-links a{font-size:13px;color:var(--mut);font-family:var(--fm);transition:color .2s}.trm-nav-links a:hover{color:var(--txt);text-decoration:none}
-/* === author header === */
-.abt-header{background:var(--bg2);border-bottom:1px solid var(--brd);padding:40px 40px 32px}
-.abt-header-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:24px}
-.abt-avatar{width:72px;height:72px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:#000;font-family:var(--fm);flex-shrink:0}
-.abt-name{font-size:26px;font-weight:700;margin-bottom:4px}
-.abt-title{font-family:var(--fm);font-size:12px;color:var(--pri)}
-/* === body === */
-.abt-wrap{max-width:760px;margin:0 auto;padding:48px 40px}
-.abt-section{margin-bottom:36px}
-.abt-section-label{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--brd)}
-.abt-p{color:var(--mut);font-size:15px;line-height:1.9;margin-bottom:14px}
-/* === credentials box === */
-.abt-cred{background:var(--bg2);border:1px solid var(--brd);border-left:3px solid var(--pri);border-radius:3px;padding:18px 20px;margin-bottom:36px}
-.abt-cred-label{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:10px}
-.abt-cred-text{font-family:var(--fm);font-size:13px;color:var(--txt)}
-/* === newsletter === */
-.abt-nl{background:var(--bg2);border:1px solid var(--brd);border-radius:3px;padding:24px;margin-top:8px}
-.abt-nl h3{font-family:var(--fm);font-size:13px;font-weight:700;color:var(--txt);margin-bottom:8px}
-.abt-nl p{font-size:13px;color:var(--mut);margin-bottom:16px}
-.trm-nl-input{width:100%;background:var(--bg);border:1px solid var(--brd);border-radius:2px;padding:9px 12px;color:var(--txt);font-size:13px;font-family:var(--fm);outline:none;margin-bottom:8px;transition:border-color .2s}
-.trm-nl-input:focus{border-color:var(--pri)}.trm-nl-input::placeholder{color:var(--mut)}
-.trm-nl-btn{background:var(--pri);color:#000;border:none;border-radius:2px;padding:10px 20px;font-size:12px;font-weight:700;font-family:var(--fm);cursor:pointer;text-transform:uppercase;letter-spacing:1px;transition:background .2s}
-.trm-nl-btn:hover{background:var(--pri2)}.trm-nl-ok{font-family:var(--fm);font-size:12px;color:var(--pri);padding:6px 0}
-/* === footer === */
-.trm-foot{margin-top:60px;border-top:1px solid var(--brd);padding:20px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.trm-foot-copy{font-family:var(--fm);font-size:11px;color:var(--mut)}
-.trm-foot-links{display:flex;gap:18px}.trm-foot-links a{font-size:11px;color:var(--mut);font-family:var(--fm)}
-@media(max-width:600px){.trm-nav{padding:12px 16px}.abt-header{padding:28px 16px 24px}.abt-header-inner{flex-direction:column;align-items:flex-start;gap:14px}.abt-wrap{padding:32px 16px}.trm-foot{padding:16px;flex-direction:column;text-align:center}}
+  --fh:system-ui,sans-serif;--fb:system-ui,sans-serif;--fm:'Courier New',Courier,monospace;--fh:'Space Grotesk',system-ui,sans-serif;--fm:'Space Mono',monospace;}
+body{background:#050908;color:#c0ddc8;font-family:'Space Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.7;min-height:100vh;overflow-x:hidden}
+a{color:var(--pri);text-decoration:none}
+
+/* NAV */
+.nav{background:#020d06;border-bottom:1px solid #0d2b18;position:sticky;top:0;z-index:99}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:56px;gap:0}
+.nav-logo{font-size:18px;font-weight:700;color:var(--pri);margin-right:32px;flex-shrink:0}
+.nav-links{display:flex;gap:0;height:100%;flex:1}
+.nav-links a{font-family:var(--fm);font-size:11px;font-weight:700;color:#2a5a38;text-transform:uppercase;letter-spacing:1px;padding:0 14px;height:100%;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .2s;margin-bottom:-1px}
+.nav-links a:hover,.nav-links a.active{color:var(--pri);border-bottom-color:var(--pri)}
+.nav-sub{font-family:var(--fm);font-size:10px;font-weight:700;color:#020d06;background:var(--pri);padding:6px 14px;border-radius:2px;text-transform:uppercase;letter-spacing:1px;margin-left:auto;flex-shrink:0}
+
+/* AUTHOR HERO */
+.hero{background:#010a04;border-bottom:1px solid #0d2b18;padding:0}
+.hero-banner{width:100%;height:300px;object-fit:cover;display:block;opacity:0;transition:opacity 1s}
+.hero-banner-ph{width:100%;height:300px;background:#020d06;position:relative;overflow:hidden}
+.hero-banner-ph::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#030f07 0%,#010a04 100%);}
+.hero-content{max-width:1100px;margin:0 auto;padding:0 20px}
+.hero-card{background:#020d06;border:1px solid #0d2b18;border-top:none;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding:28px 32px}
+.hero-avatar{width:100px;height:100px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700;color:#020d06;flex-shrink:0;border:3px solid #0d2b18}
+.hero-info-name{font-size:28px;font-weight:700;color:#e8f5ec;margin-bottom:4px;letter-spacing:-0.5px}
+.hero-info-role{font-family:var(--fm);font-size:11px;color:var(--pri);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
+.hero-info-desc{font-size:14px;color:#3a6a48;line-height:1.65;max-width:560px}
+.hero-stats{display:flex;flex-direction:column;gap:14px;flex-shrink:0;border-left:1px solid #0d2b18;padding-left:28px}
+.stat-item{text-align:right}
+.stat-num{font-family:var(--fm);font-size:22px;font-weight:700;color:var(--pri);line-height:1}
+.stat-label{font-family:var(--fm);font-size:9px;color:#2a5a38;text-transform:uppercase;letter-spacing:2px;margin-top:2px}
+
+/* CONTENT WRAPPER */
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.two-col{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:start;padding:56px 0}
+
+/* STORY SECTION */
+.sec-kicker{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:3px;padding-bottom:12px;border-bottom:1px solid #0d2b18;margin-bottom:24px}
+.sec-kicker::before{content:'// ';color:#1a4a2a}
+.abt-p{color:#5a8a6a;font-size:15px;line-height:1.9;margin-bottom:16px}
+.abt-p:last-child{margin-bottom:0}
+
+/* EXPERTISE GRID */
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#0d2b18;margin-top:24px}
+.exp-card{background:#020d06;padding:20px 22px}
+.exp-icon{font-size:26px;margin-bottom:10px}
+.exp-title{font-size:14px;font-weight:700;color:#c0ddc8;margin-bottom:5px}
+.exp-desc{font-family:var(--fm);font-size:11px;color:#2a5a38;line-height:1.6}
+
+/* METHODOLOGY */
+.meth-list{display:flex;flex-direction:column;gap:0;background:#020d06;border:1px solid #0d2b18;margin-top:24px}
+.meth-item{display:grid;grid-template-columns:56px 1fr;gap:0;border-bottom:1px solid #0d2b18}
+.meth-item:last-child{border-bottom:none}
+.meth-num{font-family:var(--fm);font-size:22px;font-weight:700;color:#0d2b18;padding:20px 0 20px 20px;display:flex;align-items:flex-start}
+.meth-body{padding:20px 20px 20px 0}
+.meth-title{font-size:14px;font-weight:700;color:#c0ddc8;margin-bottom:5px}
+.meth-desc{font-family:var(--fm);font-size:11px;color:#2a5a38;line-height:1.65}
+
+/* SIDEBAR */
+.side-nl{background:#020d06;border:1px solid #0d2b18;border-left:2px solid var(--pri);padding:24px;margin-bottom:28px}
+.side-nl h3{font-size:16px;font-weight:700;color:#e8f5ec;margin-bottom:6px}
+.side-nl p{font-family:var(--fm);font-size:11px;color:#2a5a38;line-height:1.65;margin-bottom:16px}
+.nl-inp{width:100%;background:#010a04;border:1px solid #0d2b18;padding:10px 12px;color:#c0ddc8;font-size:13px;font-family:'Space Grotesk',sans-serif;outline:none;margin-bottom:9px;border-radius:2px}
+.nl-inp:focus{border-color:var(--pri)}.nl-inp::placeholder{color:#2a5a38}
+.nl-btn{width:100%;background:var(--pri);color:#020d06;border:none;padding:11px;font-size:12px;font-weight:700;font-family:var(--fm);cursor:pointer;text-transform:uppercase;letter-spacing:1px;border-radius:2px}
+.nl-btn:hover{background:var(--pri2)}
+
+/* SITE PILLARS */
+.pillar-list{display:flex;flex-direction:column;gap:1px;background:#0d2b18;border:1px solid #0d2b18;margin-bottom:28px}
+.pillar{background:#020d06;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.pillar-dot{width:6px;height:6px;border-radius:50%;background:var(--pri);flex-shrink:0}
+.pillar-text{font-family:var(--fm);font-size:11px;color:#3a6a48;line-height:1.5}
+.pillar-text strong{color:#c0ddc8;display:block;margin-bottom:2px;font-size:12px}
+
+/* RECENT POSTS */
+.recent-post{display:grid;grid-template-columns:80px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid #0d2b18;cursor:pointer;transition:opacity .2s}
+.recent-post:last-child{border-bottom:none}
+.recent-post:hover{opacity:.75}
+.recent-img{width:80px;height:56px;object-fit:cover;border-radius:1px;display:block}
+.recent-title{font-size:13px;font-weight:600;line-height:1.35;color:#c0ddc8;margin-bottom:4px}
+.recent-meta{font-family:var(--fm);font-size:10px;color:#2a5a38}
+
+/* CONTRIBUTORS */
+.contrib-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#0d2b18;border:1px solid #0d2b18}
+.contrib-card{background:#020d06;padding:16px 18px;display:flex;align-items:flex-start;gap:12px}
+.contrib-av{width:40px;height:40px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#020d06;flex-shrink:0;font-family:var(--fm)}
+.contrib-name{font-size:13px;font-weight:700;color:#c0ddc8;margin-bottom:2px}
+.contrib-role{font-family:var(--fm);font-size:9px;color:var(--pri);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px}
+.contrib-bio{font-family:var(--fm);font-size:10px;color:#2a5a38;line-height:1.6}
+
+/* COMMENTS */
+.comment{background:#020d06;border:1px solid #0d2b18;border-left:2px solid #0d2b18;padding:16px 18px;margin-bottom:1px;transition:border-left-color .2s}
+.comment:hover{border-left-color:var(--pri)}
+.comment-text{font-size:14px;color:#5a8a6a;line-height:1.75;margin-bottom:10px;font-style:italic}
+.comment-author{font-family:var(--fm);font-size:10px;color:#2a5a38;font-weight:700;text-transform:uppercase;letter-spacing:1.5px}
+
+/* FOOTER */
+.foot{background:#010604;border-top:1px solid #0a1e10;padding:22px 20px;margin-top:64px}
+.foot-in{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.foot-copy{font-family:var(--fm);font-size:11px;color:#1a4a2a}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap}
+.foot-links a{font-family:var(--fm);font-size:11px;color:#1a4a2a;transition:color .2s}
+.foot-links a:hover{color:var(--pri)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .two-col{grid-template-columns:1fr;gap:32px;padding:40px 0}
+  .hero-card{grid-template-columns:auto 1fr;}
+  .hero-stats{display:none}
+  .exp-grid{grid-template-columns:1fr}
+  .contrib-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .hero-banner,.hero-banner-ph{height:200px}
+  .hero-card{grid-template-columns:1fr;padding:20px 16px;gap:16px}
+  .hero-avatar{width:72px;height:72px;font-size:22px}
+  .hero-info-name{font-size:22px}
+  .nav-in{padding:0 16px}
+  .nav-links a:not(.active){display:none}
+  .foot-in{flex-direction:column;text-align:center}
+}
 </style>
 </head>
 <body>
 
-<!-- nav -->
-<nav class="trm-nav">
-  <a href="./" class="trm-logo">CryptoPulse<em>/ Crypto & Trading</em></a>
-  <div class="trm-nav-links"><a href="./">Home</a><a href="about.html">About</a></div>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-in">
+    <a href="./" class="nav-logo">CryptoPulse</a>
+    <div class="nav-links">
+      <a href="./">Home</a>
+      <a href="./">Analysis</a>
+      <a href="about.html" class="active">About</a>
+    </div>
+    <a href="#subscribe" class="nav-sub">Subscribe Free</a>
+  </div>
 </nav>
 
-<!-- author-header -->
-<div class="abt-header">
-  <div class="abt-header-inner">
-    <div class="abt-avatar">MC</div>
-    <div>
-      <div class="abt-name">Marcus Chen</div>
-      <div class="abt-title">Quant Trader & Market Analyst</div>
+<!-- AUTHOR HERO -->
+<div class="hero">
+  <div class="hero-banner-ph" style="position:relative">
+    <img id="pxl-img" class="hero-banner" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" alt="CryptoPulse">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(1,10,4,.3) 0%,rgba(1,10,4,.85) 100%)"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-card">
+      <div class="hero-avatar">MC</div>
+      <div>
+        <div class="hero-info-name">Marcus Chen</div>
+        <div class="hero-info-role">Quant Trader & Market Analyst</div>
+        <div class="hero-info-desc">On-chain data, systematic signals, and algo trade breakdowns for serious crypto traders.</div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-num">8+</div><div class="stat-label">Years trading</div></div>
+        <div class="stat-item"><div class="stat-num">$10M+</div><div class="stat-label">Vol managed</div></div>
+        <div class="stat-item"><div class="stat-num">Indep.</div><div class="stat-label">No sponsors</div></div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- pexels-banner -->
-<!-- hero-banner -->
-<div id="pxl-wrap" style="width:100%;height:240px;overflow:hidden;position:relative;background:var(--bg2);">
-  <img id="pxl-img" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s;display:block;" alt="">
-  <a id="pxl-cred" href="https://www.pexels.com" target="_blank" rel="noopener" style="position:absolute;bottom:6px;right:10px;font-size:10px;color:rgba(255,255,255,.5);opacity:0;transition:opacity .6s;text-decoration:none;">Photo: Pexels</a>
-</div>
+<!-- MAIN CONTENT -->
+<div class="wrap">
+  <div class="two-col">
 
-<!-- main-content -->
-<div class="abt-wrap">
+    <!-- LEFT: story + expertise + methodology + contributors + comments -->
+    <div>
 
-  <!-- section: background story -->
-  <div class="abt-section">
-    <div class="abt-section-label">// background</div>
-    <p class="abt-p">I grew up in a household where money was taken seriously. My parents had immigrated and built everything from nothing, and that shaped how I thought about risk before I ever traded a single position. Not as something to avoid, but as something to size correctly.</p>
+      <!-- Background Story -->
+      <div class="sec-kicker">Background</div>
+      <p class="abt-p">I grew up in a household where money was taken seriously. My parents had immigrated and built everything from nothing, and that shaped how I thought about risk before I ever traded a single position. Not as something to avoid, but as something to size correctly.</p>
     <p class="abt-p">My path into trading started through software. I studied mathematics at university and got hired by a small prop trading firm in Vancouver as a data analyst. Within eight months I was running my own book. Within two years I had blown it up, rebuilt it, and finally started making consistent returns.</p>
     <p class="abt-p">Crypto entered my world in 2016. I spent about six months watching on-chain data before building my first automated strategy. It lost money for four months before I understood the gap between what I thought I was measuring and what actually drove price. That gap is the real curriculum in this space.</p>
     <p class="abt-p">Running automated strategies at a prop desk for eight years gave me perspective on the full lifecycle of a trading idea - conception, backtesting, live deployment, degradation, and retirement. Most edges have a shelf life. The discipline is recognizing when to retire a strategy rather than explaining away its losses.</p>
     <p class="abt-p">I went independent three years ago. CryptoPulse is where I publish the longer analysis - on-chain research, strategy breakdowns, and market structure observations that take more than a short post to explain properly. No hype, no calls, no FOMO. Just the systematic work.</p>
-  </div>
 
-  <!-- section: credentials -->
-  <div class="abt-cred">
-    <div class="abt-cred-label">// credentials</div>
-    <div class="abt-cred-text">Quant Trader & Market Analyst</div>
-  </div>
+      <!-- Expertise Grid -->
+      <div style="margin-top:48px">
+        <div class="sec-kicker">Areas of Expertise</div>
+        <div class="exp-grid">
+          <div class="exp-card"><div class="exp-icon">📊</div><div class="exp-title">On-Chain Analysis</div><div class="exp-desc">Exchange flows, whale wallets, miner behavior, mempool signals — reading the blockchain for trade intelligence</div></div>
+          <div class="exp-card"><div class="exp-icon">⚙️</div><div class="exp-title">Algorithmic Strategy</div><div class="exp-desc">Building, backtesting, deploying, and retiring systematic strategies. The full lifecycle from concept to capital</div></div>
+          <div class="exp-card"><div class="exp-icon">📉</div><div class="exp-title">Market Microstructure</div><div class="exp-desc">Order book dynamics, liquidity gaps, bid-ask spreads, and how price actually moves at key levels</div></div>
+          <div class="exp-card"><div class="exp-icon">🔢</div><div class="exp-title">Quantitative Methods</div><div class="exp-desc">Statistical analysis, signal validation, walk-forward testing, and the math behind what most traders skip</div></div>
+          <div class="exp-card"><div class="exp-icon">🛡️</div><div class="exp-title">Risk Management</div><div class="exp-desc">Position sizing frameworks, drawdown limits, portfolio construction under uncertainty, Kelly criterion in practice</div></div>
+          <div class="exp-card"><div class="exp-icon">🧠</div><div class="exp-title">Trade Psychology</div><div class="exp-desc">Why most traders fail despite good systems — and the behavioral discipline that actually separates performance</div></div>
+        </div>
+      </div>
 
-  <!-- section: what this site covers -->
-  <div class="abt-section">
-    <div class="abt-section-label">// what this site covers</div>
-    <p class="abt-p">On-chain data, systematic signals, and algo trade breakdowns for serious crypto traders.</p>
-    <p class="abt-p">Evidence-based analysis for algorithmic traders and crypto researchers.</p>
-  </div>
+      <!-- Methodology -->
+      <div style="margin-top:48px">
+        <div class="sec-kicker">Research Methodology</div>
+        <div class="meth-list">
+          <div class="meth-item"><div class="meth-num">01</div><div class="meth-body"><div class="meth-title">Form a falsifiable hypothesis</div><div class="meth-desc">Every analysis starts with a specific claim that can be proven wrong. No vague directional bias allowed.</div></div></div>
+          <div class="meth-item"><div class="meth-num">02</div><div class="meth-body"><div class="meth-title">Pull primary data</div><div class="meth-desc">On-chain data from node queries, exchange APIs, and aggregators — not repackaged sentiment from Twitter threads.</div></div></div>
+          <div class="meth-item"><div class="meth-num">03</div><div class="meth-body"><div class="meth-title">Test across market regimes</div><div class="meth-desc">Bull, bear, and sideways. What works in one regime often fails in another. Both sides get published.</div></div></div>
+          <div class="meth-item"><div class="meth-num">04</div><div class="meth-body"><div class="meth-title">Publish the uncertainty</div><div class="meth-desc">Confidence levels are stated explicitly. If the data is inconclusive, that is the finding — not a fabricated conclusion.</div></div></div>
+          <div class="meth-item"><div class="meth-num">05</div><div class="meth-body"><div class="meth-title">Update when wrong</div><div class="meth-desc">When a call or thesis proves incorrect, a correction is published. No deleting posts. No pretending it didn't happen.</div></div></div>
+        </div>
+      </div>
 
-  <!-- section: newsletter -->
-  <div class="abt-nl">
-    <h3>The Weekly Alpha Report</h3>
-    <p>Systematic signals, on-chain data, and trade setups - no filler, no hype.</p>
-    <form id="abt-nl" onsubmit="nlSub(event)">
-      <input type="email" class="trm-nl-input" placeholder="your@email.com" required>
-      <button type="submit" class="trm-nl-btn">Subscribe</button>
-    </form>
-  </div>
+      <!-- What This Site Covers -->
+      <div style="margin-top:48px">
+        <div class="sec-kicker">What CryptoPulse Covers</div>
+        <p class="abt-p">On-chain data, systematic signals, and algo trade breakdowns for serious crypto traders.</p>
+        <p class="abt-p">Evidence-based analysis for algorithmic traders and crypto researchers.</p>
+      </div>
 
-</div>
-
-<!-- section: contributors -->
-<div class="abt-wrap" style="padding-top:0">
-  <div class="abt-section" style="margin-top:0">
-    <div class="abt-section-label">// contributors</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
-      <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
+      <!-- Contributors -->
+      <div style="margin-top:48px">
+        <div class="sec-kicker">Contributors</div>
+        <div class="contrib-grid">
+          <div style="background:#020d06;border:1px solid #0d2b18;border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
       <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">LF</div>
       <div>
-        <div style="font-size:14px;font-weight:700;color:var(--txt)">Lena Fischer</div>
+        <div style="font-size:14px;font-weight:700;color:#c0ddc8">Lena Fischer</div>
         <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">International Contributor</div>
-        <div style="font-size:12px;color:var(--mut);line-height:1.6">Based in Frankfurt. Covers European regulatory developments, cross-border market dynamics, and emerging market capital flows.</div>
+        <div style="font-size:12px;color:#2a5a38;line-height:1.6">Based in Frankfurt. Covers European regulatory developments, cross-border market dynamics, and emerging market capital flows.</div>
       </div>
     </div>
-    <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
+    <div style="background:#020d06;border:1px solid #0d2b18;border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
       <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">JT</div>
       <div>
-        <div style="font-size:14px;font-weight:700;color:var(--txt)">James Thorne</div>
+        <div style="font-size:14px;font-weight:700;color:#c0ddc8">James Thorne</div>
         <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Technical Contributor</div>
-        <div style="font-size:12px;color:var(--mut);line-height:1.6">Full-stack developer who switched to financial writing. Covers the engineering reality behind products and platforms.</div>
+        <div style="font-size:12px;color:#2a5a38;line-height:1.6">Full-stack developer who switched to financial writing. Covers the engineering reality behind products and platforms.</div>
       </div>
     </div>
-    <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
+    <div style="background:#020d06;border:1px solid #0d2b18;border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
       <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">DO</div>
       <div>
-        <div style="font-size:14px;font-weight:700;color:var(--txt)">Daniel Osei</div>
+        <div style="font-size:14px;font-weight:700;color:#c0ddc8">Daniel Osei</div>
         <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Field Correspondent</div>
-        <div style="font-size:12px;color:var(--mut);line-height:1.6">On the ground covering conferences, product launches, and industry events. Focuses on what the press releases leave out.</div>
+        <div style="font-size:12px;color:#2a5a38;line-height:1.6">On the ground covering conferences, product launches, and industry events. Focuses on what the press releases leave out.</div>
       </div>
     </div>
-    <div style="background:var(--bg2);border:1px solid var(--brd);border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
+    <div style="background:#020d06;border:1px solid #0d2b18;border-radius:10px;padding:16px;display:flex;gap:12px;align-items:flex-start">
       <div style="width:40px;height:40px;border-radius:50%;background:var(--pri);color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0">RK</div>
       <div>
-        <div style="font-size:14px;font-weight:700;color:var(--txt)">Rachel Kim</div>
+        <div style="font-size:14px;font-weight:700;color:#c0ddc8">Rachel Kim</div>
         <div style="font-size:11px;color:var(--pri);margin-bottom:5px;font-weight:600">Contributing Analyst</div>
-        <div style="font-size:12px;color:var(--mut);line-height:1.6">Former hedge fund researcher. Covers quantitative methods and market microstructure. Has contributed to three academic finance papers.</div>
+        <div style="font-size:12px;color:#2a5a38;line-height:1.6">Former hedge fund researcher. Covers quantitative methods and market microstructure. Has contributed to three academic finance papers.</div>
       </div>
     </div>
-    </div>
-  </div>
-</div>
+        </div>
+      </div>
 
-<!-- section: comments -->
-<div class="abt-wrap" style="padding-top:0">
-  <div class="abt-section">
-    <div class="abt-section-label">// reader comments</div>
-    <div style="margin-top:12px">
-      <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
+      <!-- Reader Comments -->
+      <div style="margin-top:48px">
+        <div class="sec-kicker">Reader Feedback</div>
+        <div style="padding:14px 0;border-bottom:1px solid #0d2b18">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
         <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">C</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Chris V.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
+        <span style="font-size:13px;font-weight:600;color:#5a8a6a">Chris V.</span>
+        <span style="font-size:10px;color:#2a5a38;margin-left:auto">Verified reader</span>
       </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">Refreshing to read something that acknowledges uncertainty instead of pretending everything is obvious in hindsight.</div>
+      <div style="font-size:13px;color:#5a8a6a;line-height:1.65;padding-left:36px">Refreshing to read something that acknowledges uncertainty instead of pretending everything is obvious in hindsight.</div>
     </div>
-    <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
+    <div style="padding:14px 0;border-bottom:1px solid #0d2b18">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
         <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">N</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Nadia F.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
+        <span style="font-size:13px;font-weight:600;color:#5a8a6a">Nadia F.</span>
+        <span style="font-size:10px;color:#2a5a38;margin-left:auto">Verified reader</span>
       </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">The writing here treats readers as intelligent adults. No dumbing down, no sensationalism, just clear analysis.</div>
+      <div style="font-size:13px;color:#5a8a6a;line-height:1.65;padding-left:36px">The writing here treats readers as intelligent adults. No dumbing down, no sensationalism, just clear analysis.</div>
     </div>
-    <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
+    <div style="padding:14px 0;border-bottom:1px solid #0d2b18">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
         <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">S</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Serena T.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
+        <span style="font-size:13px;font-weight:600;color:#5a8a6a">Serena T.</span>
+        <span style="font-size:10px;color:#2a5a38;margin-left:auto">Verified reader</span>
       </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">I have shared this with three colleagues already. The kind of analysis that used to be locked behind expensive research subscriptions.</div>
+      <div style="font-size:13px;color:#5a8a6a;line-height:1.65;padding-left:36px">I have shared this with three colleagues already. The kind of analysis that used to be locked behind expensive research subscriptions.</div>
     </div>
-    <div style="padding:14px 0;border-bottom:1px solid var(--brd)">
+    <div style="padding:14px 0;border-bottom:1px solid #0d2b18">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
         <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">M</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Mike H.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
+        <span style="font-size:13px;font-weight:600;color:#5a8a6a">Mike H.</span>
+        <span style="font-size:10px;color:#2a5a38;margin-left:auto">Verified reader</span>
       </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">The level of detail here is what keeps me coming back. You actually back up the claims instead of just asserting them.</div>
+      <div style="font-size:13px;color:#5a8a6a;line-height:1.65;padding-left:36px">The level of detail here is what keeps me coming back. You actually back up the claims instead of just asserting them.</div>
     </div>
     <div style="padding:14px 0;border-bottom:none">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
         <div style="width:28px;height:28px;border-radius:50%;background:var(--pri)22;border:1px solid var(--pri)44;color:var(--pri);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">O</div>
-        <span style="font-size:13px;font-weight:600;color:var(--txt)">Omar K.</span>
-        <span style="font-size:10px;color:var(--mut);margin-left:auto">Verified reader</span>
+        <span style="font-size:13px;font-weight:600;color:#5a8a6a">Omar K.</span>
+        <span style="font-size:10px;color:#2a5a38;margin-left:auto">Verified reader</span>
       </div>
-      <div style="font-size:13px;color:var(--txt);line-height:1.65;padding-left:36px">I have read things here that changed how I think about the field. That is a high bar and this site clears it regularly.</div>
+      <div style="font-size:13px;color:#5a8a6a;line-height:1.65;padding-left:36px">I have read things here that changed how I think about the field. That is a high bar and this site clears it regularly.</div>
     </div>
+      </div>
+
+    </div><!-- /LEFT -->
+
+    <!-- RIGHT SIDEBAR -->
+    <aside>
+
+      <!-- Newsletter -->
+      <div class="side-nl" id="subscribe">
+        <h3>The Weekly Alpha Report</h3>
+        <p>Systematic signals, on-chain data, and trade setups - no filler, no hype.</p>
+        <form id="abt-nl" onsubmit="nlSub('abt-nl',event)">
+          <input type="email" class="nl-inp" placeholder="your@email.com" required>
+          <button type="submit" class="nl-btn">Subscribe Free</button>
+        </form>
+      </div>
+
+      <!-- Site Pillars -->
+      <div class="sec-kicker" style="margin-top:8px">What You Get</div>
+      <div class="pillar-list">
+        <div class="pillar"><div class="pillar-dot"></div><div class="pillar-text"><strong>Live Market Data</strong>Real-time crypto prices from CoinGecko, updated every 90 seconds</div></div>
+        <div class="pillar"><div class="pillar-dot"></div><div class="pillar-text"><strong>On-Chain Reports</strong>Exchange inflows, whale accumulation, mempool signals decoded</div></div>
+        <div class="pillar"><div class="pillar-dot"></div><div class="pillar-text"><strong>Algo Breakdowns</strong>The full lifecycle of systematic strategies — build, test, deploy, retire</div></div>
+        <div class="pillar"><div class="pillar-dot"></div><div class="pillar-text"><strong>No Hype, No Ads</strong>Independent research with no affiliate deals or price targets</div></div>
+      </div>
+
+      <!-- Recent Posts -->
+      <div class="sec-kicker" style="margin-top:32px">Recent Analysis</div>
+      <div id="recent-posts">
+        <div class="recent-post" style="opacity:.35;pointer-events:none"><img class="recent-img" src="https://picsum.photos/seed/168/160/112" alt="" loading="lazy"><div><div class="recent-title">First analysis publishing soon</div><div class="recent-meta">Coming soon</div></div></div>
+        <div class="recent-post" style="opacity:.2;pointer-events:none"><img class="recent-img" src="https://picsum.photos/seed/169/160/112" alt="" loading="lazy"><div><div class="recent-title">Research in preparation</div><div class="recent-meta">Coming soon</div></div></div>
+        <div class="recent-post" style="opacity:.1;pointer-events:none"><img class="recent-img" src="https://picsum.photos/seed/170/160/112" alt="" loading="lazy"><div><div class="recent-title">Signal study underway</div><div class="recent-meta">Coming soon</div></div></div>
+      </div>
+
+    </aside><!-- /SIDEBAR -->
+
+  </div><!-- /two-col -->
+</div><!-- /wrap -->
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="foot-in">
+    <span class="foot-copy">© CryptoPulse · Evidence-based analysis for algorithmic traders and crypto researchers.</span>
+    <div class="foot-links">
+      <a href="./">Home</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="sms.html">SMS</a>
+      <a href="meta-policy.html">Meta Policy</a>
     </div>
   </div>
-</div>
-
-<!-- footer -->
-<footer class="trm-foot">
-  <span class="trm-foot-copy">© CryptoPulse</span>
-  <div class="trm-foot-links"><a href="./">Home</a><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="sms.html">SMS Policy</a><a href="meta-policy.html">Meta Policy</a></div>
 </footer>
 
 <script>
-function nlSub(e){e.preventDefault();e.target.innerHTML='<div class="trm-nl-ok">✓ Subscribed. Thank you.</div>';}
+function nlSub(id,e){
+  e.preventDefault();
+  var f=document.getElementById(id);
+  if(f)f.innerHTML='<p style="color:var(--pri);font-family:var(--fm);font-size:13px;font-weight:700;padding:10px 0">✓ Subscribed. Welcome to the list.</p>';
+}
+/* load recent posts from articles.json */
+(async function(){
+  try{
+    var r=await fetch('./articles.json');if(!r.ok)throw 0;
+    var posts=await r.json();if(!posts||!posts.length)throw 0;
+    var rp=document.getElementById('recent-posts');
+    if(rp)rp.innerHTML=posts.slice(0,4).map(function(p){
+      var img=p.image||'https://picsum.photos/seed/'+(Math.abs(p.slug.charCodeAt(0)*31)%997+3)+'/160/112';
+      return '<a href="./'+p.slug+'/" style="display:block"><div class="recent-post"><img class="recent-img" src="'+img+'" alt="'+p.title+'" loading="lazy"><div><div class="recent-title">'+p.title+'</div><div class="recent-meta">'+(p.date_iso||'')+'</div></div></div></a>';
+    }).join('');
+  }catch(e){}
+})();
 /* banner loader: pexels → picsum fallback */
 (function(){
   var el=document.getElementById('pxl-img');
@@ -224,10 +384,10 @@ function nlSub(e){e.preventDefault();e.target.innerHTML='<div class="trm-nl-ok">
     fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('cryptocurrency trading charts financial data')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
       .then(function(r){return r.json();}).then(function(d){
         if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
-        else{showImg('https://picsum.photos/seed/295/1400/400','');}
-      }).catch(function(){showImg('https://picsum.photos/seed/295/1400/400','');});
+        else{showImg('https://picsum.photos/seed/167/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/167/1400/400','');});
   }else{
-    showImg('https://picsum.photos/seed/295/1400/400','');
+    showImg('https://picsum.photos/seed/167/1400/400','');
   }
 })();
 </script>
