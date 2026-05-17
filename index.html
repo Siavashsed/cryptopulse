@@ -172,7 +172,7 @@ img{display:block;max-width:100%}
 
 <!-- hero -->
 <div class="hero" id="hero-wrap">
-  <img id="pxl-img" src="https://picsum.photos/seed/138/1400/520" alt="Featured article" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s">
+  <img id="pxl-img" src="https://picsum.photos/seed/242/1400/520" alt="Featured article" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s">
   <div class="hero-overlay"></div>
   <div class="hero-content" id="hero-content">
     <div class="hero-tag">Crypto & Trading</div>
@@ -260,23 +260,47 @@ img{display:block;max-width:100%}
 /* date */
 document.getElementById('nav-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'});
 
-/* ticker simulation */
-(function(){
+/* live crypto ticker via CoinGecko */
+(async function(){
   var prices={btc:67234,eth:3421,sol:142.5,bnb:612};
   var changes={btc:2.31,eth:-0.84,sol:4.12,bnb:1.05};
   function fmt(v,d){return v>=1000?'$'+v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','):'$'+v.toFixed(d||2);}
   function upd(){
     ['btc','eth','sol','bnb'].forEach(function(c){
-      prices[c]*=(1+(Math.random()-.5)*.002);
-      changes[c]+=(Math.random()-.5)*.05;
-      var d=changes[c]>=0;
       var pe=document.getElementById('tk-'+c);
       var ce=document.getElementById('tk-'+c+'-ch');
+      var d=changes[c]>=0;
       if(pe)pe.textContent=fmt(prices[c],c==='sol'?2:0);
       if(ce){ce.textContent=(d?'▲ ':'▼ ')+Math.abs(changes[c]).toFixed(2)+'%';ce.className=d?'tk-up':'tk-dn';}
     });
   }
-  setInterval(upd,3000);
+  /* fetch live prices */
+  try{
+    var r=await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin&vs_currencies=usd&include_24hr_change=true',{cache:'no-store'});
+    var d=await r.json();
+    if(d.bitcoin){prices.btc=d.bitcoin.usd;changes.btc=d.bitcoin.usd_24h_change||0;}
+    if(d.ethereum){prices.eth=d.ethereum.usd;changes.eth=d.ethereum.usd_24h_change||0;}
+    if(d.solana){prices.sol=d.solana.usd;changes.sol=d.solana.usd_24h_change||0;}
+    if(d.binancecoin){prices.bnb=d.binancecoin.usd;changes.bnb=d.binancecoin.usd_24h_change||0;}
+    upd();
+  }catch(e){upd();}
+  /* micro-fluctuations to keep ticker alive */
+  setInterval(function(){
+    ['btc','eth','sol','bnb'].forEach(function(c){prices[c]*=(1+(Math.random()-.5)*.001);});
+    upd();
+  },4000);
+  /* refresh live data every 90 seconds */
+  setInterval(async function(){
+    try{
+      var r2=await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin&vs_currencies=usd&include_24hr_change=true',{cache:'no-store'});
+      var d2=await r2.json();
+      if(d2.bitcoin){prices.btc=d2.bitcoin.usd;changes.btc=d2.bitcoin.usd_24h_change||0;}
+      if(d2.ethereum){prices.eth=d2.ethereum.usd;changes.eth=d2.ethereum.usd_24h_change||0;}
+      if(d2.solana){prices.sol=d2.solana.usd;changes.sol=d2.solana.usd_24h_change||0;}
+      if(d2.binancecoin){prices.bnb=d2.binancecoin.usd;changes.bnb=d2.binancecoin.usd_24h_change||0;}
+      upd();
+    }catch(e){}
+  },90000);
 })();
 
 /* load articles */
@@ -375,10 +399,10 @@ loadPosts();
     fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('cryptocurrency trading charts financial data')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
       .then(function(r){return r.json();}).then(function(d){
         if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
-        else{showImg('https://picsum.photos/seed/138/1400/400','');}
-      }).catch(function(){showImg('https://picsum.photos/seed/138/1400/400','');});
+        else{showImg('https://picsum.photos/seed/242/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/242/1400/400','');});
   }else{
-    showImg('https://picsum.photos/seed/138/1400/400','');
+    showImg('https://picsum.photos/seed/242/1400/400','');
   }
 })();
 </script>
