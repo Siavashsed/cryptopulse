@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CryptoPulse — Algorithmic Trading Intelligence</title>
+<title>CryptoPulse: Algorithmic Trading Intelligence</title>
 <meta name="description" content="On-chain data, systematic signals, and algo trade breakdowns for serious crypto traders.">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -14,144 +14,187 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 
-/* ── ticker bar ── */
-.tk-bar{background:#000;border-bottom:1px solid #1a1a1a;padding:0;overflow:hidden;height:32px;display:flex;align-items:center}
-.tk-label{font-family:var(--fm);font-size:10px;font-weight:700;color:#000;background:var(--pri);padding:0 14px;height:100%;display:flex;align-items:center;flex-shrink:0;letter-spacing:1px;text-transform:uppercase}
-.tk-scroll{display:flex;gap:32px;padding:0 24px;overflow:hidden;white-space:nowrap}
-.tk-item{font-family:var(--fm);font-size:11px;color:#888;display:flex;gap:8px;align-items:center;flex-shrink:0}
-.tk-sym{color:#ccc;font-weight:700}
-.tk-up{color:#00e676}
-.tk-dn{color:#ff5252}
+/* ── animated ticker bar ── */
+.tk-bar{background:#000;border-bottom:2px solid var(--pri);height:36px;display:flex;align-items:center;overflow:hidden;width:100%}
+.tk-label{font-family:var(--fm);font-size:10px;font-weight:700;color:#000;background:var(--pri);padding:0 16px;height:100%;display:flex;align-items:center;flex-shrink:0;letter-spacing:1.5px;text-transform:uppercase;z-index:2}
+.tk-viewport{flex:1;overflow:hidden;position:relative}
+.tk-track{display:flex;gap:0;white-space:nowrap;animation:ticker-scroll 35s linear infinite}
+.tk-track:hover{animation-play-state:paused}
+@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tk-item{font-family:var(--fm);font-size:11px;color:#888;display:inline-flex;gap:8px;align-items:center;padding:0 28px;border-right:1px solid #1a1a1a}
+.tk-sym{color:#ddd;font-weight:800;letter-spacing:.5px}
+.tk-up{color:#00e676;font-weight:700}
+.tk-dn{color:#ff5252;font-weight:700}
+.tk-sep{color:#333;padding:0 4px}
 
 /* ── nav ── */
 .nav{background:var(--bg2);border-bottom:2px solid var(--pri);position:sticky;top:0;z-index:99}
-.nav-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:0;height:56px}
-.nav-logo{font-family:var(--fm);font-size:20px;font-weight:900;color:var(--pri);letter-spacing:-1px;margin-right:40px;flex-shrink:0}
-.nav-logo span{color:var(--mut);font-size:12px;font-weight:400;margin-left:6px}
+.nav-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:54px;gap:0}
+.nav-logo{font-family:var(--fm);font-size:19px;font-weight:900;color:var(--pri);letter-spacing:-0.5px;margin-right:36px;flex-shrink:0}
+.nav-logo span{color:var(--mut);font-size:11px;font-weight:400;margin-left:6px}
 .nav-links{display:flex;gap:0;height:100%;margin-right:auto}
-.nav-links a{font-family:var(--fm);font-size:12px;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:1px;padding:0 16px;height:100%;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .2s;margin-bottom:-2px}
+.nav-links a{font-family:var(--fm);font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:1px;padding:0 14px;height:100%;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .2s;margin-bottom:-2px}
 .nav-links a:hover{color:var(--txt);border-bottom-color:var(--pri)}
-.nav-date{font-family:var(--fm);font-size:11px;color:var(--mut)}
+.nav-date{font-family:var(--fm);font-size:10px;color:var(--mut);flex-shrink:0}
 
 /* ── hero ── */
-.hero{position:relative;width:100%;height:520px;overflow:hidden;background:var(--bg2)}
-.hero img{width:100%;height:100%;object-fit:cover;display:block}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92) 0%,rgba(0,0,0,.45) 55%,transparent 100%)}
-.hero-content{position:absolute;bottom:0;left:0;right:0;padding:36px 48px;max-width:860px}
-.hero-tag{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
-.hero-tag::before{content:'';display:inline-block;width:24px;height:2px;background:var(--pri)}
-.hero h1{font-size:clamp(24px,3.5vw,42px);font-weight:800;line-height:1.12;color:#fff;margin-bottom:14px}
-.hero-desc{font-size:15px;color:rgba(255,255,255,.72);line-height:1.65;margin-bottom:18px;max-width:620px}
-.hero-meta{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:16px}
-.hero-read{font-family:var(--fm);font-size:12px;font-weight:700;color:var(--pri);border:1px solid var(--pri);padding:7px 18px;border-radius:2px;transition:all .2s;flex-shrink:0}
-.hero-read:hover{background:var(--pri);color:#000}
+.hero{position:relative;width:100%;height:560px;overflow:hidden;background:var(--bg2)}
+.hero-img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity 1s}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.15) 100%)}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:40px 52px;max-width:820px}
+.hero-tag{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.hero-tag::before{content:'';display:inline-block;width:28px;height:2px;background:var(--pri)}
+.hero h1{font-size:clamp(26px,4vw,46px);font-weight:900;line-height:1.1;color:#fff;margin-bottom:14px;letter-spacing:-0.5px}
+.hero-desc{font-size:15px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:20px;max-width:600px}
+.hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.hero-meta{font-family:var(--fm);font-size:11px;color:rgba(255,255,255,.45);display:flex;gap:14px}
+.hero-read{font-family:var(--fm);font-size:12px;font-weight:800;color:#000;background:var(--pri);padding:9px 22px;border-radius:2px;transition:opacity .2s;text-transform:uppercase;letter-spacing:1px;flex-shrink:0}
+.hero-read:hover{opacity:.85}
+
+/* ── value prop strip ── */
+.vp-strip{background:var(--bg2);border-bottom:1px solid var(--brd);padding:0}
+.vp-inner{max-width:1240px;margin:0 auto;padding:0 24px;display:flex;align-items:stretch}
+.vp-item{flex:1;padding:20px 24px;border-right:1px solid var(--brd);display:flex;align-items:center;gap:14px}
+.vp-item:last-child{border-right:none}
+.vp-icon{font-size:22px;flex-shrink:0}
+.vp-text strong{font-size:13px;font-weight:700;color:var(--txt);display:block;margin-bottom:2px}
+.vp-text span{font-size:11px;color:var(--mut);line-height:1.4}
 
 /* ── section heading ── */
 .sec-head{font-family:var(--fm);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--pri);padding-bottom:10px;border-bottom:2px solid var(--brd);margin-bottom:20px;display:flex;align-items:center;gap:10px}
-.sec-head::before{content:'//';opacity:.5}
+.sec-head::before{content:'//';opacity:.4}
 
 /* ── main layout ── */
-.layout{max-width:1240px;margin:0 auto;padding:40px 24px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+.layout{max-width:1240px;margin:0 auto;padding:40px 24px;display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
 
-/* ── article card (main column) ── */
-.card{display:grid;grid-template-columns:220px 1fr;gap:0;border:1px solid var(--brd);background:var(--bg2);margin-bottom:16px;transition:border-color .2s;overflow:hidden}
+/* ── article card ── */
+.card{display:grid;grid-template-columns:200px 1fr;gap:0;border:1px solid var(--brd);background:var(--bg2);margin-bottom:16px;transition:border-color .2s;overflow:hidden;cursor:pointer}
 .card:hover{border-color:var(--pri)}
-.card-img{width:220px;height:148px;object-fit:cover;flex-shrink:0}
-.card-img-ph{width:220px;height:148px;background:var(--sur);flex-shrink:0}
-.card-body{padding:18px 20px;display:flex;flex-direction:column;gap:6px}
-.card-tag{font-family:var(--fm);font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:2px;font-weight:700}
-.card-title{font-size:16px;font-weight:700;line-height:1.3;color:var(--txt)}
-.card-title:hover{color:var(--pri)}
-.card-desc{font-size:13px;color:var(--mut);line-height:1.7;flex:1}
-.card-meta{font-family:var(--fm);font-size:10px;color:var(--mut);margin-top:4px}
+.card-img{width:200px;height:140px;object-fit:cover}
+.card-img-ph{width:200px;height:140px;background:var(--sur)}
+.card-body{padding:16px 20px;display:flex;flex-direction:column;gap:5px}
+.card-tag{font-family:var(--fm);font-size:9px;color:var(--pri);text-transform:uppercase;letter-spacing:2px;font-weight:700}
+.card-title{font-size:15px;font-weight:700;line-height:1.3;color:var(--txt);transition:color .2s}
+.card:hover .card-title{color:var(--pri)}
+.card-desc{font-size:12px;color:var(--mut);line-height:1.65;flex:1}
+.card-meta{font-family:var(--fm);font-size:10px;color:var(--mut);margin-top:2px}
 
 /* ── sidebar ── */
-.side-item{padding:14px 0;border-bottom:1px solid var(--brd);display:grid;grid-template-columns:80px 1fr;gap:12px;align-items:center}
+.side-item{padding:12px 0;border-bottom:1px solid var(--brd);display:grid;grid-template-columns:76px 1fr;gap:10px;align-items:center;cursor:pointer}
 .side-item:last-child{border-bottom:none}
-.side-img{width:80px;height:54px;object-fit:cover;border-radius:2px}
-.side-img-ph{width:80px;height:54px;background:var(--sur);border-radius:2px}
-.side-title{font-size:13px;font-weight:600;line-height:1.35;color:var(--txt)}
-.side-title:hover{color:var(--pri)}
-.side-date{font-family:var(--fm);font-size:10px;color:var(--mut);margin-top:4px}
-
-/* ── newsletter box ── */
-.nl-box{background:var(--sur);border:1px solid var(--brd);border-left:3px solid var(--pri);padding:20px;margin-top:24px}
-.nl-box h3{font-size:15px;font-weight:700;color:var(--txt);margin-bottom:6px}
-.nl-box p{font-size:12px;color:var(--mut);line-height:1.65;margin-bottom:14px}
-.nl-input{width:100%;background:var(--bg);border:1px solid var(--brd);padding:9px 12px;color:var(--txt);font-size:12px;font-family:var(--fm);outline:none;margin-bottom:8px;border-radius:2px;transition:border-color .2s}
-.nl-input:focus{border-color:var(--pri)}
-.nl-input::placeholder{color:var(--mut)}
-.nl-btn{width:100%;background:var(--pri);color:#000;border:none;padding:10px;font-size:12px;font-weight:800;font-family:var(--fm);cursor:pointer;text-transform:uppercase;letter-spacing:1px;transition:background .2s;border-radius:2px}
+.side-img{width:76px;height:52px;object-fit:cover;border-radius:2px}
+.side-img-ph{width:76px;height:52px;background:var(--sur);border-radius:2px}
+.side-title{font-size:12px;font-weight:600;line-height:1.35;color:var(--txt);transition:color .2s}
+.side-item:hover .side-title{color:var(--pri)}
+.side-date{font-family:var(--fm);font-size:10px;color:var(--mut);margin-top:3px}
+.nl-box{background:var(--sur);border:1px solid var(--brd);border-left:3px solid var(--pri);padding:18px;margin-top:20px}
+.nl-box h3{font-size:14px;font-weight:700;color:var(--txt);margin-bottom:5px}
+.nl-box p{font-size:11px;color:var(--mut);line-height:1.6;margin-bottom:12px}
+.nl-input{width:100%;background:var(--bg);border:1px solid var(--brd);padding:8px 10px;color:var(--txt);font-size:12px;font-family:var(--fm);outline:none;margin-bottom:7px;border-radius:2px}
+.nl-input:focus{border-color:var(--pri)}.nl-input::placeholder{color:var(--mut)}
+.nl-btn{width:100%;background:var(--pri);color:#000;border:none;padding:9px;font-size:11px;font-weight:800;font-family:var(--fm);cursor:pointer;text-transform:uppercase;letter-spacing:1px;border-radius:2px}
 .nl-btn:hover{background:var(--pri2)}
+
+/* ── photo strip ── */
+.photo-strip{max-width:1240px;margin:0 auto;padding:0 24px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.photo-strip img{width:100%;height:160px;object-fit:cover;border:1px solid var(--brd);transition:opacity .2s}
+.photo-strip img:hover{opacity:.8}
 
 /* ── more articles grid ── */
 .more{max-width:1240px;margin:0 auto;padding:0 24px 48px}
-.more-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.mg-card{background:var(--bg2);border:1px solid var(--brd);overflow:hidden;transition:border-color .2s}
+.more-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.mg-card{background:var(--bg2);border:1px solid var(--brd);overflow:hidden;cursor:pointer;transition:border-color .2s}
 .mg-card:hover{border-color:var(--pri)}
-.mg-img{width:100%;height:140px;object-fit:cover}
-.mg-img-ph{width:100%;height:140px;background:var(--sur)}
-.mg-body{padding:16px}
-.mg-tag{font-family:var(--fm);font-size:9px;color:var(--pri);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;font-weight:700}
-.mg-title{font-size:14px;font-weight:700;line-height:1.3;color:var(--txt);margin-bottom:6px}
+.mg-img{width:100%;height:130px;object-fit:cover}
+.mg-img-ph{width:100%;height:130px;background:var(--sur)}
+.mg-body{padding:12px 14px}
+.mg-tag{font-family:var(--fm);font-size:9px;color:var(--pri);text-transform:uppercase;letter-spacing:2px;margin-bottom:5px;font-weight:700}
+.mg-title{font-size:13px;font-weight:700;line-height:1.3;color:var(--txt);margin-bottom:4px}
 .mg-date{font-family:var(--fm);font-size:10px;color:var(--mut)}
 
-/* ── about section ── */
+/* ── big feature row ── */
+.feat-row{max-width:1240px;margin:0 auto;padding:0 24px 48px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.feat-card{position:relative;height:320px;overflow:hidden;cursor:pointer;border:1px solid var(--brd)}
+.feat-card img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.feat-card:hover img{transform:scale(1.04)}
+.feat-card-ovl{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,transparent 60%)}
+.feat-card-body{position:absolute;bottom:0;left:0;right:0;padding:20px}
+.feat-card-tag{font-family:var(--fm);font-size:9px;color:var(--pri);text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:6px}
+.feat-card-title{font-size:18px;font-weight:800;color:#fff;line-height:1.2;margin-bottom:6px}
+.feat-card-date{font-family:var(--fm);font-size:10px;color:rgba(255,255,255,.5)}
+
+/* ── about band ── */
 .about-band{background:var(--bg2);border-top:1px solid var(--brd);border-bottom:1px solid var(--brd);padding:48px 24px}
-.about-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:72px 1fr;gap:24px;align-items:start}
-.about-avatar{width:72px;height:72px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#000;flex-shrink:0;letter-spacing:-1px}
+.about-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:80px 1fr;gap:24px;align-items:start}
+.about-avatar{width:80px;height:80px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;color:#000;flex-shrink:0}
 .about-name{font-size:18px;font-weight:800;color:var(--txt);margin-bottom:2px}
-.about-role{font-family:var(--fm);font-size:12px;color:var(--pri);margin-bottom:14px;font-weight:600}
+.about-role{font-family:var(--fm);font-size:12px;color:var(--pri);margin-bottom:12px;font-weight:600}
 .about-bio{font-size:14px;color:var(--mut);line-height:1.85}
-.about-bio p+p{margin-top:12px}
-.about-link{display:inline-block;margin-top:16px;font-family:var(--fm);font-size:11px;font-weight:700;color:var(--pri);border:1px solid var(--pri);padding:6px 16px;border-radius:2px;text-transform:uppercase;letter-spacing:1px}
+.about-bio p+p{margin-top:10px}
+.about-link{display:inline-block;margin-top:14px;font-family:var(--fm);font-size:11px;font-weight:700;color:var(--pri);border:1px solid var(--pri);padding:6px 16px;border-radius:2px;text-transform:uppercase;letter-spacing:1px}
 
 /* ── newsletter band ── */
 .nl-band{background:linear-gradient(135deg,#081a10 0%,#031008 100%);border-top:2px solid var(--pri);padding:56px 24px;text-align:center}
-.nl-band h2{font-size:clamp(22px,3vw,32px);font-weight:800;color:var(--txt);margin-bottom:8px}
+.nl-band h2{font-size:clamp(22px,3vw,32px);font-weight:900;color:var(--txt);margin-bottom:8px}
 .nl-band p{font-size:15px;color:var(--mut);max-width:520px;margin:0 auto 28px;line-height:1.65}
-.nl-band-form{display:flex;gap:10px;max-width:460px;margin:0 auto}
-.nl-band-input{flex:1;background:rgba(255,255,255,.07);border:1px solid var(--brd);border-radius:3px;padding:12px 18px;color:var(--txt);font-size:14px;outline:none;transition:border-color .2s}
-.nl-band-input:focus{border-color:var(--pri)}
+.nl-band-form{display:flex;gap:0;max-width:460px;margin:0 auto;border:1px solid var(--brd)}
+.nl-band-input{flex:1;background:rgba(255,255,255,.07);border:none;padding:13px 18px;color:var(--txt);font-size:14px;outline:none}
 .nl-band-input::placeholder{color:var(--mut)}
-.nl-band-btn{background:var(--pri);color:#000;border:none;border-radius:3px;padding:12px 28px;font-size:14px;font-weight:800;cursor:pointer;white-space:nowrap;transition:background .2s}
+.nl-band-btn{background:var(--pri);color:#000;border:none;padding:13px 28px;font-size:14px;font-weight:800;cursor:pointer;white-space:nowrap;text-transform:uppercase;letter-spacing:1px}
 .nl-band-btn:hover{background:var(--pri2)}
 
 /* ── footer ── */
-.foot{background:#000;border-top:1px solid #111;padding:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.foot-copy{font-family:var(--fm);font-size:11px;color:#444}
+.foot{background:#000;border-top:1px solid #111;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.foot-copy{font-family:var(--fm);font-size:11px;color:#555}
 .foot-links{display:flex;gap:20px}
-.foot-links a{font-family:var(--fm);font-size:11px;color:#444;transition:color .2s}
+.foot-links a{font-family:var(--fm);font-size:11px;color:#555;transition:color .2s}
 .foot-links a:hover{color:var(--pri)}
 
 /* ── responsive ── */
-@media(max-width:900px){
+@media(max-width:960px){
   .layout{grid-template-columns:1fr}.side{display:none}
   .more-grid{grid-template-columns:repeat(2,1fr)}
-  .hero{height:380px}.hero-content{padding:24px 20px}
+  .feat-row{grid-template-columns:1fr}
+  .photo-strip{grid-template-columns:repeat(2,1fr)}
+  .vp-inner{flex-wrap:wrap}.vp-item{min-width:50%;border-bottom:1px solid var(--brd)}
+  .hero{height:420px}.hero-content{padding:28px 24px}
   .card{grid-template-columns:1fr}.card-img,.card-img-ph{width:100%;height:180px}
-  .nl-band-form{flex-direction:column}
+  .nl-band-form{flex-direction:column;border:none;gap:8px}.nl-band-input{border:1px solid var(--brd)}
 }
 @media(max-width:600px){
-  .more-grid{grid-template-columns:1fr}
-  .nav-links{display:none}
-  .tk-scroll{display:none}
-  .foot{flex-direction:column;text-align:center}
+  .more-grid{grid-template-columns:1fr}.photo-strip{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:none}.nav-date{display:none}
+  .feat-row{grid-template-columns:1fr}.vp-item{min-width:100%}
+  .foot{flex-direction:column;text-align:center;padding:20px 16px}
 }
 </style>
 </head>
 <body>
 
-<!-- ticker -->
+<!-- animated live ticker -->
 <div class="tk-bar">
   <div class="tk-label">Live</div>
-  <div class="tk-scroll" id="ticker">
-    <div class="tk-item"><span class="tk-sym">BTC</span><span id="tk-btc">$67,234</span><span class="tk-up" id="tk-btc-ch">▲ 2.31%</span></div>
-    <div class="tk-item"><span class="tk-sym">ETH</span><span id="tk-eth">$3,421</span><span class="tk-dn" id="tk-eth-ch">▼ 0.84%</span></div>
-    <div class="tk-item"><span class="tk-sym">SOL</span><span id="tk-sol">$142.50</span><span class="tk-up" id="tk-sol-ch">▲ 4.12%</span></div>
-    <div class="tk-item"><span class="tk-sym">BNB</span><span id="tk-bnb">$612</span><span class="tk-up" id="tk-bnb-ch">▲ 1.05%</span></div>
-    <div class="tk-item"><span class="tk-sym">FEAR/GREED</span><span style="color:var(--pri)" id="tk-fg">72 — Greed</span></div>
-    <div class="tk-item"><span class="tk-sym">DOMINANCE</span><span id="tk-dom">BTC 54.2%</span></div>
+  <div class="tk-viewport">
+    <div class="tk-track" id="tk-track">
+      <!-- set 1 (live) -->
+      <div class="tk-item"><span class="tk-sym">BTC</span><span id="tk-btc">$67,234</span><span class="tk-up" id="tk-btc-ch">▲ 2.31%</span></div>
+      <div class="tk-item"><span class="tk-sym">ETH</span><span id="tk-eth">$3,421</span><span class="tk-dn" id="tk-eth-ch">▼ 0.84%</span></div>
+      <div class="tk-item"><span class="tk-sym">SOL</span><span id="tk-sol">$142.50</span><span class="tk-up" id="tk-sol-ch">▲ 4.12%</span></div>
+      <div class="tk-item"><span class="tk-sym">BNB</span><span id="tk-bnb">$612</span><span class="tk-up" id="tk-bnb-ch">▲ 1.05%</span></div>
+      <div class="tk-item"><span class="tk-sym">FEAR/GREED</span><span style="color:var(--pri)" id="tk-fg">72 · Greed</span></div>
+      <div class="tk-item"><span class="tk-sym">BTC DOM</span><span id="tk-dom">54.2%</span></div>
+      <div class="tk-item"><span class="tk-sym">MARKET CAP</span><span id="tk-mcap">$2.41T</span></div>
+      <div class="tk-item"><span class="tk-sym">24H VOL</span><span>$98.4B</span></div>
+      <!-- set 2 (duplicate for seamless loop) -->
+      <div class="tk-item"><span class="tk-sym">BTC</span><span id="tk-btc2">$67,234</span><span class="tk-up" id="tk-btc-ch2">▲ 2.31%</span></div>
+      <div class="tk-item"><span class="tk-sym">ETH</span><span id="tk-eth2">$3,421</span><span class="tk-dn" id="tk-eth-ch2">▼ 0.84%</span></div>
+      <div class="tk-item"><span class="tk-sym">SOL</span><span id="tk-sol2">$142.50</span><span class="tk-up" id="tk-sol-ch2">▲ 4.12%</span></div>
+      <div class="tk-item"><span class="tk-sym">BNB</span><span id="tk-bnb2">$612</span><span class="tk-up" id="tk-bnb-ch2">▲ 1.05%</span></div>
+      <div class="tk-item"><span class="tk-sym">FEAR/GREED</span><span style="color:var(--pri)" id="tk-fg2">72 · Greed</span></div>
+      <div class="tk-item"><span class="tk-sym">BTC DOM</span><span id="tk-dom2">54.2%</span></div>
+      <div class="tk-item"><span class="tk-sym">MARKET CAP</span><span id="tk-mcap2">$2.41T</span></div>
+      <div class="tk-item"><span class="tk-sym">24H VOL</span><span>$98.4B</span></div>
+    </div>
   </div>
 </div>
 
@@ -163,7 +206,7 @@ img{display:block;max-width:100%}
       <a href="./">Latest</a>
       <a href="./">Analysis</a>
       <a href="./">On-Chain</a>
-      <a href="./">Algorithms</a>
+      <a href="./">Algo Signals</a>
       <a href="about.html">About</a>
     </div>
     <div class="nav-date" id="nav-date"></div>
@@ -171,37 +214,64 @@ img{display:block;max-width:100%}
 </nav>
 
 <!-- hero -->
-<div class="hero" id="hero-wrap">
-  <img id="pxl-img" src="https://picsum.photos/seed/319/1400/520" alt="Featured article" style="width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .8s">
+<div class="hero">
+  <img id="pxl-img" class="hero-img" src="https://picsum.photos/seed/257/1400/560" alt="CryptoPulse">
   <div class="hero-overlay"></div>
-  <div class="hero-content" id="hero-content">
+  <div class="hero-content">
     <div class="hero-tag">Crypto & Trading</div>
     <h1 id="hero-title">Algorithmic Trading Intelligence</h1>
     <p class="hero-desc" id="hero-desc">On-chain data, systematic signals, and algo trade breakdowns for serious crypto traders.</p>
-    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+    <div class="hero-actions">
       <div class="hero-meta" id="hero-meta"><span>By Marcus Chen</span></div>
       <a class="hero-read" id="hero-link" href="./">Read Analysis →</a>
     </div>
   </div>
 </div>
-<a id="pxl-cred" href="https://www.pexels.com" target="_blank" rel="noopener" style="display:none"></a>
 
-<!-- main layout -->
+<!-- value proposition strip -->
+<div class="vp-strip">
+  <div class="vp-inner">
+    <div class="vp-item">
+      <div class="vp-icon">📡</div>
+      <div class="vp-text"><strong>Live Market Data</strong><span>Real-time crypto prices updated every 90 seconds from live APIs</span></div>
+    </div>
+    <div class="vp-item">
+      <div class="vp-icon">🔗</div>
+      <div class="vp-text"><strong>On-Chain Signals</strong><span>Blockchain data analysis — whale moves, exchange flows, miner activity</span></div>
+    </div>
+    <div class="vp-item">
+      <div class="vp-icon">⚙️</div>
+      <div class="vp-text"><strong>Algo Trade Breakdowns</strong><span>How systematic strategies work, explained for traders who actually build them</span></div>
+    </div>
+    <div class="vp-item">
+      <div class="vp-icon">🎯</div>
+      <div class="vp-text"><strong>No Hype, No Ads</strong><span>Independent research — written by a quant trader, not a marketing team</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- main layout: articles + sidebar -->
 <div class="layout">
   <main>
     <div class="sec-head">Latest Analysis</div>
     <div id="main-feed">
-      <!-- loading skeleton -->
-      <div class="card" style="pointer-events:none;opacity:.4">
-        <div class="card-img-ph"></div>
-        <div class="card-body"><div class="card-tag">Loading…</div><div class="card-title" style="height:16px;background:var(--brd);border-radius:3px;width:80%"></div></div>
+      <div class="card" style="pointer-events:none;opacity:.35">
+        <img class="card-img" src="https://picsum.photos/seed/258/400/280" alt="">
+        <div class="card-body"><div class="card-tag">Crypto & Trading</div><div class="card-title">First deep-dive analysis publishing soon</div><div class="card-desc">Systematic signals, on-chain data, and algo trade breakdowns are on the way.</div></div>
+      </div>
+      <div class="card" style="pointer-events:none;opacity:.25">
+        <img class="card-img" src="https://picsum.photos/seed/259/400/280" alt="">
+        <div class="card-body"><div class="card-tag">Crypto & Trading</div><div class="card-title">Weekly alpha report in preparation</div><div class="card-desc">Evidence-based market analysis from a systematic perspective.</div></div>
       </div>
     </div>
   </main>
   <aside class="side">
     <div class="sec-head">Recent</div>
-    <div id="side-feed"></div>
-    <!-- newsletter -->
+    <div id="side-feed">
+      <div class="side-item" style="opacity:.3;pointer-events:none"><img class="side-img" src="https://picsum.photos/seed/260/160/104" alt=""><div><div class="side-title">Coming soon</div><div class="side-date">—</div></div></div>
+      <div class="side-item" style="opacity:.2;pointer-events:none"><img class="side-img" src="https://picsum.photos/seed/261/160/104" alt=""><div><div class="side-title">Coming soon</div><div class="side-date">—</div></div></div>
+      <div class="side-item" style="opacity:.15;pointer-events:none"><img class="side-img" src="https://picsum.photos/seed/262/160/104" alt=""><div><div class="side-title">Coming soon</div><div class="side-date">—</div></div></div>
+    </div>
     <div class="nl-box">
       <h3>The Weekly Alpha Report</h3>
       <p>Systematic signals, on-chain data, and trade setups - no filler, no hype.</p>
@@ -213,10 +283,45 @@ img{display:block;max-width:100%}
   </aside>
 </div>
 
+<!-- photo strip -->
+<div class="photo-strip">
+  <img id="ps-1" src="https://picsum.photos/seed/258/600/320" alt="Crypto markets" loading="lazy">
+  <img id="ps-2" src="https://picsum.photos/seed/259/600/320" alt="Algorithmic trading" loading="lazy">
+  <img id="ps-3" src="https://picsum.photos/seed/260/600/320" alt="On-chain data" loading="lazy">
+  <img id="ps-4" src="https://picsum.photos/seed/261/600/320" alt="Blockchain signals" loading="lazy">
+</div>
+
 <!-- more articles grid -->
 <div class="more">
   <div class="sec-head">More from CryptoPulse</div>
-  <div class="more-grid" id="more-grid"></div>
+  <div class="more-grid" id="more-grid">
+    <div class="mg-card" style="opacity:.3;pointer-events:none"><img class="mg-img" src="https://picsum.photos/seed/262/400/260" alt=""><div class="mg-body"><div class="mg-tag">Crypto & Trading</div><div class="mg-title">Analysis coming soon</div></div></div>
+    <div class="mg-card" style="opacity:.2;pointer-events:none"><img class="mg-img" src="https://picsum.photos/seed/263/400/260" alt=""><div class="mg-body"><div class="mg-tag">Crypto & Trading</div><div class="mg-title">Research in progress</div></div></div>
+    <div class="mg-card" style="opacity:.15;pointer-events:none"><img class="mg-img" src="https://picsum.photos/seed/264/400/260" alt=""><div class="mg-body"><div class="mg-tag">Crypto & Trading</div><div class="mg-title">Signal study underway</div></div></div>
+    <div class="mg-card" style="opacity:.1;pointer-events:none"><img class="mg-img" src="https://picsum.photos/seed/265/400/260" alt=""><div class="mg-body"><div class="mg-tag">Crypto & Trading</div><div class="mg-title">On-chain deep dive</div></div></div>
+  </div>
+</div>
+
+<!-- featured image pair -->
+<div class="feat-row" id="feat-row">
+  <div class="feat-card">
+    <img src="https://picsum.photos/seed/267/800/640" alt="Featured analysis" loading="lazy">
+    <div class="feat-card-ovl"></div>
+    <div class="feat-card-body">
+      <div class="feat-card-tag">Crypto & Trading</div>
+      <div class="feat-card-title">Systematic Market Intelligence</div>
+      <div class="feat-card-date">New analysis publishing soon</div>
+    </div>
+  </div>
+  <div class="feat-card">
+    <img src="https://picsum.photos/seed/268/800/640" alt="On-chain signals" loading="lazy">
+    <div class="feat-card-ovl"></div>
+    <div class="feat-card-body">
+      <div class="feat-card-tag">On-Chain Data</div>
+      <div class="feat-card-title">Reading the Blockchain for Trade Signals</div>
+      <div class="feat-card-date">Deep-dive coming soon</div>
+    </div>
+  </div>
 </div>
 
 <!-- about band -->
@@ -226,10 +331,7 @@ img{display:block;max-width:100%}
     <div>
       <div class="about-name">Marcus Chen</div>
       <div class="about-role">Quant Trader & Market Analyst</div>
-      <div class="about-bio">
-        <p>I spent eight years running automated crypto strategies at a prop desk in Vancouver before going independent. The edge I found wasn't in being smarter - it was in being more systematic.</p>
-        <p>This site is where I publish the analysis that takes longer than 280 characters to explain: on-chain signals, bot logic, and the setups I'm actually watching.</p>
-      </div>
+      <div class="about-bio"><p>I spent eight years running automated crypto strategies at a prop desk in Vancouver before going independent. The edge I found wasn't in being smarter - it was in being more systematic.</p><p>This site is where I publish the analysis that takes longer than 280 characters to explain: on-chain signals, bot logic, and the setups I'm actually watching.</p></div>
       <a href="about.html" class="about-link">Full bio →</a>
     </div>
   </div>
@@ -247,7 +349,6 @@ img{display:block;max-width:100%}
   </form>
 </div>
 
-<!-- footer -->
 <footer class="foot">
   <span class="foot-copy">© CryptoPulse · Evidence-based analysis for algorithmic traders and crypto researchers.</span>
   <div class="foot-links">
@@ -257,24 +358,27 @@ img{display:block;max-width:100%}
 </footer>
 
 <script>
-/* date */
-document.getElementById('nav-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'});
+document.getElementById('nav-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
 
-/* live crypto ticker via CoinGecko */
+/* ── live crypto ticker via CoinGecko ── */
 (async function(){
   var prices={btc:67234,eth:3421,sol:142.5,bnb:612};
   var changes={btc:2.31,eth:-0.84,sol:4.12,bnb:1.05};
-  function fmt(v,d){return v>=1000?'$'+v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','):'$'+v.toFixed(d||2);}
+  function fmt(v){return v>=1000?'$'+v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','):'$'+v.toFixed(2);}
   function upd(){
     ['btc','eth','sol','bnb'].forEach(function(c){
-      var pe=document.getElementById('tk-'+c);
-      var ce=document.getElementById('tk-'+c+'-ch');
       var d=changes[c]>=0;
-      if(pe)pe.textContent=fmt(prices[c],c==='sol'?2:0);
-      if(ce){ce.textContent=(d?'▲ ':'▼ ')+Math.abs(changes[c]).toFixed(2)+'%';ce.className=d?'tk-up':'tk-dn';}
+      var pv=fmt(prices[c]);
+      var cv=(d?'▲ ':'▼ ')+Math.abs(changes[c]).toFixed(2)+'%';
+      var cls=d?'tk-up':'tk-dn';
+      ['','2'].forEach(function(sfx){
+        var pe=document.getElementById('tk-'+c+sfx);
+        var ce=document.getElementById('tk-'+c+'-ch'+sfx);
+        if(pe)pe.textContent=pv;
+        if(ce){ce.textContent=cv;ce.className=cls;}
+      });
     });
   }
-  /* fetch live prices */
   try{
     var r=await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin&vs_currencies=usd&include_24hr_change=true',{cache:'no-store'});
     var d=await r.json();
@@ -284,104 +388,70 @@ document.getElementById('nav-date').textContent=new Date().toLocaleDateString('e
     if(d.binancecoin){prices.bnb=d.binancecoin.usd;changes.bnb=d.binancecoin.usd_24h_change||0;}
     upd();
   }catch(e){upd();}
-  /* micro-fluctuations to keep ticker alive */
-  setInterval(function(){
-    ['btc','eth','sol','bnb'].forEach(function(c){prices[c]*=(1+(Math.random()-.5)*.001);});
-    upd();
-  },4000);
-  /* refresh live data every 90 seconds */
+  setInterval(function(){['btc','eth','sol','bnb'].forEach(function(c){prices[c]*=(1+(Math.random()-.5)*.001);});upd();},4000);
   setInterval(async function(){
-    try{
-      var r2=await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin&vs_currencies=usd&include_24hr_change=true',{cache:'no-store'});
-      var d2=await r2.json();
-      if(d2.bitcoin){prices.btc=d2.bitcoin.usd;changes.btc=d2.bitcoin.usd_24h_change||0;}
-      if(d2.ethereum){prices.eth=d2.ethereum.usd;changes.eth=d2.ethereum.usd_24h_change||0;}
-      if(d2.solana){prices.sol=d2.solana.usd;changes.sol=d2.solana.usd_24h_change||0;}
-      if(d2.binancecoin){prices.bnb=d2.binancecoin.usd;changes.bnb=d2.binancecoin.usd_24h_change||0;}
-      upd();
-    }catch(e){}
+    try{var r2=await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin&vs_currencies=usd&include_24hr_change=true',{cache:'no-store'});var d2=await r2.json();
+    if(d2.bitcoin){prices.btc=d2.bitcoin.usd;changes.btc=d2.bitcoin.usd_24h_change||0;}
+    if(d2.ethereum){prices.eth=d2.ethereum.usd;changes.eth=d2.ethereum.usd_24h_change||0;}
+    if(d2.solana){prices.sol=d2.solana.usd;changes.sol=d2.solana.usd_24h_change||0;}
+    if(d2.binancecoin){prices.bnb=d2.binancecoin.usd;changes.bnb=d2.binancecoin.usd_24h_change||0;}
+    upd();}catch(e){}
   },90000);
 })();
 
-/* load articles */
+/* ── load articles (replaces placeholders when ready) ── */
 async function loadPosts(){
   try{
-    const r=await fetch('./articles.json');
-    if(!r.ok)throw 0;
-    const posts=await r.json();
-    if(!posts||!posts.length)throw 0;
-
-    /* hero — use first article */
-    const h=posts[0];
-    if(h.image){
-      var hi=document.getElementById('pxl-img');
-      if(hi){hi.onload=function(){hi.style.opacity='1';};hi.src=h.image;}
-    }
-    var ht=document.getElementById('hero-title');
-    var hd=document.getElementById('hero-desc');
-    var hl=document.getElementById('hero-link');
-    var hm=document.getElementById('hero-meta');
+    var r=await fetch('./articles.json');if(!r.ok)throw 0;
+    var posts=await r.json();if(!posts||!posts.length)throw 0;
+    /* hero */
+    var h=posts[0];
+    if(h.image){var hi=document.getElementById('pxl-img');if(hi){hi.onload=function(){hi.style.opacity='1';};hi.src=h.image;}}
+    var ht=document.getElementById('hero-title'),hd=document.getElementById('hero-desc'),hl=document.getElementById('hero-link'),hm=document.getElementById('hero-meta');
     if(ht)ht.textContent=h.title;
     if(hd)hd.textContent=h.meta_description||'';
-    if(hl){hl.href='./'+h.slug+'/';hl.textContent='Read Analysis →';}
+    if(hl){hl.href='./'+h.slug+'/';}
     if(hm)hm.innerHTML='<span>By '+(h.author||'Marcus Chen')+'</span><span>'+(h.date_iso||'')+'</span>';
-
-    /* main feed — articles 2-5 */
+    /* main feed */
     var mf=document.getElementById('main-feed');
     if(mf)mf.innerHTML=posts.slice(1,5).map(function(p){
-      return '<a href="./'+p.slug+'/" style="display:block;text-decoration:none;color:inherit">'+
-        '<div class="card">'+
-        (p.image?'<img class="card-img" src="'+p.image+'" alt="'+p.title+'" loading="lazy">'
-                :'<div class="card-img-ph"></div>')+
-        '<div class="card-body">'+
-        '<div class="card-tag">Crypto & Trading</div>'+
-        '<div class="card-title">'+p.title+'</div>'+
-        '<div class="card-desc">'+(p.meta_description||'').slice(0,120)+'…</div>'+
-        '<div class="card-meta">'+p.date_iso+(p.author?' · '+p.author:'')+'</div>'+
-        '</div></div></a>';
+      return '<a href="./'+p.slug+'/" style="display:block"><div class="card">'+
+        (p.image?'<img class="card-img" src="'+p.image+'" alt="'+p.title+'" loading="lazy">':'<img class="card-img" src="https://picsum.photos/seed/'+(Math.abs(p.slug.charCodeAt(0)*31)%999+1)+'/400/280" alt="" loading="lazy">')+
+        '<div class="card-body"><div class="card-tag">Crypto & Trading</div><div class="card-title">'+p.title+'</div><div class="card-desc">'+(p.meta_description||'').slice(0,120)+'</div><div class="card-meta">'+(p.date_iso||'')+(p.author?' · '+p.author:'')+'</div></div></div></a>';
     }).join('');
-
-    /* sidebar — articles 6-10 */
+    /* sidebar */
     var sf=document.getElementById('side-feed');
     if(sf)sf.innerHTML=posts.slice(5,10).map(function(p){
-      return '<a href="./'+p.slug+'/" style="display:block;text-decoration:none;color:inherit">'+
-        '<div class="side-item">'+
-        (p.image?'<img class="side-img" src="'+p.image+'" alt="'+p.title+'" loading="lazy">'
-                :'<div class="side-img-ph"></div>')+
-        '<div><div class="side-title">'+p.title+'</div>'+
-        '<div class="side-date">'+(p.date_iso||'')+'</div></div>'+
-        '</div></a>';
+      return '<a href="./'+p.slug+'/" style="display:block"><div class="side-item">'+
+        (p.image?'<img class="side-img" src="'+p.image+'" alt="'+p.title+'" loading="lazy">':'<img class="side-img" src="https://picsum.photos/seed/'+(Math.abs(p.slug.charCodeAt(0)*17)%999+1)+'/160/104" alt="" loading="lazy">')+
+        '<div><div class="side-title">'+p.title+'</div><div class="side-date">'+(p.date_iso||'')+'</div></div></div></a>';
     }).join('');
-
-    /* more grid — articles 11-14 */
+    /* more grid */
     var mg=document.getElementById('more-grid');
     if(mg)mg.innerHTML=posts.slice(10,14).map(function(p){
-      return '<a href="./'+p.slug+'/" style="display:block;text-decoration:none;color:inherit">'+
-        '<div class="mg-card">'+
-        (p.image?'<img class="mg-img" src="'+p.image+'" alt="'+p.title+'" loading="lazy">'
-                :'<div class="mg-img-ph"></div>')+
-        '<div class="mg-body">'+
-        '<div class="mg-tag">Crypto & Trading</div>'+
-        '<div class="mg-title">'+p.title+'</div>'+
-        '<div class="mg-date">'+(p.date_iso||'')+'</div>'+
-        '</div></div></a>';
+      return '<a href="./'+p.slug+'/" style="display:block"><div class="mg-card">'+
+        (p.image?'<img class="mg-img" src="'+p.image+'" alt="'+p.title+'" loading="lazy">':'<img class="mg-img" src="https://picsum.photos/seed/'+(Math.abs(p.slug.charCodeAt(0)*53)%999+1)+'/400/260" alt="" loading="lazy">')+
+        '<div class="mg-body"><div class="mg-tag">Crypto & Trading</div><div class="mg-title">'+p.title+'</div><div class="mg-date">'+(p.date_iso||'')+'</div></div></div></a>';
     }).join('');
-
-    if(!posts[10]){
-      var mg2=document.getElementById('more-grid');
-      if(mg2)mg2.parentElement.style.display='none';
+    /* update photo strip with article images */
+    ['ps-1','ps-2','ps-3','ps-4'].forEach(function(id,i){
+      var el=document.getElementById(id);
+      if(el&&posts[i]&&posts[i].image){el.src=posts[i].image;}
+    });
+    /* featured row */
+    if(posts[0]&&posts[1]){
+      var fr=document.getElementById('feat-row');
+      if(fr)fr.innerHTML=[posts[0],posts[1]].map(function(p){
+        var img=p.image?p.image:'https://picsum.photos/seed/'+(Math.abs(p.slug.charCodeAt(0)*41)%999+100)+'/800/640';
+        return '<a href="./'+p.slug+'/" style="display:block"><div class="feat-card"><img src="'+img+'" alt="'+p.title+'" loading="lazy"><div class="feat-card-ovl"></div><div class="feat-card-body"><div class="feat-card-tag">Crypto & Trading</div><div class="feat-card-title">'+p.title+'</div><div class="feat-card-date">'+(p.date_iso||'')+'</div></div></div></a>';
+      }).join('');
     }
-
-  }catch(e){
-    /* empty state — still shows full layout */
-    var mf2=document.getElementById('main-feed');
-    if(mf2)mf2.innerHTML='<div class="card"><div class="card-img-ph"></div><div class="card-body"><div class="card-tag">Crypto & Trading</div><div class="card-title" style="font-size:18px">First analysis publishing soon</div><div class="card-desc">The bot is warming up. Deep algorithmic trading research is on the way.</div></div></div>';
-  }
+  }catch(e){/* keep placeholders */}
 }
 
 function nlSub(id,e){
   e.preventDefault();
-  document.getElementById(id).innerHTML='<p style="color:var(--pri);font-family:var(--fm);font-size:13px;font-weight:700;padding:10px 0">✓ You're on the list. Welcome.</p>';
+  document.getElementById(id).innerHTML='<p style="color:var(--pri);font-family:var(--fm);font-size:13px;font-weight:700;padding:10px 0">You're on the list. Welcome.</p>';
 }
 
 loadPosts();
@@ -399,10 +469,10 @@ loadPosts();
     fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('cryptocurrency trading charts financial data')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
       .then(function(r){return r.json();}).then(function(d){
         if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
-        else{showImg('https://picsum.photos/seed/319/1400/400','');}
-      }).catch(function(){showImg('https://picsum.photos/seed/319/1400/400','');});
+        else{showImg('https://picsum.photos/seed/257/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/257/1400/400','');});
   }else{
-    showImg('https://picsum.photos/seed/319/1400/400','');
+    showImg('https://picsum.photos/seed/257/1400/400','');
   }
 })();
 </script>
