@@ -291,7 +291,7 @@ img{display:block;max-width:100%}
 <section class="hero-section">
   <div class="hero-wrap">
     <a href="./" class="hero-feat" id="hero-feat-link">
-      <img id="pxl-img" class="hero-feat-img" src="https://picsum.photos/seed/978/1200/600" alt="CryptoPulse hero">
+      <img id="pxl-img" class="hero-feat-img" src="https://picsum.photos/seed/993/1200/600" alt="CryptoPulse hero">
       <div class="hero-feat-ovl"></div>
       <div class="hero-feat-body">
         <div class="hero-badge">Breaking</div>
@@ -637,10 +637,10 @@ loadPosts();
     fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('cryptocurrency trading charts financial data')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
       .then(function(r){return r.json();}).then(function(d){
         if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
-        else{showImg('https://picsum.photos/seed/978/1400/400','');}
-      }).catch(function(){showImg('https://picsum.photos/seed/978/1400/400','');});
+        else{showImg('https://picsum.photos/seed/993/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/993/1400/400','');});
   }else{
-    showImg('https://picsum.photos/seed/978/1400/400','');
+    showImg('https://picsum.photos/seed/993/1400/400','');
   }
 })();
 </script>
