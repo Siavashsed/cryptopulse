@@ -15,14 +15,27 @@
 body{background:#050908;color:#c0ddc8;font-family:'Space Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.7;min-height:100vh;overflow-x:hidden}
 a{color:var(--pri);text-decoration:none}
 
+/* TICKER */
+.tk-bar{background:#020d06;border-bottom:1px solid #0d2b18;height:36px;display:flex;align-items:center;overflow:hidden}
+.tk-label{font-family:var(--fm);font-size:9px;font-weight:700;color:#020d06;background:var(--pri);padding:0 14px;height:100%;display:flex;align-items:center;flex-shrink:0;letter-spacing:2px;text-transform:uppercase}
+.tk-vp{flex:1;overflow:hidden}
+.tk-tr{display:flex;white-space:nowrap;animation:ticker-scroll 40s linear infinite}
+@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tk-it{font-family:var(--fm);font-size:11px;color:#4a7a5a;display:inline-flex;gap:7px;align-items:center;padding:0 22px;border-right:1px solid #0d2b18}
+.tk-sy{color:#a0cfb0;font-weight:700}
+.tk-up{color:var(--pri);font-weight:700}
+.tk-dn{color:#ff5252;font-weight:700}
 /* NAV */
 .nav{background:#020d06;border-bottom:1px solid #0d2b18;position:sticky;top:0;z-index:99}
-.nav-in{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:56px;gap:0}
-.nav-logo{font-size:18px;font-weight:700;color:var(--pri);margin-right:32px;flex-shrink:0}
+.nav-in{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:58px;gap:0}
+.nav-logo{font-size:20px;font-weight:700;color:var(--pri);margin-right:40px;flex-shrink:0;letter-spacing:-0.5px;text-decoration:none}
+.nav-logo span{font-family:var(--fm);font-size:10px;color:#2a5a38;font-weight:400;margin-left:6px;letter-spacing:1px;text-transform:uppercase}
 .nav-links{display:flex;gap:0;height:100%;flex:1}
-.nav-links a{font-family:var(--fm);font-size:11px;font-weight:700;color:#2a5a38;text-transform:uppercase;letter-spacing:1px;padding:0 14px;height:100%;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .2s;margin-bottom:-1px}
+.nav-links a{font-family:var(--fm);font-size:11px;font-weight:700;color:#3a6a48;text-transform:uppercase;letter-spacing:1px;padding:0 14px;height:100%;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .2s;margin-bottom:-1px;text-decoration:none}
 .nav-links a:hover,.nav-links a.active{color:var(--pri);border-bottom-color:var(--pri)}
-.nav-sub{font-family:var(--fm);font-size:10px;font-weight:700;color:#020d06;background:var(--pri);padding:6px 14px;border-radius:2px;text-transform:uppercase;letter-spacing:1px;margin-left:auto;flex-shrink:0}
+.nav-right{display:flex;align-items:center;gap:14px;flex-shrink:0;margin-left:auto}
+.nav-date-abt{font-family:var(--fm);font-size:10px;color:#2a5a38}
+.nav-subscribe{font-family:var(--fm);font-size:10px;font-weight:700;color:#020d06;background:var(--pri);padding:6px 14px;border-radius:2px;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;text-decoration:none}
 
 /* AUTHOR HERO */
 .hero{background:#010a04;border-bottom:1px solid #0d2b18;padding:0}
@@ -133,16 +146,38 @@ a{color:var(--pri);text-decoration:none}
 </head>
 <body>
 
+<!-- TICKER -->
+<div class="tk-bar">
+  <div class="tk-label">LIVE</div>
+  <div class="tk-vp">
+    <div class="tk-tr">
+      <div class="tk-it"><span class="tk-sy">BTC</span><span id="abt-btc">$67,234</span><span class="tk-up">▲ 2.31%</span></div>
+      <div class="tk-it"><span class="tk-sy">ETH</span><span id="abt-eth">$3,421</span><span class="tk-dn">▼ 0.84%</span></div>
+      <div class="tk-it"><span class="tk-sy">SOL</span><span>$142.50</span><span class="tk-up">▲ 4.12%</span></div>
+      <div class="tk-it"><span class="tk-sy">BNB</span><span>$612</span><span class="tk-up">▲ 1.05%</span></div>
+      <div class="tk-it"><span class="tk-sy">FEAR/GREED</span><span class="tk-up">72 · Greed</span></div>
+      <div class="tk-it"><span class="tk-sy">BTC DOM</span><span>54.2%</span></div>
+      <div class="tk-it"><span class="tk-sy">BTC</span><span>$67,234</span><span class="tk-up">▲ 2.31%</span></div>
+      <div class="tk-it"><span class="tk-sy">ETH</span><span>$3,421</span><span class="tk-dn">▼ 0.84%</span></div>
+      <div class="tk-it"><span class="tk-sy">SOL</span><span>$142.50</span><span class="tk-up">▲ 4.12%</span></div>
+      <div class="tk-it"><span class="tk-sy">FEAR/GREED</span><span class="tk-up">72 · Greed</span></div>
+    </div>
+  </div>
+</div>
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-in">
-    <a href="./" class="nav-logo">CryptoPulse</a>
+    <a href="./" class="nav-logo">CryptoPulse<span>Algorithmic Trading Intelligence</span></a>
     <div class="nav-links">
-      <a href="./">Home</a>
+      <a href="./">Latest</a>
       <a href="./">Analysis</a>
+      <a href="./">On-Chain</a>
       <a href="about.html" class="active">About</a>
     </div>
-    <a href="#subscribe" class="nav-sub">Subscribe Free</a>
+    <div class="nav-right">
+      <div class="nav-date-abt" id="abt-nav-date"></div>
+      <a href="#subscribe" class="nav-subscribe">Subscribe Free</a>
+    </div>
   </div>
 </nav>
 
@@ -327,9 +362,9 @@ a{color:var(--pri);text-decoration:none}
       <!-- Recent Posts -->
       <div class="sec-kicker" style="margin-top:32px">Recent Analysis</div>
       <div id="recent-posts">
-        <div class="recent-post" style="opacity:.35;pointer-events:none"><img class="recent-img" src="https://picsum.photos/seed/919/160/112" alt="" loading="lazy"><div><div class="recent-title">First analysis publishing soon</div><div class="recent-meta">Coming soon</div></div></div>
-        <div class="recent-post" style="opacity:.2;pointer-events:none"><img class="recent-img" src="https://picsum.photos/seed/920/160/112" alt="" loading="lazy"><div><div class="recent-title">Research in preparation</div><div class="recent-meta">Coming soon</div></div></div>
-        <div class="recent-post" style="opacity:.1;pointer-events:none"><img class="recent-img" src="https://picsum.photos/seed/921/160/112" alt="" loading="lazy"><div><div class="recent-title">Signal study underway</div><div class="recent-meta">Coming soon</div></div></div>
+        <div class="recent-post" style="opacity:.35;pointer-events:none"><img class="recent-img" src="https://picsum.photos/seed/481/160/112" alt="" loading="lazy"><div><div class="recent-title">First analysis publishing soon</div><div class="recent-meta">Coming soon</div></div></div>
+        <div class="recent-post" style="opacity:.2;pointer-events:none"><img class="recent-img" src="https://picsum.photos/seed/482/160/112" alt="" loading="lazy"><div><div class="recent-title">Research in preparation</div><div class="recent-meta">Coming soon</div></div></div>
+        <div class="recent-post" style="opacity:.1;pointer-events:none"><img class="recent-img" src="https://picsum.photos/seed/483/160/112" alt="" loading="lazy"><div><div class="recent-title">Signal study underway</div><div class="recent-meta">Coming soon</div></div></div>
       </div>
 
     </aside><!-- /SIDEBAR -->
@@ -353,12 +388,23 @@ a{color:var(--pri);text-decoration:none}
 </footer>
 
 <script>
+var abtDate=document.getElementById('abt-nav-date');
+if(abtDate)abtDate.textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+/* live price ticker on about page */
+(async function(){
+  try{
+    var d=await (await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd&include_24hr_change=true',{cache:'no-store'})).json();
+    var bb=document.getElementById('abt-btc'),eb=document.getElementById('abt-eth');
+    function fmt(v){return v>=1000?'$'+v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','):'$'+v.toFixed(2);}
+    if(bb&&d.bitcoin)bb.textContent=fmt(d.bitcoin.usd);
+    if(eb&&d.ethereum)eb.textContent=fmt(d.ethereum.usd);
+  }catch(e){}
+})();
 function nlSub(id,e){
   e.preventDefault();
   var f=document.getElementById(id);
   if(f)f.innerHTML='<p style="color:var(--pri);font-family:var(--fm);font-size:13px;font-weight:700;padding:10px 0">✓ Subscribed. Welcome to the list.</p>';
 }
-/* load recent posts from articles.json */
 (async function(){
   try{
     var r=await fetch('./articles.json');if(!r.ok)throw 0;
@@ -384,10 +430,10 @@ function nlSub(id,e){
     fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('cryptocurrency trading charts financial data')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
       .then(function(r){return r.json();}).then(function(d){
         if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
-        else{showImg('https://picsum.photos/seed/918/1400/400','');}
-      }).catch(function(){showImg('https://picsum.photos/seed/918/1400/400','');});
+        else{showImg('https://picsum.photos/seed/480/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/480/1400/400','');});
   }else{
-    showImg('https://picsum.photos/seed/918/1400/400','');
+    showImg('https://picsum.photos/seed/480/1400/400','');
   }
 })();
 </script>
