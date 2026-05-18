@@ -291,7 +291,7 @@ img{display:block;max-width:100%}
 <section class="hero-section">
   <div class="hero-wrap">
     <a href="./" class="hero-feat" id="hero-feat-link">
-      <img id="pxl-img" class="hero-feat-img" src="https://picsum.photos/seed/270/1200/600" alt="CryptoPulse hero">
+      <img id="pxl-img" class="hero-feat-img" src="https://picsum.photos/seed/918/1200/600" alt="CryptoPulse hero">
       <div class="hero-feat-ovl"></div>
       <div class="hero-feat-body">
         <div class="hero-badge">Breaking</div>
@@ -299,7 +299,7 @@ img{display:block;max-width:100%}
         <p class="hero-desc" id="hero-desc">On-chain data, systematic signals, and algo trade breakdowns for serious crypto traders.</p>
         <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
           <div class="hero-byline" id="hero-byline"><span>By Marcus Chen</span><span id="hero-date-d"></span></div>
-          <a class="hero-cta" id="hero-cta" href="./">Read Analysis →</a>
+          <span class="hero-cta" id="hero-cta">Read Analysis →</span>
         </div>
       </div>
     </a>
@@ -545,7 +545,6 @@ async function loadPosts(){
     if(ht)ht.textContent=h0.title;
     if(hd)hd.textContent=h0.meta_description||'';
     if(hl)hl.href='./'+h0.slug+'/';
-    var hcta=document.getElementById('hero-cta');if(hcta)hcta.href='./'+h0.slug+'/';
     if(hb)hb.innerHTML='<span>By '+(h0.author||'Marcus Chen')+'</span><span>'+(h0.date_iso||'')+'</span>';
     /* sub-stories — posts[1..3] */
     if(posts.length>1){
@@ -608,10 +607,10 @@ loadPosts();
     fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('cryptocurrency trading charts financial data')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
       .then(function(r){return r.json();}).then(function(d){
         if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
-        else{showImg('https://picsum.photos/seed/270/1400/400','');}
-      }).catch(function(){showImg('https://picsum.photos/seed/270/1400/400','');});
+        else{showImg('https://picsum.photos/seed/918/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/918/1400/400','');});
   }else{
-    showImg('https://picsum.photos/seed/270/1400/400','');
+    showImg('https://picsum.photos/seed/918/1400/400','');
   }
 })();
 </script>
