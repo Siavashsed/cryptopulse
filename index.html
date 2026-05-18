@@ -1,98 +1,618 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>siavashsed.github.io/cryptopulse — Crypto & Algorithmic Trading</title>
-<meta name="description" content="Expert insights on crypto & algorithmic trading">
-
-
-
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CryptoPulse: Algorithmic Trading Intelligence</title>
+<meta name="description" content="On-chain data, systematic signals, and algo trade breakdowns for serious crypto traders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;background:#0d0d0d;color:#e8e8e8;line-height:1.65;font-size:16px}
-a{color:#6c63ff;text-decoration:none}
-a:hover{color:#9d97ff}
-img{max-width:100%;display:block;height:auto}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{  --bg:#050908;--bg2:#081009;--sur:#0c1710;
+  --pri:#00e676;--pri2:#00b85a;
+  --txt:#d8f0e0;--mut:#5a8468;--brd:#122216;
+  --fh:system-ui,sans-serif;--fb:system-ui,sans-serif;--fm:'Courier New',Courier,monospace;--fh:'Space Grotesk',system-ui,sans-serif;--fm:'Space Mono',monospace;}
+body{background:var(--bg);color:var(--txt);font-family:'Space Grotesk',system-ui,sans-serif;font-size:15px;line-height:1.65;min-height:100vh;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
 
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-.top-bar{background:#141414;border-bottom:1px solid #252525;padding:0}
-.logo{font-size:22px;font-weight:800;color:#6c63ff}
-.split{display:grid;grid-template-columns:2fr 1fr;gap:36px;margin:40px 0 48px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
-@media(max-width:780px){.split{grid-template-columns:1fr}}
+/* ── ticker ── */
+.tk-bar{background:#020d06;border-bottom:1px solid #0d2b18;height:38px;display:flex;align-items:center;overflow:hidden;width:100%}
+.tk-label{font-family:var(--fm);font-size:9px;font-weight:700;color:#020d06;background:var(--pri);padding:0 14px;height:100%;display:flex;align-items:center;flex-shrink:0;letter-spacing:2px;text-transform:uppercase;gap:5px}
+.tk-dot{width:7px;height:7px;border-radius:50%;background:#020d06;animation:blink 1.2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.tk-viewport{flex:1;overflow:hidden}
+.tk-track{display:flex;white-space:nowrap;animation:ticker-scroll 40s linear infinite}
+.tk-track:hover{animation-play-state:paused}
+@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tk-item{font-family:var(--fm);font-size:11px;color:#4a7a5a;display:inline-flex;gap:7px;align-items:center;padding:0 22px;border-right:1px solid #0d2b18}
+.tk-sym{color:#a0cfb0;font-weight:700;letter-spacing:.5px}
+.tk-up{color:var(--pri);font-weight:700}
+.tk-dn{color:#ff5252;font-weight:700}
+
+/* ── nav ── */
+.nav{background:#020d06;border-bottom:1px solid #0d2b18;position:sticky;top:0;z-index:100}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:58px;gap:0}
+.nav-logo{font-size:20px;font-weight:700;color:var(--pri);margin-right:40px;flex-shrink:0;letter-spacing:-0.5px}
+.nav-logo span{font-family:var(--fm);font-size:10px;color:#2a5a38;font-weight:400;margin-left:6px;letter-spacing:1px;text-transform:uppercase}
+.nav-links{display:flex;gap:0;height:100%;flex:1}
+.nav-links a{font-family:var(--fm);font-size:11px;font-weight:700;color:#3a6a48;text-transform:uppercase;letter-spacing:1px;padding:0 14px;height:100%;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .2s;margin-bottom:-1px}
+.nav-links a:hover,.nav-links a.active{color:var(--pri);border-bottom-color:var(--pri)}
+.nav-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.nav-date{font-family:var(--fm);font-size:10px;color:#2a5a38}
+.nav-subscribe{font-family:var(--fm);font-size:10px;font-weight:700;color:#020d06;background:var(--pri);padding:6px 14px;border-radius:2px;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.nav-burger span{width:22px;height:2px;background:var(--pri);border-radius:1px;display:block;transition:all .3s}
+.nav-mobile{display:none;position:absolute;top:100%;left:0;right:0;background:#020d06;border-bottom:1px solid #0d2b18;flex-direction:column;padding:12px 0;z-index:99}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-family:var(--fm);font-size:12px;font-weight:700;color:#3a6a48;text-transform:uppercase;letter-spacing:1px;padding:12px 24px;border-bottom:1px solid #0a1e10;display:block}
+.nav-mobile a:last-child{border-bottom:none}
+.nav-mobile a:hover{color:var(--pri);background:#030f07}
+
+/* ── SECTION 1: HERO GRID ── */
+.hero-section{background:#020d06;border-bottom:1px solid #0d2b18}
+.hero-wrap{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;min-height:520px}
+.hero-feat{position:relative;overflow:hidden;display:block}
+.hero-feat-img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity 1s;min-height:520px}
+.hero-feat-ovl{position:absolute;inset:0;background:linear-gradient(to top,rgba(1,8,4,.98) 0%,rgba(1,8,4,.6) 45%,rgba(1,8,4,.1) 100%)}
+.hero-feat-body{position:absolute;bottom:0;left:0;right:0;padding:36px 40px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--fm);font-size:9px;font-weight:700;color:#020d06;background:var(--pri);padding:4px 10px;border-radius:1px;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px}
+.hero-h1{font-size:clamp(22px,3.5vw,42px);font-weight:700;line-height:1.1;color:#e8f5ec;margin-bottom:12px;letter-spacing:-0.5px}
+.hero-desc{font-size:14px;color:#5a8a6a;line-height:1.7;margin-bottom:20px;max-width:560px}
+.hero-byline{font-family:var(--fm);font-size:10px;color:#2a5a38;display:flex;align-items:center;gap:12px}
+.hero-cta{font-family:var(--fm);font-size:11px;font-weight:700;color:#020d06;background:var(--pri);padding:10px 20px;border-radius:2px;text-transform:uppercase;letter-spacing:1px;flex-shrink:0;transition:opacity .2s}
+.hero-cta:hover{opacity:.85}
+
+/* sub-stories column */
+.hero-sub-col{display:flex;flex-direction:column;border-left:1px solid #0d2b18;background:#030f07}
+.sub-story{display:grid;grid-template-columns:110px 1fr;gap:0;border-bottom:1px solid #0d2b18;flex:1;min-height:0;overflow:hidden;transition:background .2s;cursor:pointer}
+.sub-story:last-child{border-bottom:none}
+.sub-story:hover{background:#050f08}
+.sub-story-img{width:110px;height:100%;min-height:120px;object-fit:cover;display:block}
+.sub-story-body{padding:16px 18px;display:flex;flex-direction:column;gap:5px;justify-content:center}
+.sub-badge{font-family:var(--fm);font-size:8px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:2px}
+.sub-title{font-size:13px;font-weight:600;line-height:1.35;color:#c0ddc8;transition:color .2s}
+.sub-story:hover .sub-title{color:var(--pri)}
+.sub-date{font-family:var(--fm);font-size:10px;color:#2a5a38;margin-top:3px}
+
+/* ── SECTION 2: VALUE PROPS ── */
+.vp-section{background:#030f07;border-bottom:1px solid #0d2b18}
+.vp-wrap{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.vp-item{padding:24px 28px;border-right:1px solid #0d2b18;display:flex;align-items:flex-start;gap:14px}
+.vp-item:last-child{border-right:none}
+.vp-icon{width:40px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:#010a04;border:1px solid #0d2b18;border-radius:6px;color:var(--pri)}
+/* chart-grid placeholder — used for all image placeholders */
+.img-ph{background:repeating-linear-gradient(0deg,transparent,transparent 15px,rgba(0,230,118,.04) 16px),repeating-linear-gradient(90deg,transparent,transparent 15px,rgba(0,230,118,.04) 16px),linear-gradient(160deg,#010a04 0%,#061a0c 100%);position:relative;overflow:hidden;flex-shrink:0}
+.img-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .5s}
+.img-ph img.loaded{opacity:1}
+.img-ph::after{content:'';position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(to top,rgba(1,10,4,.8),transparent);pointer-events:none}
+/* chart-line SVG decoration inside placeholder */
+.img-ph-line{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.12}
+.vp-label{font-size:13px;font-weight:700;color:#c0ddc8;margin-bottom:4px}
+.vp-desc{font-family:var(--fm);font-size:11px;color:#2a5a38;line-height:1.55}
+
+/* ── SECTION 3: LATEST ANALYSIS ── */
+.analysis-section{max-width:1280px;margin:0 auto;padding:48px 20px;display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+.sec-label{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:3px;padding-bottom:12px;border-bottom:1px solid #0d2b18;margin-bottom:24px;display:flex;align-items:center;gap:8px}
+.sec-label::before{content:'//';color:#1a4a2a}
+.art-card{display:grid;grid-template-columns:180px 1fr;border:1px solid #0d2b18;background:#030f07;margin-bottom:1px;overflow:hidden;transition:border-color .2s;cursor:pointer}
+.art-card:hover{border-color:var(--pri);z-index:1;position:relative}
+.art-card-img{width:180px;height:130px;object-fit:cover;display:block}
+.art-card-body{padding:16px 20px;display:flex;flex-direction:column;gap:5px}
+.art-card-tag{font-family:var(--fm);font-size:9px;color:var(--pri);text-transform:uppercase;letter-spacing:2px;font-weight:700}
+.art-card-title{font-size:15px;font-weight:700;line-height:1.3;color:#c0ddc8;transition:color .2s}
+.art-card:hover .art-card-title{color:var(--pri)}
+.art-card-desc{font-size:12px;color:#3a6a48;line-height:1.65;flex:1}
+.art-card-meta{font-family:var(--fm);font-size:10px;color:#2a5a38;margin-top:3px}
+.art-card-read{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);margin-top:4px}
+
+/* sidebar */
+.side-label{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:3px;padding-bottom:12px;border-bottom:1px solid #0d2b18;margin-bottom:0}
+.side-label::before{content:'//';margin-right:8px;color:#1a4a2a}
+.side-item{padding:14px 0;border-bottom:1px solid #0d2b18;display:grid;grid-template-columns:80px 1fr;gap:12px;align-items:start;cursor:pointer;transition:opacity .2s}
+.side-item:last-child{border-bottom:none}
+.side-item:hover{opacity:.75}
+.side-img{width:80px;height:56px;object-fit:cover;border-radius:1px;display:block}
+.side-title{font-size:12px;font-weight:600;line-height:1.35;color:#c0ddc8;margin-bottom:4px}
+.side-meta{font-family:var(--fm);font-size:10px;color:#2a5a38}
+
+/* sidebar newsletter */
+.side-nl{background:#030f07;border:1px solid #0d2b18;border-left:2px solid var(--pri);padding:20px;margin-top:24px}
+.side-nl h3{font-size:14px;font-weight:700;color:#c0ddc8;margin-bottom:5px}
+.side-nl p{font-family:var(--fm);font-size:11px;color:#3a6a48;line-height:1.6;margin-bottom:14px}
+.nl-inp{width:100%;background:#020d06;border:1px solid #0d2b18;padding:9px 12px;color:#c0ddc8;font-size:13px;outline:none;margin-bottom:8px;border-radius:2px;font-family:'Space Grotesk',sans-serif}
+.nl-inp:focus{border-color:var(--pri)}.nl-inp::placeholder{color:#2a5a38}
+.nl-btn{width:100%;background:var(--pri);color:#020d06;border:none;padding:10px;font-size:11px;font-weight:700;font-family:var(--fm);cursor:pointer;text-transform:uppercase;letter-spacing:1px;border-radius:2px}
+.nl-btn:hover{background:var(--pri2)}
+
+/* ── SECTION 4: MARKET INTELLIGENCE ── */
+.mkt-section{background:#010a04;border-top:1px solid #0d2b18;border-bottom:1px solid #0d2b18;padding:56px 0}
+.mkt-wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+.mkt-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:32px;flex-wrap:wrap;gap:8px}
+.mkt-title{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:3px}
+.mkt-title::before{content:'// ';color:#1a4a2a}
+.mkt-source{font-family:var(--fm);font-size:10px;color:#2a5a38}
+.mkt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#0d2b18;margin-bottom:48px}
+.mkt-card{background:#020d06;padding:24px 20px;display:flex;flex-direction:column;gap:4px}
+.mkt-sym{font-family:var(--fm);font-size:11px;font-weight:700;color:#2a5a38;text-transform:uppercase;letter-spacing:2px}
+.mkt-coin-name{font-size:12px;color:#3a6a48;margin-bottom:4px}
+.mkt-price{font-family:var(--fm);font-size:26px;font-weight:700;color:#c0ddc8;letter-spacing:-0.5px;line-height:1}
+.mkt-change{font-family:var(--fm);font-size:12px;font-weight:700;margin-top:4px}
+.mkt-change.up{color:var(--pri)}
+.mkt-change.dn{color:#ff5252}
+.mkt-bar{height:3px;background:#0d2b18;border-radius:2px;margin-top:12px;overflow:hidden}
+.mkt-bar-fill{height:100%;background:var(--pri);border-radius:2px;transition:width .5s ease}
+
+/* editorial cards under market intel */
+.mkt-editorial{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#0d2b18}
+.mkt-ed-card{background:#020d06;overflow:hidden;cursor:pointer;display:block;transition:background .2s}
+.mkt-ed-card:hover{background:#030f07}
+.mkt-ed-img{width:100%;height:180px;object-fit:cover;display:block;opacity:.85;transition:opacity .3s}
+.mkt-ed-card:hover .mkt-ed-img{opacity:1}
+.mkt-ed-body{padding:18px 20px}
+.mkt-ed-tag{font-family:var(--fm);font-size:9px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
+.mkt-ed-title{font-size:15px;font-weight:700;line-height:1.3;color:#c0ddc8;margin-bottom:6px;transition:color .2s}
+.mkt-ed-card:hover .mkt-ed-title{color:var(--pri)}
+.mkt-ed-desc{font-family:var(--fm);font-size:11px;color:#2a5a38;line-height:1.6}
+
+/* ── SECTION 5: NEWSLETTER CTA ── */
+.nl-section{background:#010a04;border-top:2px solid var(--pri);padding:72px 20px;text-align:center;position:relative;overflow:hidden}
+.nl-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,230,118,.06),transparent);pointer-events:none}
+.nl-section-inner{position:relative;max-width:600px;margin:0 auto}
+.nl-kicker{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:16px}
+.nl-h2{font-size:clamp(26px,4vw,44px);font-weight:700;color:#e8f5ec;line-height:1.1;margin-bottom:12px;letter-spacing:-0.5px}
+.nl-sub{font-size:16px;color:#3a6a48;max-width:480px;margin:0 auto 32px;line-height:1.7}
+.nl-form{display:flex;max-width:460px;margin:0 auto 16px;border:1px solid #0d2b18;overflow:hidden;border-radius:3px}
+.nl-form input{flex:1;background:rgba(255,255,255,.04);border:none;padding:14px 18px;color:#e8f5ec;font-size:14px;font-family:'Space Grotesk',sans-serif;outline:none;min-width:0}
+.nl-form input::placeholder{color:#2a5a38}
+.nl-form button{background:var(--pri);color:#020d06;border:none;padding:14px 24px;font-size:13px;font-weight:700;font-family:var(--fm);cursor:pointer;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+.nl-form button:hover{background:var(--pri2)}
+.nl-fine{font-family:var(--fm);font-size:10px;color:#1a4a2a}
+
+/* ── ABOUT STRIP ── */
+.about-strip{background:#020d06;border-top:1px solid #0d2b18;border-bottom:1px solid #0d2b18;padding:48px 20px}
+.about-strip-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:88px 1fr;gap:28px;align-items:start}
+.about-avatar{width:88px;height:88px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#020d06;flex-shrink:0}
+.about-name{font-size:20px;font-weight:700;color:#e8f5ec;margin-bottom:3px}
+.about-role{font-family:var(--fm);font-size:11px;color:var(--pri);margin-bottom:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.about-bio{font-size:14px;color:#3a6a48;line-height:1.85}
+.about-bio p+p{margin-top:10px}
+.about-link{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-family:var(--fm);font-size:11px;font-weight:700;color:var(--pri);border:1px solid #0d2b18;padding:7px 16px;border-radius:2px;text-transform:uppercase;letter-spacing:1px;transition:border-color .2s}
+.about-link:hover{border-color:var(--pri)}
+
+/* ── FOOTER ── */
+.foot{background:#010604;border-top:1px solid #0a1e10;padding:24px 20px}
+.foot-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.foot-copy{font-family:var(--fm);font-size:11px;color:#1a4a2a}
+.foot-links{display:flex;gap:20px;flex-wrap:wrap}
+.foot-links a{font-family:var(--fm);font-size:11px;color:#1a4a2a;transition:color .2s}
+.foot-links a:hover{color:var(--pri)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero-wrap{grid-template-columns:1fr 300px}
+  .hero-feat-body{padding:28px 28px}
+  .hero-h1{font-size:clamp(20px,3vw,34px)}
+  .analysis-section{grid-template-columns:1fr;gap:40px}
+  .mkt-grid{grid-template-columns:repeat(2,1fr)}
+  .mkt-editorial{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .hero-wrap{grid-template-columns:1fr}
+  .hero-feat-img{min-height:360px}
+  .hero-feat-body{padding:24px 20px}
+  .hero-sub-col{border-left:none;border-top:1px solid #0d2b18;flex-direction:row;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sub-story{min-width:260px;border-bottom:none;border-right:1px solid #0d2b18;flex:0 0 auto}
+  .sub-story:last-child{border-right:none}
+  .vp-wrap{grid-template-columns:repeat(2,1fr)}
+  .vp-item{border-right:none;border-bottom:1px solid #0d2b18}
+  .vp-item:nth-child(odd){border-right:1px solid #0d2b18}
+  .nav-links,.nav-right .nav-date,.nav-right .nav-subscribe{display:none}
+  .nav-burger{display:flex}
+  .mkt-grid{grid-template-columns:repeat(2,1fr)}
+  .mkt-editorial{grid-template-columns:1fr}
+  .about-strip-inner{grid-template-columns:1fr}
+  .about-avatar{width:64px;height:64px;font-size:20px}
+  .nl-section{padding:52px 16px}
+  .art-card{grid-template-columns:1fr}
+  .art-card-img{width:100%;height:160px}
+}
+@media(max-width:480px){
+  .vp-wrap{grid-template-columns:1fr}
+  .vp-item{border-right:none}
+  .hero-feat-img{min-height:280px}
+  .hero-h1{font-size:21px}
+  .hero-feat-body{padding:20px 16px}
+  .mkt-grid{grid-template-columns:repeat(2,1fr)}
+  .mkt-price{font-size:20px}
+  .nl-form{flex-direction:column;border:none}
+  .nl-form input{border:1px solid #0d2b18;border-radius:2px}
+  .nl-form button{border-radius:2px;padding:12px}
+  .foot-inner{flex-direction:column;text-align:center;gap:12px}
+}
 </style>
 </head>
 <body>
-<div class="top-bar">
-  <div class="wrap" style="padding:16px 24px;display:flex;justify-content:space-between;align-items:center">
-    <a href="/" class="logo">siavashsed.github.io/cryptopulse</a>
-    <span style="font-size:11px;color:#555;text-transform:uppercase;letter-spacing:2px">Crypto & Algorithmic Trading</span>
+
+<!-- ── LIVE TICKER ── -->
+<div class="tk-bar">
+  <div class="tk-label"><div class="tk-dot"></div>LIVE</div>
+  <div class="tk-viewport">
+    <div class="tk-track">
+      <div class="tk-item"><span class="tk-sym">BTC</span><span id="tk-btc">$67,234</span><span class="tk-up" id="tk-btc-ch">▲ 2.31%</span></div>
+      <div class="tk-item"><span class="tk-sym">ETH</span><span id="tk-eth">$3,421</span><span class="tk-dn" id="tk-eth-ch">▼ 0.84%</span></div>
+      <div class="tk-item"><span class="tk-sym">SOL</span><span id="tk-sol">$142.50</span><span class="tk-up" id="tk-sol-ch">▲ 4.12%</span></div>
+      <div class="tk-item"><span class="tk-sym">BNB</span><span id="tk-bnb">$612</span><span class="tk-up" id="tk-bnb-ch">▲ 1.05%</span></div>
+      <div class="tk-item"><span class="tk-sym">FEAR/GREED</span><span class="tk-up" id="tk-fg">72 · Greed</span></div>
+      <div class="tk-item"><span class="tk-sym">BTC DOM</span><span id="tk-dom">54.2%</span></div>
+      <div class="tk-item"><span class="tk-sym">GLOBAL CAP</span><span id="tk-mcap">$2.41T</span></div>
+      <div class="tk-item"><span class="tk-sym">24H VOL</span><span>$98.4B</span></div>
+      <div class="tk-item"><span class="tk-sym">BTC</span><span id="tk-btc2">$67,234</span><span class="tk-up" id="tk-btc-ch2">▲ 2.31%</span></div>
+      <div class="tk-item"><span class="tk-sym">ETH</span><span id="tk-eth2">$3,421</span><span class="tk-dn" id="tk-eth-ch2">▼ 0.84%</span></div>
+      <div class="tk-item"><span class="tk-sym">SOL</span><span id="tk-sol2">$142.50</span><span class="tk-up" id="tk-sol-ch2">▲ 4.12%</span></div>
+      <div class="tk-item"><span class="tk-sym">BNB</span><span id="tk-bnb2">$612</span><span class="tk-up" id="tk-bnb-ch2">▲ 1.05%</span></div>
+      <div class="tk-item"><span class="tk-sym">FEAR/GREED</span><span class="tk-up" id="tk-fg2">72 · Greed</span></div>
+      <div class="tk-item"><span class="tk-sym">BTC DOM</span><span id="tk-dom2">54.2%</span></div>
+      <div class="tk-item"><span class="tk-sym">GLOBAL CAP</span><span id="tk-mcap2">$2.41T</span></div>
+      <div class="tk-item"><span class="tk-sym">24H VOL</span><span>$98.4B</span></div>
+    </div>
   </div>
 </div>
-<div class="wrap">
-  <div class="split">
-    <div>
-        <img src="https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works" loading="lazy" style="width:100%;height:300px;object-fit:cover;border-radius:8px;margin-bottom:16px">
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6c63ff;margin-bottom:8px">Crypto & Algorithmic Trading</div>
-        <a href="/dollar-cost-averaging-crypto-math/" style="font-size:clamp(20px,3vw,28px);font-weight:700;line-height:1.25;color:#e8e8e8;display:block;margin-bottom:12px">Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works</a>
-        <p style="font-size:15px;color:#aaa;line-height:1.6;margin-bottom:16px">Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.</p>
-        <a href="/dollar-cost-averaging-crypto-math/" style="font-size:13px;font-weight:700;color:#6c63ff">Read full article →</a>
-        <div style="font-size:11px;color:#555;margin-top:8px">May 17, 2026</div></div>
-    <div>
-      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6c63ff;padding-bottom:10px;border-bottom:2px solid #6c63ff;margin-bottom:0">Latest</div>
-      
-    <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #252525">
-      <img src="https://images.pexels.com/photos/6777564/pexels-photo-6777564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Funding Rates Explained: What Every Futures Trader Actually Needs to Know" loading="lazy" style="width:72px;height:58px;object-fit:cover;border-radius:4px;flex-shrink:0">
-      <div>
-        <div style="font-size:11px;color:#555;margin-bottom:3px">May 16, 2026</div>
-        <a href="/funding-rates-crypto-futures-traders/" style="font-size:14px;font-weight:600;color:#e8e8e8;line-height:1.35">Funding Rates Explained: What Every Futures Trader Actually Needs to Know</a>
-      </div>
+
+<!-- ── NAV ── -->
+<nav class="nav" style="position:relative">
+  <div class="nav-inner">
+    <a href="./" class="nav-logo">CryptoPulse<span>Algorithmic Trading Intelligence</span></a>
+    <div class="nav-links" id="nav-links-d">
+      <a href="./" class="active">Latest</a>
+      <a href="./">Analysis</a>
+      <a href="./">On-Chain</a>
+      <a href="./">Algo Signals</a>
+      <a href="about.html">About</a>
     </div>
-    <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #252525">
-      <img src="https://images.pexels.com/photos/7807839/pexels-photo-7807839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Grid Bots vs Trend-Following Bots: A Real Head-to-Head Comparison" loading="lazy" style="width:72px;height:58px;object-fit:cover;border-radius:4px;flex-shrink:0">
-      <div>
-        <div style="font-size:11px;color:#555;margin-bottom:3px">May 15, 2026</div>
-        <a href="/grid-bots-vs-trend-following-bots/" style="font-size:14px;font-weight:600;color:#e8e8e8;line-height:1.35">Grid Bots vs Trend-Following Bots: A Real Head-to-Head Comparison</a>
-      </div>
-    </div>
-    <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #252525">
-      <img src="https://images.pexels.com/photos/8370426/pexels-photo-8370426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="On-Chain Metrics That Preceded the Last Three Crypto Market Tops" loading="lazy" style="width:72px;height:58px;object-fit:cover;border-radius:4px;flex-shrink:0">
-      <div>
-        <div style="font-size:11px;color:#555;margin-bottom:3px">May 15, 2026</div>
-        <a href="/on-chain-metrics-crypto-market-tops/" style="font-size:14px;font-weight:600;color:#e8e8e8;line-height:1.35">On-Chain Metrics That Preceded the Last Three Crypto Market Tops</a>
-      </div>
-    </div>
-    <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #252525">
-      <img src="https://images.pexels.com/photos/30268013/pexels-photo-30268013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bitcoin Volatility Patterns Institutional Traders Actually Track (Not the Ones You Read About)" loading="lazy" style="width:72px;height:58px;object-fit:cover;border-radius:4px;flex-shrink:0">
-      <div>
-        <div style="font-size:11px;color:#555;margin-bottom:3px">May 15, 2026</div>
-        <a href="/bitcoin-volatility-patterns-institutional-traders/" style="font-size:14px;font-weight:600;color:#e8e8e8;line-height:1.35">Bitcoin Volatility Patterns Institutional Traders Actually Track (Not the Ones You Read About)</a>
-      </div>
-    </div>
+    <div class="nav-right">
+      <div class="nav-date" id="nav-date"></div>
+      <a href="#newsletter" class="nav-subscribe">Subscribe</a>
+      <button class="nav-burger" onclick="document.getElementById('nav-mobile').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
-  <h2 style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#aaa;margin-bottom:20px">More Articles</h2>
-  <div class="grid"><div style="background:#141414;border:1px solid #252525;border-radius:10px;overflow:hidden">
-  <img src="https://images.pexels.com/photos/5831512/pexels-photo-5831512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="How Exchange APIs Power Fully Automated Crypto Trading Strategies" loading="lazy" style="width:100%;height:150px;object-fit:cover">
-  <div style="padding:18px">
-    <div style="font-size:11px;color:#555;margin-bottom:6px">May 15, 2026</div>
-    <a href="/exchange-apis-automated-crypto-trading/" style="font-size:16px;font-weight:700;color:#e8e8e8;line-height:1.3;display:block;margin-bottom:8px">How Exchange APIs Power Fully Automated Crypto Trading Strategies</a>
-    <p style="font-size:13px;color:#aaa;line-height:1.55;margin-bottom:12px">Ex-quant trader Marcus Chen breaks down how exchange APIs enable automated crypto strategies — the m...</p>
-    <a href="/exchange-apis-automated-crypto-trading/" style="font-size:13px;font-weight:600;color:#6c63ff">Read →</a>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="./">Latest Analysis</a>
+    <a href="./">On-Chain Signals</a>
+    <a href="./">Algo Breakdowns</a>
+    <a href="about.html">About</a>
+    <a href="#newsletter">Subscribe Free</a>
   </div>
-</div><div style="background:#141414;border:1px solid #252525;border-radius:10px;overflow:hidden">
-  <img src="https://images.pexels.com/photos/6478886/pexels-photo-6478886.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Why Algorithmic Trading Beats Emotional Trading When Crypto Markets Go Haywire" loading="lazy" style="width:100%;height:150px;object-fit:cover">
-  <div style="padding:18px">
-    <div style="font-size:11px;color:#555;margin-bottom:6px">May 15, 2026</div>
-    <a href="/algorithmic-vs-emotional-crypto-trading/" style="font-size:16px;font-weight:700;color:#e8e8e8;line-height:1.3;display:block;margin-bottom:8px">Why Algorithmic Trading Beats Emotional Trading When Crypto Markets Go Haywire</a>
-    <p style="font-size:13px;color:#aaa;line-height:1.55;margin-bottom:12px">Ex-quant trader Marcus Chen explains why algorithmic trading consistently outperforms emotional deci...</p>
-    <a href="/algorithmic-vs-emotional-crypto-trading/" style="font-size:13px;font-weight:600;color:#6c63ff">Read →</a>
+</nav>
+
+<!-- ── SECTION 1: HERO GRID ── -->
+<section class="hero-section">
+  <div class="hero-wrap">
+    <a href="./" class="hero-feat" id="hero-feat-link">
+      <img id="pxl-img" class="hero-feat-img" src="https://picsum.photos/seed/270/1200/600" alt="CryptoPulse hero">
+      <div class="hero-feat-ovl"></div>
+      <div class="hero-feat-body">
+        <div class="hero-badge">Breaking</div>
+        <h1 class="hero-h1" id="hero-title">Algorithmic Trading Intelligence</h1>
+        <p class="hero-desc" id="hero-desc">On-chain data, systematic signals, and algo trade breakdowns for serious crypto traders.</p>
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <div class="hero-byline" id="hero-byline"><span>By Marcus Chen</span><span id="hero-date-d"></span></div>
+          <a class="hero-cta" id="hero-cta" href="./">Read Analysis →</a>
+        </div>
+      </div>
+    </a>
+    <div class="hero-sub-col" id="sub-col">
+      <div class="sub-story"><div class="sub-story-img img-ph" id="si-0"><img id="si-img-0" alt=""><div class="img-ph-line"><svg viewBox="0 0 110 60" width="110" height="60" fill="none" stroke="#00e676" stroke-width="1.5"><polyline points="0,50 18,35 36,42 55,18 72,28 90,10 110,16"/></svg></div></div><div class="sub-story-body"><div class="sub-badge">Crypto & Trading</div><div class="sub-title" id="si-ttl-0">Systematic signals and on-chain research publishing soon</div><div class="sub-date" id="si-dt-0">Upcoming</div></div></div>
+      <div class="sub-story"><div class="sub-story-img img-ph" id="si-1"><img id="si-img-1" alt=""><div class="img-ph-line"><svg viewBox="0 0 110 60" width="110" height="60" fill="none" stroke="#00e676" stroke-width="1.5"><polyline points="0,40 20,55 38,30 55,45 72,20 88,32 110,15"/></svg></div></div><div class="sub-story-body"><div class="sub-badge">Algo Trading</div><div class="sub-title" id="si-ttl-1">Strategy breakdowns and quant analysis in preparation</div><div class="sub-date" id="si-dt-1">Upcoming</div></div></div>
+      <div class="sub-story"><div class="sub-story-img img-ph" id="si-2"><img id="si-img-2" alt=""><div class="img-ph-line"><svg viewBox="0 0 110 60" width="110" height="60" fill="none" stroke="#00e676" stroke-width="1.5"><polyline points="0,30 15,48 32,22 50,38 68,12 85,24 110,8"/></svg></div></div><div class="sub-story-body"><div class="sub-badge">On-Chain</div><div class="sub-title" id="si-ttl-2">Blockchain data, whale tracking, and exchange flow reports</div><div class="sub-date" id="si-dt-2">Upcoming</div></div></div>
+    </div>
   </div>
-</div></div>
+</section>
+
+<!-- ── SECTION 2: VALUE PROPS ── -->
+<section class="vp-section">
+  <div class="vp-wrap">
+    <div class="vp-item">
+      <div class="vp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M2 18.5a16 16 0 0 1 20 0"/><path d="M5.5 15a11 11 0 0 1 13 0"/><path d="M9 11.5a6 6 0 0 1 6 0"/><circle cx="12" cy="20" r="1.5" fill="currentColor"/></svg></div>
+      <div><div class="vp-label">Live Market Data</div><div class="vp-desc">Real-time prices from CoinGecko, refreshed every 90 seconds directly in your browser</div></div>
+    </div>
+    <div class="vp-item">
+      <div class="vp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="5" height="6" rx="1"/><rect x="9.5" y="9" width="5" height="6" rx="1"/><rect x="17" y="9" width="5" height="6" rx="1"/><line x1="7" y1="12" x2="9.5" y2="12"/><line x1="14.5" y1="12" x2="17" y2="12"/></svg></div>
+      <div><div class="vp-label">On-Chain Intelligence</div><div class="vp-desc">Whale moves, exchange inflows, miner behavior, and mempool signals decoded into plain language</div></div>
+    </div>
+    <div class="vp-item">
+      <div class="vp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
+      <div><div class="vp-label">Algo Trade Breakdowns</div><div class="vp-desc">How systematic strategies are built, tested, deployed, and eventually retired — the full lifecycle</div></div>
+    </div>
+    <div class="vp-item">
+      <div class="vp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><line x1="12" y1="3" x2="12" y2="8.5"/><line x1="12" y1="15.5" x2="12" y2="21"/><line x1="3" y1="12" x2="8.5" y2="12"/><line x1="15.5" y1="12" x2="21" y2="12"/></svg></div>
+      <div><div class="vp-label">No Hype, No Calls</div><div class="vp-desc">Written by a quant trader, not a marketing team. No price predictions, no affiliate deals</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 3: LATEST ANALYSIS ── -->
+<div class="analysis-section">
+  <main>
+    <div class="sec-label">Latest Analysis</div>
+    <div id="main-feed">
+      <div class="art-card" style="opacity:.38;pointer-events:none">
+        <div class="art-card-img img-ph" style="height:130px"><img alt=""><div class="img-ph-line"><svg viewBox="0 0 180 130" width="180" height="130" fill="none" stroke="#00e676" stroke-width="1.5"><polyline points="0,100 30,70 60,85 90,40 120,55 150,20 180,30"/><polyline points="0,110 30,95 60,100 90,70 120,80 150,50 180,60" stroke-width="0.5"/></svg></div></div>
+        <div class="art-card-body"><div class="art-card-tag">Crypto & Trading</div><div class="art-card-title">First deep-dive analysis publishing soon</div><div class="art-card-desc">Systematic signals, on-chain data, and trade strategy breakdowns are on their way.</div><div class="art-card-meta">By Marcus Chen</div></div>
+      </div>
+      <div class="art-card" style="opacity:.22;pointer-events:none">
+        <div class="art-card-img img-ph" style="height:130px"><img alt=""><div class="img-ph-line"><svg viewBox="0 0 180 130" width="180" height="130" fill="none" stroke="#00e676" stroke-width="1.5"><polyline points="0,80 30,55 60,70 90,30 120,45 150,15 180,25"/></svg></div></div>
+        <div class="art-card-body"><div class="art-card-tag">On-Chain</div><div class="art-card-title">On-chain research report in preparation</div><div class="art-card-desc">Blockchain analytics, whale movement tracking, and exchange flow interpretation.</div><div class="art-card-meta">By Marcus Chen</div></div>
+      </div>
+      <div class="art-card" style="opacity:.13;pointer-events:none">
+        <div class="art-card-img img-ph" style="height:130px"><img alt=""><div class="img-ph-line"><svg viewBox="0 0 180 130" width="180" height="130" fill="none" stroke="#00e676" stroke-width="1.5"><polyline points="0,90 25,60 55,75 85,35 115,50 145,22 180,18"/></svg></div></div>
+        <div class="art-card-body"><div class="art-card-tag">Algo Trading</div><div class="art-card-title">Quant strategy breakdown coming soon</div><div class="art-card-desc">Full backtesting methodology, live performance data, and lessons from deployment.</div><div class="art-card-meta">By Marcus Chen</div></div>
+      </div>
+    </div>
+  </main>
+  <aside>
+    <div class="side-label">Trending</div>
+    <div id="side-feed">
+      <div class="side-item" style="opacity:.35;pointer-events:none"><div class="side-img img-ph" style="height:56px"><img alt=""></div><div><div class="side-title">Analysis publishing soon</div><div class="side-meta">Upcoming</div></div></div>
+      <div class="side-item" style="opacity:.2;pointer-events:none"><div class="side-img img-ph" style="height:56px"><img alt=""></div><div><div class="side-title">Research incoming</div><div class="side-meta">Upcoming</div></div></div>
+      <div class="side-item" style="opacity:.12;pointer-events:none"><div class="side-img img-ph" style="height:56px"><img alt=""></div><div><div class="side-title">Signal study underway</div><div class="side-meta">Upcoming</div></div></div>
+    </div>
+    <div class="side-nl">
+      <h3>The Weekly Alpha Report</h3>
+      <p>Systematic signals, on-chain data, and trade setups - no filler, no hype.</p>
+      <form id="nl-side" onsubmit="nlSub('nl-side',event)">
+        <input type="email" class="nl-inp" placeholder="your@email.com" required>
+        <button type="submit" class="nl-btn">Subscribe</button>
+      </form>
+    </div>
+  </aside>
 </div>
-<footer style="background:#141414;border-top:1px solid #252525;padding:40px 24px;text-align:center;font-size:13px;color:#555;margin-top:60px">
-<p>&copy; 2026 siavashsed.github.io/cryptopulse &nbsp;&middot;&nbsp; Crypto & Algorithmic Trading</p>
-<p style="margin-top:6px;font-size:11px">For informational purposes only. Not financial or investment advice.</p>
-<p style="margin-top:6px;font-size:11px"><a href="/about/" style="color:#555">About</a> &nbsp;&middot;&nbsp; <a href="/contact/" style="color:#555">Contact</a> &nbsp;&middot;&nbsp; <a href="/privacy/" style="color:#555">Privacy Policy</a></p>
-</footer></body></html>
+
+<!-- ── SECTION 4: MARKET INTELLIGENCE ── -->
+<section class="mkt-section">
+  <div class="mkt-wrap">
+    <div class="mkt-head">
+      <div class="mkt-title">Markets at a Glance</div>
+      <div class="mkt-source">Live · CoinGecko API · auto-refreshes every 90s</div>
+    </div>
+    <div class="mkt-grid">
+      <div class="mkt-card">
+        <div class="mkt-sym">BTC</div>
+        <div class="mkt-coin-name">Bitcoin</div>
+        <div class="mkt-price" id="mkt-btc">$67,234</div>
+        <div class="mkt-change up" id="mkt-btc-ch">▲ 2.31%</div>
+        <div class="mkt-bar"><div class="mkt-bar-fill" id="mkt-btc-bar" style="width:62%"></div></div>
+      </div>
+      <div class="mkt-card">
+        <div class="mkt-sym">ETH</div>
+        <div class="mkt-coin-name">Ethereum</div>
+        <div class="mkt-price" id="mkt-eth">$3,421</div>
+        <div class="mkt-change dn" id="mkt-eth-ch">▼ 0.84%</div>
+        <div class="mkt-bar"><div class="mkt-bar-fill" id="mkt-eth-bar" style="width:48%"></div></div>
+      </div>
+      <div class="mkt-card">
+        <div class="mkt-sym">SOL</div>
+        <div class="mkt-coin-name">Solana</div>
+        <div class="mkt-price" id="mkt-sol">$142.50</div>
+        <div class="mkt-change up" id="mkt-sol-ch">▲ 4.12%</div>
+        <div class="mkt-bar"><div class="mkt-bar-fill" id="mkt-sol-bar" style="width:38%"></div></div>
+      </div>
+      <div class="mkt-card">
+        <div class="mkt-sym">BNB</div>
+        <div class="mkt-coin-name">BNB Chain</div>
+        <div class="mkt-price" id="mkt-bnb">$612</div>
+        <div class="mkt-change up" id="mkt-bnb-ch">▲ 1.05%</div>
+        <div class="mkt-bar"><div class="mkt-bar-fill" id="mkt-bnb-bar" style="width:29%"></div></div>
+      </div>
+    </div>
+    <div class="mkt-editorial" id="mkt-editorial">
+      <a class="mkt-ed-card" href="./" id="mkt-ed-1">
+        <div class="mkt-ed-img img-ph" style="height:180px"><img id="mei-0" alt="On-Chain Analysis"><div class="img-ph-line"><svg viewBox="0 0 300 180" width="300" height="180" fill="none" stroke="#00e676" stroke-width="1.5"><polyline points="0,140 40,100 80,120 130,55 180,75 230,30 280,50 300,40"/><polyline points="0,160 40,145 80,155 130,100 180,120 230,75 280,90 300,80" stroke-width="0.6"/></svg></div></div>
+        <div class="mkt-ed-body"><div class="mkt-ed-tag">On-Chain</div><div class="mkt-ed-title">Reading Blockchain Data for Trade Signals</div><div class="mkt-ed-desc">Exchange inflows, whale accumulation patterns, and what they historically precede.</div></div>
+      </a>
+      <a class="mkt-ed-card" href="./" id="mkt-ed-2">
+        <div class="mkt-ed-img img-ph" style="height:180px"><img id="mei-1" alt="Algo Strategy"><div class="img-ph-line"><svg viewBox="0 0 300 180" width="300" height="180" fill="none" stroke="#00e676" stroke-width="1.5"><polyline points="0,100 50,130 90,80 140,110 190,45 240,65 280,30 300,20"/></svg></div></div>
+        <div class="mkt-ed-body"><div class="mkt-ed-tag">Algo Trading</div><div class="mkt-ed-title">How Systematic Strategies Degrade Over Time</div><div class="mkt-ed-desc">Every edge has a shelf life. Knowing when to retire a strategy is harder than building it.</div></div>
+      </a>
+      <a class="mkt-ed-card" href="./" id="mkt-ed-3">
+        <div class="mkt-ed-img img-ph" style="height:180px"><img id="mei-2" alt="Market Structure"><div class="img-ph-line"><svg viewBox="0 0 300 180" width="300" height="180" fill="none" stroke="#00e676" stroke-width="1.5"><polyline points="0,120 35,90 70,105 110,60 155,80 200,35 245,55 300,25"/></svg></div></div>
+        <div class="mkt-ed-body"><div class="mkt-ed-tag">Market Structure</div><div class="mkt-ed-title">Crypto Market Microstructure for Retail Traders</div><div class="mkt-ed-desc">Order books, liquidity gaps, and why price moves the way it does at key levels.</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 5: NEWSLETTER ── -->
+<section class="nl-section" id="newsletter">
+  <div class="nl-section-inner">
+    <div class="nl-kicker">Free Weekly Intelligence Report</div>
+    <h2 class="nl-h2">The Weekly Alpha Report</h2>
+    <p class="nl-sub">Systematic signals, on-chain data, and trade setups - no filler, no hype.</p>
+    <form class="nl-form" id="nl-main" onsubmit="nlSub('nl-main',event)">
+      <input type="email" placeholder="your@email.com" required>
+      <button type="submit">Subscribe Free →</button>
+    </form>
+    <div class="nl-fine">No spam. Unsubscribe anytime. Written by a quant, not a bot.</div>
+  </div>
+</section>
+
+<!-- ── ABOUT STRIP ── -->
+<section class="about-strip">
+  <div class="about-strip-inner">
+    <div class="about-avatar">MC</div>
+    <div>
+      <div class="about-name">Marcus Chen</div>
+      <div class="about-role">Quant Trader & Market Analyst</div>
+      <div class="about-bio"><p>I spent eight years running automated crypto strategies at a prop desk in Vancouver before going independent. The edge I found wasn't in being smarter - it was in being more systematic.</p><p>This site is where I publish the analysis that takes longer than 280 characters to explain: on-chain signals, bot logic, and the setups I'm actually watching.</p></div>
+      <a href="about.html" class="about-link">Full bio &amp; methodology →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="foot">
+  <div class="foot-inner">
+    <span class="foot-copy">© CryptoPulse · Evidence-based analysis for algorithmic traders and crypto researchers.</span>
+    <div class="foot-links">
+      <a href="./">Home</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="sms.html">SMS</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('nav-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+document.getElementById('hero-date-d').textContent=new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+
+/* ── live CoinGecko ticker + market cards ── */
+(async function(){
+  var p={btc:67234,eth:3421,sol:142.5,bnb:612};
+  var c={btc:2.31,eth:-0.84,sol:4.12,bnb:1.05};
+  function fmt(v){return v>=1000?'$'+v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','):'$'+v.toFixed(2);}
+  function updTk(){
+    ['btc','eth','sol','bnb'].forEach(function(k){
+      var up=c[k]>=0;
+      var pv=fmt(p[k]),cv=(up?'▲ ':'▼ ')+Math.abs(c[k]).toFixed(2)+'%',cls=up?'tk-up':'tk-dn';
+      ['','2'].forEach(function(s){
+        var pe=document.getElementById('tk-'+k+s),ce=document.getElementById('tk-'+k+'-ch'+s);
+        if(pe)pe.textContent=pv;if(ce){ce.textContent=cv;ce.className=cls;}
+      });
+      /* market cards */
+      var mp=document.getElementById('mkt-'+k),mc=document.getElementById('mkt-'+k+'-ch');
+      if(mp)mp.textContent=pv;
+      if(mc){mc.textContent=cv;mc.className='mkt-change '+(up?'up':'dn');}
+    });
+  }
+  function fetchPrices(){
+    return fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin&vs_currencies=usd&include_24hr_change=true',{cache:'no-store'})
+      .then(function(r){return r.json();}).then(function(d){
+        if(d.bitcoin){p.btc=d.bitcoin.usd;c.btc=d.bitcoin.usd_24h_change||0;}
+        if(d.ethereum){p.eth=d.ethereum.usd;c.eth=d.ethereum.usd_24h_change||0;}
+        if(d.solana){p.sol=d.solana.usd;c.sol=d.solana.usd_24h_change||0;}
+        if(d.binancecoin){p.bnb=d.binancecoin.usd;c.bnb=d.binancecoin.usd_24h_change||0;}
+        updTk();
+      }).catch(function(){updTk();});
+  }
+  fetchPrices();
+  setInterval(function(){['btc','eth','sol','bnb'].forEach(function(k){p[k]*=(1+(Math.random()-.5)*.0006);});updTk();},4000);
+  setInterval(fetchPrices,90000);
+})();
+
+/* ── helper: load img into .img-ph wrapper ── */
+function setPhImg(wrapperId,src,alt){
+  var w=document.getElementById(wrapperId);if(!w||!src)return;
+  var i=w.querySelector('img');
+  if(!i){i=document.createElement('img');w.appendChild(i);}
+  i.alt=alt||'';
+  i.onload=function(){i.classList.add('loaded');};
+  i.src=src;
+}
+/* ── Pexels multi-image loader ── */
+(function(){
+  var k=localStorage.getItem('pexelsKey');if(!k)return;
+  fetch('https://api.pexels.com/v1/search?query=cryptocurrency+trading+charts+financial+data&per_page=12&orientation=landscape',{headers:{Authorization:k}})
+    .then(function(r){return r.json();}).then(function(d){
+      if(!d.photos||!d.photos.length)return;
+      var ph=d.photos;
+      // hero already handled by _pexels_js (pxl-img)
+      // sub-stories
+      ['si-0','si-1','si-2'].forEach(function(id,i){
+        if(ph[i+1])setPhImg(id,ph[i+1].src.medium,ph[i+1].alt||'');
+      });
+      // market editorial cards
+      ['mkt-ed-1','mkt-ed-2','mkt-ed-3'].forEach(function(id,i){
+        var el=document.getElementById(id);if(!el)return;
+        var ph2=el.querySelector('.img-ph');if(!ph2)return;
+        var img=ph2.querySelector('img');if(img&&ph[i+4]){img.alt=ph[i+4].alt||'';img.onload=function(){img.classList.add('loaded');};img.src=ph[i+4].src.large;}
+      });
+    }).catch(function(){});
+})();
+/* ── articles.json loader ── */
+async function loadPosts(){
+  try{
+    var r=await fetch('./articles.json');if(!r.ok)throw 0;
+    var posts=await r.json();if(!posts||!posts.length)throw 0;
+    /* hero — post[0] */
+    var h0=posts[0];
+    var hi=document.getElementById('pxl-img');
+    if(hi&&h0.image){hi.onload=function(){hi.style.opacity='1';};hi.src=h0.image;}
+    var ht=document.getElementById('hero-title'),hd=document.getElementById('hero-desc'),hl=document.getElementById('hero-feat-link'),hb=document.getElementById('hero-byline');
+    if(ht)ht.textContent=h0.title;
+    if(hd)hd.textContent=h0.meta_description||'';
+    if(hl)hl.href='./'+h0.slug+'/';
+    var hcta=document.getElementById('hero-cta');if(hcta)hcta.href='./'+h0.slug+'/';
+    if(hb)hb.innerHTML='<span>By '+(h0.author||'Marcus Chen')+'</span><span>'+(h0.date_iso||'')+'</span>';
+    /* sub-stories — posts[1..3] */
+    if(posts.length>1){
+      posts.slice(1,4).forEach(function(p,i){
+        var ttl=document.getElementById('si-ttl-'+i),dt=document.getElementById('si-dt-'+i),w=document.getElementById('si-'+i);
+        if(ttl)ttl.textContent=p.title;
+        if(dt)dt.textContent=p.date_iso||'';
+        var par=w&&w.parentElement;if(par){par.onclick=function(){location.href='./'+p.slug+'/';}; par.style.cursor='pointer';}
+        if(p.image&&w)setPhImg('si-'+i,p.image,p.title);
+      });
+    }
+    /* main feed — ALL remaining posts (posts[4..end]) shown as full article cards */
+    var mf=document.getElementById('main-feed');
+    if(mf&&posts.length>4){mf.innerHTML=posts.slice(4).map(function(p){
+      var imgHtml=p.image
+        ?'<img class="art-card-img" src="'+p.image+'" alt="'+p.title+'" loading="lazy" style="width:180px;height:130px;object-fit:cover;flex-shrink:0;display:block">'
+        :'<div class="art-card-img img-ph" style="height:130px;flex-shrink:0"><div class="img-ph-line"><svg viewBox="0 0 180 130" width="180" height="130" fill="none" stroke="#00e676" stroke-width="1.5"><polyline points="0,100 30,70 60,85 90,40 120,55 150,20 180,30"/></svg></div></div>';
+      return '<a href="./'+p.slug+'/" style="display:block"><div class="art-card">'+imgHtml+'<div class="art-card-body"><div class="art-card-tag">Crypto & Trading</div><div class="art-card-title">'+p.title+'</div><div class="art-card-desc">'+(p.meta_description||'').slice(0,110)+'</div><div class="art-card-meta">'+(p.date_iso||'')+(p.author?' · '+p.author:'')+'</div></div></div></a>';
+    }).join('');}
+    /* sidebar trending — posts[1..5] */
+    var sf=document.getElementById('side-feed');
+    if(sf){sf.innerHTML=posts.slice(1,6).map(function(p){
+      var imgHtml=p.image
+        ?'<img class="side-img" src="'+p.image+'" alt="'+p.title+'" loading="lazy" style="width:80px;height:56px;object-fit:cover;flex-shrink:0;border-radius:1px">'
+        :'<div class="side-img img-ph" style="height:56px"></div>';
+      return '<a href="./'+p.slug+'/" style="display:block"><div class="side-item">'+imgHtml+'<div><div class="side-title">'+p.title+'</div><div class="side-meta">'+(p.date_iso||'')+'</div></div></div></a>';
+    }).join('');}
+    /* market editorial cards — top 3 articles */
+    [[posts[0],'mkt-ed-1','Crypto & Trading'],[posts[1],'mkt-ed-2','Algo Trading'],[posts[2],'mkt-ed-3','Market Structure']].forEach(function(row){
+      var p=row[0],id=row[1],tag=row[2];
+      if(!p)return;
+      var el=document.getElementById(id);if(!el)return;
+      el.href='./'+p.slug+'/';
+      var ph=el.querySelector('.img-ph');
+      if(ph&&p.image){var i=ph.querySelector('img');if(i){i.alt=p.title;i.onload=function(){i.classList.add('loaded');};i.src=p.image;}}
+      var body=el.querySelector('.mkt-ed-body');
+      if(body)body.innerHTML='<div class="mkt-ed-tag">'+tag+'</div><div class="mkt-ed-title">'+p.title+'</div><div class="mkt-ed-desc">'+(p.meta_description||'').slice(0,100)+'</div>';
+    });
+  }catch(e){/* placeholders stay */}
+}
+
+function nlSub(id,e){
+  e.preventDefault();
+  var f=document.getElementById(id);
+  if(f)f.innerHTML='<p style="color:var(--pri);font-family:var(--fm);font-size:13px;font-weight:700;padding:10px 0">You're on the list. Welcome.</p>';
+}
+
+loadPosts();
+/* banner loader: pexels → picsum fallback */
+(function(){
+  var el=document.getElementById('pxl-img');
+  var cr=document.getElementById('pxl-cred');
+  if(!el)return;
+  function showImg(src,cred){
+    el.onload=function(){el.style.opacity='1';if(cred&&cr){cr.textContent=cred;cr.style.opacity='1';}};
+    el.src=src;
+  }
+  var k=localStorage.getItem('pexelsKey');
+  if(k){
+    fetch('https://api.pexels.com/v1/search?query='+encodeURIComponent('cryptocurrency trading charts financial data')+'&per_page=5&orientation=landscape',{headers:{Authorization:k}})
+      .then(function(r){return r.json();}).then(function(d){
+        if(d.photos&&d.photos[0]){showImg(d.photos[0].src.large,'Photo: Pexels');}
+        else{showImg('https://picsum.photos/seed/270/1400/400','');}
+      }).catch(function(){showImg('https://picsum.photos/seed/270/1400/400','');});
+  }else{
+    showImg('https://picsum.photos/seed/270/1400/400','');
+  }
+})();
+</script>
+</body></html>
