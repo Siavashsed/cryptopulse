@@ -103,13 +103,60 @@ p{margin-bottom:18px;color:#aaa;line-height:1.75}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"><style>.site-nav{background:#081009!important;border-bottom:1px solid #0d2b18!important}.site-nav-logo{font-family:'Space Grotesk',system-ui,sans-serif!important;color:#00e676!important;font-size:18px!important;font-weight:700!important;letter-spacing:-.3px!important}.site-nav-links a{color:#5a8468!important;font-weight:600!important;font-size:13px!important}.site-nav-links a:hover{color:#d8f0e0!important;border-bottom-color:#00e676!important}.site-nav-back{color:#5a8468!important}.site-nav-back:hover{color:#00e676!important}.cp-tk{background:#020d06;border-bottom:1px solid #0d2b18;height:36px;display:flex;align-items:center;overflow:hidden;width:100%}.cp-tk-lbl{background:#00e676;color:#020d06;padding:0 14px;height:100%;display:flex;align-items:center;flex-shrink:0;letter-spacing:2px;text-transform:uppercase;font-size:9px;font-weight:700;gap:5px}.cp-tk-dot{width:6px;height:6px;border-radius:50%;background:#020d06;animation:cptk-blink 1.2s ease-in-out infinite}@keyframes cptk-blink{0%,100%{opacity:1}50%{opacity:.2}}.cp-tk-vp{flex:1;overflow:hidden}.cp-tk-tr{display:flex;white-space:nowrap;animation:cptk-scroll 40s linear infinite;gap:28px}@keyframes cptk-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}.cp-tk-it{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:#d8f0e0;font-family:'Space Grotesk',system-ui,sans-serif}.cp-tk-sy{color:#5a8468;font-size:10px}</style>
 </head>
-<body><div class="hdr">
-  <a href="/" style="font-size:18px;font-weight:700;color:#6c63ff">siavashsed.github.io/cryptopulse</a>
-  <span style="font-size:11px;color:#555;text-transform:uppercase;letter-spacing:1px">Crypto & Algorithmic Trading</span>
+<body><div class="a-tk">
+  <div class="a-tk-lbl"><div class="a-tk-dot"></div>LIVE</div>
+  <div class="a-tk-vp"><div class="a-tk-tr">
+    <div class="a-tk-it"><span class="a-tk-sy">BTC</span><span id="atk-btc">$67,234</span><span class="a-tk-up" id="atk-btc-c">▲ 2.31%</span></div>
+    <div class="a-tk-it"><span class="a-tk-sy">ETH</span><span id="atk-eth">$3,421</span><span class="a-tk-dn" id="atk-eth-c">▼ 0.84%</span></div>
+    <div class="a-tk-it"><span class="a-tk-sy">SOL</span><span id="atk-sol">$142.50</span><span class="a-tk-up" id="atk-sol-c">▲ 4.12%</span></div>
+    <div class="a-tk-it"><span class="a-tk-sy">BNB</span><span id="atk-bnb">$612</span><span class="a-tk-up" id="atk-bnb-c">▲ 1.05%</span></div>
+    <div class="a-tk-it"><span class="a-tk-sy">BTC</span><span id="atk-btc2">$67,234</span><span class="a-tk-up" id="atk-btc-c2">▲ 2.31%</span></div>
+    <div class="a-tk-it"><span class="a-tk-sy">ETH</span><span id="atk-eth2">$3,421</span><span class="a-tk-dn" id="atk-eth-c2">▼ 0.84%</span></div>
+    <div class="a-tk-it"><span class="a-tk-sy">SOL</span><span id="atk-sol2">$142.50</span><span class="a-tk-up" id="atk-sol-c2">▲ 4.12%</span></div>
+    <div class="a-tk-it"><span class="a-tk-sy">BNB</span><span id="atk-bnb2">$612</span><span class="a-tk-up" id="atk-bnb-c2">▲ 1.05%</span></div>
+  </div></div>
 </div>
+<nav class="a-nav">
+  <div class="a-nav-in">
+    <a href="../" class="a-nav-logo">Cryptopulse<span>crypto intelligence</span></a>
+    <div class="a-nav-links">
+      <a href="../#analysis">Analysis</a>
+      <a href="../#topics">On-Chain</a>
+      <a href="../#market">Algo Signals</a>
+      <a href="../about.html">About</a>
+    </div>
+    <div class="a-nav-right">
+      <div class="a-nav-date" id="a-nav-date"></div>
+      <a href="../#newsletter" class="a-nav-sub">Subscribe</a>
+    </div>
+  </div>
+</nav>
+<script>
+document.getElementById('a-nav-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
+(async function(){
+  var p={btc:67234,eth:3421,sol:142.5,bnb:612},c={btc:2.31,eth:-0.84,sol:4.12,bnb:1.05};
+  function fmt(v){return v>=1000?'$'+v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','):'$'+v.toFixed(2);}
+  function upd(){['btc','eth','sol','bnb'].forEach(function(k){
+    var up=c[k]>=0,pv=fmt(p[k]),cv=(up?'▲ ':'▼ ')+Math.abs(c[k]).toFixed(2)+'%',cl=up?'a-tk-up':'a-tk-dn';
+    ['','2'].forEach(function(s){
+      var pe=document.getElementById('atk-'+k+s),ce=document.getElementById('atk-'+k+'-c'+s);
+      if(pe)pe.textContent=pv;if(ce){ce.textContent=cv;ce.className=cl;}
+    });
+  });}
+  fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin&vs_currencies=usd&include_24hr_change=true',{cache:'no-store'})
+    .then(r=>r.json()).then(function(d){
+      if(d.bitcoin){p.btc=d.bitcoin.usd;c.btc=d.bitcoin.usd_24h_change||0;}
+      if(d.ethereum){p.eth=d.ethereum.usd;c.eth=d.ethereum.usd_24h_change||0;}
+      if(d.solana){p.sol=d.solana.usd;c.sol=d.solana.usd_24h_change||0;}
+      if(d.binancecoin){p.bnb=d.binancecoin.usd;c.bnb=d.binancecoin.usd_24h_change||0;}
+      upd();
+    }).catch(upd);
+  setInterval(function(){['btc','eth','sol','bnb'].forEach(k=>{p[k]*=(1+(Math.random()-.5)*.0006);});upd();},4000);
+})();
+</script>
 <div class="wrap">
   <article>
-    <div style="font-size:13px;color:#555;margin-bottom:20px"><a href="/" style="color:#555">← Home</a> &nbsp;·&nbsp; May 15, 2026</div>
+    <div style="font-size:13px;color:#555;margin-bottom:20px"><a href="../" style="color:#555">← Home</a> &nbsp;·&nbsp; May 15, 2026</div>
     <h1>Bitcoin Volatility Patterns Institutional Traders Actually Track (Not the Ones You Read About)</h1>
     <div style="font-size:13px;color:#555;margin-bottom:20px">By <strong style="color:#aaa">Marcus Chen</strong></div>
     <img src="https://images.pexels.com/photos/30268013/pexels-photo-30268013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Multiple monitors showing Bitcoin price charts and volatility data on a trading desk" loading="lazy" style="width:100%;height:380px;object-fit:cover;border-radius:8px;margin:24px 0"><p style="font-size:11px;color:#555;margin-top:-12px">Photo: Arturo Añez. / Pexels</p>
