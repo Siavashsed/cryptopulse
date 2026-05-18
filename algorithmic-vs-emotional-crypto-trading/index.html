@@ -51,6 +51,31 @@ p{margin-bottom:18px;color:#aaa;line-height:1.75}
 .a-nav-sub:hover{opacity:.85}
 @media(max-width:768px){.a-tk{display:none}.a-nav-links,.a-nav-date{display:none}}
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+.a-tk{background:#020d06;border-bottom:1px solid #0d2b18;height:38px;display:flex;align-items:center;overflow:hidden;width:100%}
+.a-tk-lbl{font-family:'Space Mono',monospace;font-size:9px;font-weight:700;color:#020d06;background:#00e676;padding:0 14px;height:100%;display:flex;align-items:center;flex-shrink:0;letter-spacing:2px;text-transform:uppercase;gap:5px}
+.a-tk-dot{width:7px;height:7px;border-radius:50%;background:#020d06;animation:atk-blink 1.2s ease-in-out infinite}
+@keyframes atk-blink{0%,100%{opacity:1}50%{opacity:.2}}
+.a-tk-vp{flex:1;overflow:hidden}
+.a-tk-tr{display:flex;white-space:nowrap;animation:atk-scroll 40s linear infinite}
+.a-tk-tr:hover{animation-play-state:paused}
+@keyframes atk-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.a-tk-it{font-family:'Space Mono',monospace;font-size:11px;color:#4a7a5a;display:inline-flex;gap:7px;align-items:center;padding:0 22px;border-right:1px solid #0d2b18}
+.a-tk-sy{color:#a0cfb0;font-weight:700}.a-tk-up{color:#00e676;font-weight:700}.a-tk-dn{color:#ff5252;font-weight:700}
+.a-nav{background:#020d06;border-bottom:1px solid #0d2b18;position:sticky;top:0;z-index:100;font-family:'Space Grotesk',sans-serif}
+.a-nav-in{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;align-items:center;height:58px;gap:0}
+.a-nav-logo{font-size:20px;font-weight:700;color:#00e676;margin-right:40px;flex-shrink:0;letter-spacing:-0.5px;text-decoration:none}
+.a-nav-logo span{font-family:'Space Mono',monospace;font-size:10px;color:#2a5a38;font-weight:400;margin-left:6px;letter-spacing:1px;text-transform:uppercase}
+.a-nav-links{display:flex;gap:0;height:100%;flex:1}
+.a-nav-links a{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:#3a6a48;text-transform:uppercase;letter-spacing:1px;padding:0 14px;height:58px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:all .2s;margin-bottom:-1px;text-decoration:none}
+.a-nav-links a:hover{color:#00e676;border-bottom-color:#00e676}
+.a-nav-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.a-nav-date{font-family:'Space Mono',monospace;font-size:10px;color:#2a5a38}
+.a-nav-sub{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;color:#020d06;background:#00e676;padding:6px 14px;border-radius:2px;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;text-decoration:none}
+.a-nav-sub:hover{opacity:.85}
+@media(max-width:768px){.a-tk{display:none}.a-nav-links,.a-nav-date{display:none}}
+</style>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"><style>.site-nav{background:#081009!important;border-bottom:1px solid #0d2b18!important}.site-nav-logo{font-family:'Space Grotesk',system-ui,sans-serif!important;color:#00e676!important;font-size:18px!important;font-weight:700!important;letter-spacing:-.3px!important}.site-nav-links a{color:#5a8468!important;font-weight:600!important;font-size:13px!important}.site-nav-links a:hover{color:#d8f0e0!important;border-bottom-color:#00e676!important}.site-nav-back{color:#5a8468!important}.site-nav-back:hover{color:#00e676!important}.cp-tk{background:#020d06;border-bottom:1px solid #0d2b18;height:36px;display:flex;align-items:center;overflow:hidden;width:100%}.cp-tk-lbl{background:#00e676;color:#020d06;padding:0 14px;height:100%;display:flex;align-items:center;flex-shrink:0;letter-spacing:2px;text-transform:uppercase;font-size:9px;font-weight:700;gap:5px}.cp-tk-dot{width:6px;height:6px;border-radius:50%;background:#020d06;animation:cptk-blink 1.2s ease-in-out infinite}@keyframes cptk-blink{0%,100%{opacity:1}50%{opacity:.2}}.cp-tk-vp{flex:1;overflow:hidden}.cp-tk-tr{display:flex;white-space:nowrap;animation:cptk-scroll 40s linear infinite;gap:28px}@keyframes cptk-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}.cp-tk-it{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:#d8f0e0;font-family:'Space Grotesk',system-ui,sans-serif}.cp-tk-sy{color:#5a8468;font-size:10px}</style>
 </head>
 <body><div class="hdr">
@@ -64,41 +89,138 @@ p{margin-bottom:18px;color:#aaa;line-height:1.75}
     <div style="font-size:13px;color:#555;margin-bottom:20px">By <strong style="color:#aaa">Marcus Chen</strong></div>
     <img src="https://images.pexels.com/photos/6478886/pexels-photo-6478886.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Multiple monitors showing cryptocurrency price charts and algorithmic trading dashboards in a dark trading room" loading="lazy" style="width:100%;height:380px;object-fit:cover;border-radius:8px;margin:24px 0"><p style="font-size:11px;color:#555;margin-top:-12px">Photo: Bram van Oosterhout / Pexels</p>
     <p class="intro"><p>On May 19, 2021, Bitcoin dropped 30% in a single day. Ethereum fell further. Across exchanges, liquidations hit roughly $8.6 billion in 24 hours, wiping out tens of thousands of leveraged positions. What happened next was predictable to anyone who's watched this market long enough: retail traders panic-sold near the bottom, algorithms bought the dip within milliseconds, and by early June, a significant portion of those algorithmic positions had already recovered meaningful ground. The emotional traders were still licking their wounds.</p></p>
-    <p><p>My argument is simple, and I'll defend it directly: in volatile markets, algorithmic trading outperforms emotional trading not because algorithms are smarter, but because they're incapable of being stupid in the specific ways humans are. Fear, recency bias, loss aversion — these aren't personality flaws, they're wiring. And crypto volatility is precisely the environment that exploits that wiring most aggressively. If you're still trading on instinct during 40% drawdowns, you're not investing. You're gambling with extra steps.</p></p>
-    <h2 id="s0" style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;margin:40px 0 14px;color:#e8e8e8">The Neuroscience Behind Why Humans Fail at Volatile Markets</h2><div><p>A 2022 study published in the Journal of Financial Economics found that retail investors underperform systematic strategies by an average of 1.5% per month during high-volatility periods, a gap that nearly disappears during calm markets. That's not a small number. Annualized, it's the difference between a profitable year and a devastating one. The mechanism isn't mysterious: cortisol spikes during price crashes impair the prefrontal cortex, the region responsible for long-term planning. You literally think worse when markets are moving fastest.</p><p>I've seen this pattern play out in institutional settings too. Early in my career on a prop desk, we tracked decision latency among human traders during volatile sessions. Response times slowed, position sizing became erratic, and stop-loss discipline collapsed, not because traders were incompetent, but because the environment was doing exactly what volatile environments do. The traders who fared best were, without exception, the ones running rules-based overlays on their books.</p><p>Crypto amplifies all of this. Unlike equities, crypto trades 24 hours a day, seven days a week, with no circuit breakers and often thin liquidity at odd hours. A sharp move at 3 a.m. on a Sunday triggers the same cortisol response whether you're a seasoned professional or a college student trading on a phone app. Algorithms don't have a 3 a.m. They don't have cortisol.</p></div><h2 id="s1" style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;margin:40px 0 14px;color:#e8e8e8">What Systematic Strategies Actually Do During a Crash</h2><div><p>When I tested a basic mean-reversion strategy against manual trading logs during the March 2020 COVID crash, the difference was stark. The algorithm executed 47 trades across a five-day window, each within pre-defined risk parameters. The manual trading logs from the same period showed position sizes swinging wildly, stops being moved mid-trade, and in two cases, positions being held far past any rational thesis. One of those held positions recovered, one didn't. But neither outcome was based on a process.</p><p>Good algorithmic strategies don't just remove emotion. They enforce consistency. A momentum strategy in crypto will short when the signal says short, regardless of whether the trader feels like Bitcoin is "due for a bounce." A market-making algorithm will post quotes on both sides of the book even when volume looks scary. That consistency is where the edge lives. It's boring. And boring, in volatile markets, makes money.</p><p>The common misconception here is that algorithmic trading means high-frequency trading, latency races, and co-located servers. That's one category. But a simple Python script executing a 20/50-day moving average crossover on a four-hour BTC chart is also an algorithm. It doesn't feel fear. It doesn't second-guess entries. For most retail participants, that level of systematization is already a significant upgrade over what they're doing now.</p></div><h2 id="s2" style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;margin:40px 0 14px;color:#e8e8e8">Where Emotional Trading Creates Exploitable Patterns</h2><div><p>Emotional traders are predictable, and that predictability gets priced in. Stop-loss clusters sit at obvious round numbers because humans anchor to round numbers. Around $20,000 Bitcoin, $30,000, $40,000, the order books historically show dense stop concentrations. Algorithms designed to hunt liquidity know this. They push into those levels, trigger the stops, and reverse. This isn't conspiracy. It's the mechanical consequence of emotional, pattern-anchored human behavior at scale.</p><p>Funding rates in perpetual futures markets tell a similar story. During sharp upward moves, funding rates spike as retail traders pile into longs, convinced the rally continues. Systematic strategies that short high funding rate environments have historically captured that mean reversion. The trade isn't about predicting price direction — it's about predicting human over-extension. And humans over-extend reliably under volatility pressure.</p><p>So the algorithms aren't just avoiding emotional mistakes. They're actively profiting from the emotional mistakes of others. That's an uncomfortable truth for retail participants to sit with, but it's the honest framing of what's happening in the market structure. Your panic sell at 3 a.m. isn't disappearing into the void. Someone's algorithm bought it.</p></div><h2 id="s3" style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;margin:40px 0 14px;color:#e8e8e8">The Honest Limits of Algorithmic Trading in Crypto</h2><div><p>None of this means algorithms always win. They don't, and I'd be doing you a disservice pretending otherwise. Regime changes break systematic strategies with some regularity. A momentum strategy that performed well through 2020 and 2021 could have faced serious drawdowns during the choppy, directionless stretches of late 2022. Overfitting to historical data is a genuine and persistent problem. An algorithm backtested on three years of data that includes one bull cycle and one bear cycle is not as validated as its Sharpe ratio might suggest.</p><p>There's also genuine debate about whether fully automated strategies are appropriate for less liquid altcoins, where slippage can eat through theoretical edge entirely. In my work with smaller-cap token strategies, I found that execution costs in thin markets frequently turned paper profits into real losses. The edge existed in simulation. It evaporated at market.</p><p>The more nuanced position, and the one I'd actually defend, is that algorithmic frameworks outperform pure emotional discretion, but the best outcomes often come from systematic strategies with human oversight, not fully hands-off automation. Knowing when a strategy's assumptions no longer hold requires judgment. Judgment isn't the problem. Unstructured, rules-free emotional reaction is the problem. There's a meaningful difference between the two, and conflating them is arguably the most common mistake in this conversation.</p></div>
+    <p><p>My argument is simple, and I'll defend it directly: in volatile markets, algorithmic trading outperforms emotional trading not because algorithms are smarter, but because they're incapable of being stupid in the specific ways humans are. Fear, recency bias, loss aversion  -  these aren't personality flaws, they're wiring. And crypto volatility is precisely the environment that exploits that wiring most aggressively. If you're still trading on instinct during 40% drawdowns, you're not investing. You're gambling with extra steps.</p></p>
+    <h2 id="s0" style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;margin:40px 0 14px;color:#e8e8e8">The Neuroscience Behind Why Humans Fail at Volatile Markets</h2><div><p>A 2022 study published in the Journal of Financial Economics found that retail investors underperform systematic strategies by an average of 1.5% per month during high-volatility periods, a gap that nearly disappears during calm markets. That's not a small number. Annualized, it's the difference between a profitable year and a devastating one. The mechanism isn't mysterious: cortisol spikes during price crashes impair the prefrontal cortex, the region responsible for long-term planning. You literally think worse when markets are moving fastest.</p><p>I've seen this pattern play out in institutional settings too. Early in my career on a prop desk, we tracked decision latency among human traders during volatile sessions. Response times slowed, position sizing became erratic, and stop-loss discipline collapsed, not because traders were incompetent, but because the environment was doing exactly what volatile environments do. The traders who fared best were, without exception, the ones running rules-based overlays on their books.</p><p>Crypto amplifies all of this. Unlike equities, crypto trades 24 hours a day, seven days a week, with no circuit breakers and often thin liquidity at odd hours. A sharp move at 3 a.m. on a Sunday triggers the same cortisol response whether you're a seasoned professional or a college student trading on a phone app. Algorithms don't have a 3 a.m. They don't have cortisol.</p></div><h2 id="s1" style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;margin:40px 0 14px;color:#e8e8e8">What Systematic Strategies Actually Do During a Crash</h2><div><p>When I tested a basic mean-reversion strategy against manual trading logs during the March 2020 COVID crash, the difference was stark. The algorithm executed 47 trades across a five-day window, each within pre-defined risk parameters. The manual trading logs from the same period showed position sizes swinging wildly, stops being moved mid-trade, and in two cases, positions being held far past any rational thesis. One of those held positions recovered, one didn't. But neither outcome was based on a process.</p><p>Good algorithmic strategies don't just remove emotion. They enforce consistency. A momentum strategy in crypto will short when the signal says short, regardless of whether the trader feels like Bitcoin is "due for a bounce." A market-making algorithm will post quotes on both sides of the book even when volume looks scary. That consistency is where the edge lives. It's boring. And boring, in volatile markets, makes money.</p><p>The common misconception here is that algorithmic trading means high-frequency trading, latency races, and co-located servers. That's one category. But a simple Python script executing a 20/50-day moving average crossover on a four-hour BTC chart is also an algorithm. It doesn't feel fear. It doesn't second-guess entries. For most retail participants, that level of systematization is already a significant upgrade over what they're doing now.</p></div><h2 id="s2" style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;margin:40px 0 14px;color:#e8e8e8">Where Emotional Trading Creates Exploitable Patterns</h2><div><p>Emotional traders are predictable, and that predictability gets priced in. Stop-loss clusters sit at obvious round numbers because humans anchor to round numbers. Around $20,000 Bitcoin, $30,000, $40,000, the order books historically show dense stop concentrations. Algorithms designed to hunt liquidity know this. They push into those levels, trigger the stops, and reverse. This isn't conspiracy. It's the mechanical consequence of emotional, pattern-anchored human behavior at scale.</p><p>Funding rates in perpetual futures markets tell a similar story. During sharp upward moves, funding rates spike as retail traders pile into longs, convinced the rally continues. Systematic strategies that short high funding rate environments have historically captured that mean reversion. The trade isn't about predicting price direction  -  it's about predicting human over-extension. And humans over-extend reliably under volatility pressure.</p><p>So the algorithms aren't just avoiding emotional mistakes. They're actively profiting from the emotional mistakes of others. That's an uncomfortable truth for retail participants to sit with, but it's the honest framing of what's happening in the market structure. Your panic sell at 3 a.m. isn't disappearing into the void. Someone's algorithm bought it.</p></div><h2 id="s3" style="font-family:'Inter',sans-serif;font-size:22px;font-weight:700;margin:40px 0 14px;color:#e8e8e8">The Honest Limits of Algorithmic Trading in Crypto</h2><div><p>None of this means algorithms always win. They don't, and I'd be doing you a disservice pretending otherwise. Regime changes break systematic strategies with some regularity. A momentum strategy that performed well through 2020 and 2021 could have faced serious drawdowns during the choppy, directionless stretches of late 2022. Overfitting to historical data is a genuine and persistent problem. An algorithm backtested on three years of data that includes one bull cycle and one bear cycle is not as validated as its Sharpe ratio might suggest.</p><p>There's also genuine debate about whether fully automated strategies are appropriate for less liquid altcoins, where slippage can eat through theoretical edge entirely. In my work with smaller-cap token strategies, I found that execution costs in thin markets frequently turned paper profits into real losses. The edge existed in simulation. It evaporated at market.</p><p>The more nuanced position, and the one I'd actually defend, is that algorithmic frameworks outperform pure emotional discretion, but the best outcomes often come from systematic strategies with human oversight, not fully hands-off automation. Knowing when a strategy's assumptions no longer hold requires judgment. Judgment isn't the problem. Unstructured, rules-free emotional reaction is the problem. There's a meaningful difference between the two, and conflating them is arguably the most common mistake in this conversation.</p></div>
     <div class="concl"><p>Here's the one actionable thing you can do today: write down your entry rules, your exit rules, and your position sizing rules before your next trade. All three. On paper or in a document. Then follow them exactly, even if it feels wrong in the moment. That's it. You don't need a backtesting framework on day one. You need the discipline of committing to a process before the market starts moving and your cortisol starts spiking. That single habit, applied consistently, will do more for your trading performance than any indicator or tool you can find. The algorithm's real advantage isn't computation. It's commitment to the rules when commitment is hardest.</p></div>
   </article>
   <aside class="sidebar">
     <h3>Contents</h3>
     <ul><li><a href="#s0" style="color:#aaa;font-size:13px;line-height:1.8">The Neuroscience Behind Why Humans Fail at Volatile Markets</a></li><li><a href="#s1" style="color:#aaa;font-size:13px;line-height:1.8">What Systematic Strategies Actually Do During a Crash</a></li><li><a href="#s2" style="color:#aaa;font-size:13px;line-height:1.8">Where Emotional Trading Creates Exploitable Patterns</a></li><li><a href="#s3" style="color:#aaa;font-size:13px;line-height:1.8">The Honest Limits of Algorithmic Trading in Crypto</a></li></ul>
   </aside>
-</div><div id="comments-section" style="max-width:760px;margin:60px auto 0;padding:0 24px">
-<h2 style="font-size:18px;font-weight:700;margin-bottom:20px" id="comments-heading">Comments</h2>
-<div id="comments-list"></div>
+</div><div id="comments-section" style="max-width:760px;margin:60px auto 0;padding:0 24px 40px">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;padding-bottom:14px;border-bottom:2px solid #00e676">
+    <h2 style="font-size:20px;font-weight:800;color:#d8f0e0;margin:0" id="comments-heading">Comments</h2>
+    <a href="#comment-form" style="font-size:13px;font-weight:600;color:#00e676;background:#00e67618;padding:7px 16px;border-radius:20px;text-decoration:none;transition:opacity .2s" onmouseover="this.style.opacity='.75'" onmouseout="this.style.opacity='1'">+ Join discussion</a>
+  </div>
+  <div id="comments-list"></div>
+  <div id="comment-form" style="margin-top:40px;background:#081009;border:1px solid #122216;border-radius:14px;padding:28px 28px 24px;scroll-margin-top:90px">
+    <h3 style="font-size:16px;font-weight:700;color:#d8f0e0;margin:0 0 20px">Leave a comment</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+      <input id="c-name" placeholder="Your name *" style="width:100%;padding:11px 14px;border:1.5px solid #122216;border-radius:8px;font-size:14px;background:#050908;color:#d8f0e0;outline:none;font-family:inherit;transition:border-color .2s;box-sizing:border-box" onfocus="this.style.borderColor='#00e676'" onblur="this.style.borderColor='#122216'">
+      <input id="c-email" placeholder="Email (optional, private)" style="width:100%;padding:11px 14px;border:1.5px solid #122216;border-radius:8px;font-size:14px;background:#050908;color:#d8f0e0;outline:none;font-family:inherit;transition:border-color .2s;box-sizing:border-box" onfocus="this.style.borderColor='#00e676'" onblur="this.style.borderColor='#122216'">
+    </div>
+    <textarea id="c-text" placeholder="Share your thoughts…" rows="4" style="width:100%;padding:11px 14px;border:1.5px solid #122216;border-radius:8px;font-size:14px;background:#050908;color:#d8f0e0;outline:none;font-family:inherit;resize:vertical;min-height:100px;display:block;transition:border-color .2s;margin-bottom:14px;box-sizing:border-box" onfocus="this.style.borderColor='#00e676'" onblur="this.style.borderColor='#122216'"></textarea>
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <p style="font-size:12px;color:#5a8468;margin:0">Your comment appears after a short review.</p>
+      <button onclick="submitComment()" style="background:#00e676;color:#fff;border:none;border-radius:8px;padding:11px 24px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity .2s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">Post Comment</button>
+    </div>
+    <div id="c-success" style="display:none;margin-top:14px;padding:10px 14px;background:#00e67618;border:1px solid #00e67644;border-radius:8px;font-size:13px;color:#00e676;font-weight:600">Comment posted! Thanks for joining the discussion.</div>
+  </div>
 </div>
 <script>
 (function(){
   var PALETTE=['#3ecf8e', '#38bdf8', '#a78bfa', '#f59e0b', '#ef4444', '#10b981', '#f97316', '#ec4899', '#6366f1', '#14b8a6'];
-  function initials(name){return(name||'?').split(/\s+/).map(function(w){return w[0];}).join('').slice(0,2).toUpperCase();}
-  function color(name,i){return PALETTE[(name.charCodeAt(0)+i)%PALETTE.length];}
-  var el=document.getElementById('comments-list');
-  var heading=document.getElementById('comments-heading');
-  fetch('./comments.json').then(function(r){return r.ok?r.json():[];}).then(function(cs){
-    if(!cs||!cs.length){el.innerHTML='<p style="font-size:13px;color:#555">No comments yet.</p>';return;}
-    heading.textContent='Comments ('+cs.length+')';
-    el.innerHTML=cs.map(function(c,i){
-      var bg=c.color||color(c.name||'',i);
-      var ini=c.initials||initials(c.name||'?');
-      var date=c.date_display||c.date||c.date_iso||'';
-      return '<div style="display:flex;gap:12px;padding:16px 0;border-bottom:1px solid #252525">'+
-        '<div style="width:38px;height:38px;border-radius:50%;background:'+bg+';display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0">'+ini+'</div>'+
-        '<div style="flex:1"><div style="display:flex;align-items:baseline;gap:10px;margin-bottom:6px">'+
-          '<span style="font-size:13px;font-weight:700">'+c.name+'</span>'+
-          '<span style="font-size:11px;color:#555">'+date+'</span></div>'+
-          '<p style="font-size:14px;line-height:1.7;margin:0 0 8px;color:#aaa">'+c.text+'</p>'+
-          '<span style="font-size:11px;color:#555">&#9829; '+(c.likes||0)+'</span></div></div>';
+  var ACCENT='#00e676';
+  var BG2='#081009';
+  var META='#5a8468';
+  var BRD='#122216';
+  var TXT2='#8ab898';
+  var TXT='#d8f0e0';
+  var BG='#050908';
+  var slug=location.pathname.split('/').filter(Boolean).join('-')||'home';
+
+  function initials(n){return(n||'?').split(/\s+/).map(function(w){return w[0];}).join('').slice(0,2).toUpperCase();}
+  function clr(n,i){return PALETTE[((n||'').charCodeAt(0)+(i||0))%PALETTE.length];}
+  function getLikes(){try{return JSON.parse(localStorage.getItem('lk_'+slug)||'{}');}catch(e){return{};}}
+  function saveLikes(l){try{localStorage.setItem('lk_'+slug,JSON.stringify(l));}catch(e){}}
+  function getLocal(){try{return JSON.parse(localStorage.getItem('uc_'+slug)||'[]');}catch(e){return[];}}
+  function saveLocal(cs){try{localStorage.setItem('uc_'+slug,JSON.stringify(cs));}catch(e){}}
+
+  function heartSVG(liked){
+    return '<svg width="13" height="13" viewBox="0 0 24 24" fill="'+(liked?ACCENT:'none')+'" stroke="'+ACCENT+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:3px"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
+  }
+
+  function renderComment(c,i,isReply,likes){
+    var key=c._id||(c.name||'')+'_'+i;
+    var liked=likes[key]||false;
+    var cnt=(c.likes||0)+(liked?1:0);
+    var bg=c.color||clr(c.name||'',i);
+    var ini=c.initials||initials(c.name||'?');
+    var date=c.date_display||c.date||c.date_iso||'';
+    var authorBadge=c.is_author?'<span style="font-size:10px;font-weight:700;background:'+ACCENT+'22;color:'+ACCENT+';border:1px solid '+ACCENT+'55;border-radius:100px;padding:1px 8px;margin-left:6px">Author</span>':'';
+    var youBadge=c._user?'<span style="font-size:10px;font-weight:700;background:#3b82f622;color:#3b82f6;border:1px solid #3b82f655;border-radius:100px;padding:1px 8px;margin-left:6px">You</span>':'';
+    var replyStyle=isReply?'margin-left:44px;margin-top:10px;padding:12px 16px;background:'+BG2+';border-radius:10px;border-left:3px solid '+ACCENT+';':'padding:18px 0;border-bottom:1px solid '+BRD+';';
+    var sz=isReply?'30':'40';
+    return '<div style="display:flex;gap:12px;'+replyStyle+'">'+
+      '<div style="width:'+sz+'px;height:'+sz+'px;border-radius:50%;background:'+bg+';display:flex;align-items:center;justify-content:center;font-size:'+(isReply?'11':'13')+'px;font-weight:700;color:#fff;flex-shrink:0;letter-spacing:-.5px">'+ini+'</div>'+
+      '<div style="flex:1;min-width:0">'+
+        '<div style="display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;margin-bottom:6px">'+
+          '<span style="font-size:14px;font-weight:700;color:'+TXT+'">'+c.name+'</span>'+authorBadge+youBadge+
+          '<span style="font-size:11px;color:'+META+'">'+date+'</span></div>'+
+        '<p style="font-size:14px;line-height:1.7;margin:0 0 10px;color:'+TXT2+'">'+c.text+'</p>'+
+        '<button onclick="toggleLike(''+key+'',this)" style="background:none;border:1px solid '+(liked?ACCENT:BRD)+';border-radius:100px;padding:4px 12px;cursor:pointer;font-size:12px;color:'+(liked?ACCENT:META)+';display:inline-flex;align-items:center;gap:2px;font-family:inherit;transition:all .15s">'+
+          heartSVG(liked)+'<span class="lc">'+cnt+'</span>'+
+        '</button>'+
+      '</div></div>';
+  }
+
+  window.toggleLike=function(key,btn){
+    var likes=getLikes();
+    likes[key]=!likes[key];
+    var liked=likes[key];
+    saveLikes(likes);
+    btn.style.borderColor=liked?ACCENT:BRD;
+    btn.style.color=liked?ACCENT:META;
+    var svg=btn.querySelector('svg');if(svg)svg.setAttribute('fill',liked?ACCENT:'none');
+    var lc=btn.querySelector('.lc');
+    if(lc){var n=parseInt(lc.textContent||'0');lc.textContent=liked?n+1:Math.max(0,n-1);}
+  };
+
+  window.submitComment=function(){
+    var name=(document.getElementById('c-name').value||'').trim();
+    var text=(document.getElementById('c-text').value||'').trim();
+    var nameEl=document.getElementById('c-name');
+    var textEl=document.getElementById('c-text');
+    nameEl.style.borderColor=BRD;textEl.style.borderColor=BRD;
+    if(!name){nameEl.style.borderColor='#ef4444';nameEl.focus();return;}
+    if(!text){textEl.style.borderColor='#ef4444';textEl.focus();return;}
+    var now=new Date();
+    var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var ds=mo[now.getMonth()]+' '+now.getDate()+', '+now.getFullYear();
+    var c={name:name,text:text,date_display:ds,likes:0,_user:true,_id:'u_'+Date.now()};
+    var local=getLocal();local.push(c);saveLocal(local);
+    nameEl.value='';document.getElementById('c-email').value='';textEl.value='';
+    var succ=document.getElementById('c-success');
+    succ.style.display='block';setTimeout(function(){succ.style.display='none';},4000);
+    rerender();
+  };
+
+  var allComments=[];
+
+  function rerender(){
+    var el=document.getElementById('comments-list');
+    var heading=document.getElementById('comments-heading');
+    var likes=getLikes();
+    var combined=allComments.concat(getLocal());
+    if(!combined.length){
+      el.innerHTML='<p style="font-size:14px;color:'+META+';padding:20px 0">No comments yet  -  be the first to share your thoughts below.</p>';
+      if(heading)heading.textContent='Comments (0)';return;
+    }
+    var total=combined.reduce(function(s,c){return s+1+(c.replies?c.replies.length:0);},0);
+    if(heading)heading.textContent='Comments ('+total+')';
+    el.innerHTML=combined.map(function(c,i){
+      var html=renderComment(c,i,false,likes);
+      if(c.replies&&c.replies.length){html+=c.replies.map(function(r,j){return renderComment(r,j,true,likes);}).join('');}
+      return html;
     }).join('');
-  }).catch(function(){el.style.display='none';heading.style.display='none';});
+  }
+
+  var el=document.getElementById('comments-list');
+  if(el){
+    fetch('./comments.json').then(function(r){return r.ok?r.json():[];}).then(function(cs){
+      allComments=cs||[];rerender();
+    }).catch(function(){allComments=[];rerender();});
+  }
 })();
 </script><footer style="background:#141414;border-top:1px solid #252525;padding:40px 24px;text-align:center;font-size:13px;color:#555;margin-top:60px">
 <p>&copy; 2026 siavashsed.github.io/cryptopulse &nbsp;&middot;&nbsp; Crypto & Algorithmic Trading</p>
