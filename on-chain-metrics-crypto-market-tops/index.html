@@ -294,9 +294,13 @@ document.getElementById('a-nav-date').textContent=new Date().toLocaleDateString(
     }).catch(function(){allComments=[];rerender();});
   }
 })();
-</script><footer style="background:#141414;border-top:1px solid #252525;padding:40px 24px;text-align:center;font-size:13px;color:#555;margin-top:60px">
+</script><footer style="background:#081009;border-top:1px solid #122216;padding:40px 24px;text-align:center;font-size:13px;color:#5a8468;margin-top:60px">
 <p>&copy; 2026 siavashsed.github.io/cryptopulse &nbsp;&middot;&nbsp; Crypto & Algorithmic Trading</p>
 <p style="margin-top:6px;font-size:11px">For informational purposes only. Not financial or investment advice.</p>
-<p style="margin-top:6px;font-size:11px"><a href="/about/" style="color:#555">About</a> &nbsp;&middot;&nbsp; <a href="/contact/" style="color:#555">Contact</a> &nbsp;&middot;&nbsp; <a href="/privacy/" style="color:#555">Privacy Policy</a></p>
+<p style="margin-top:6px;font-size:11px">
+  <a href="../" style="color:#5a8468">Home</a> &nbsp;&middot;&nbsp;
+  <a href="../about/" style="color:#5a8468">About</a> &nbsp;&middot;&nbsp;
+  <a href="../privacy/" style="color:#5a8468">Privacy Policy</a>
+</p>
 </footer><script>(function(){var nav=document.querySelector('.site-nav');if(!nav)return;var tk=document.createElement('div');tk.className='cp-tk';var items=[{sy:'BTC',id:'cptk-btc'},{sy:'ETH',id:'cptk-eth'},{sy:'SOL',id:'cptk-sol'},{sy:'BNB',id:'cptk-bnb'},{sy:'ADA',id:'cptk-ada'},{sy:'AVAX',id:'cptk-avax'},{sy:'LINK',id:'cptk-link'},{sy:'DOT',id:'cptk-dot'},{sy:'MATIC',id:'cptk-matic'},{sy:'ATOM',id:'cptk-atom'}];var html=items.map(function(i){return '<span class="cp-tk-it"><span class="cp-tk-sy">'+i.sy+'</span><span id="'+i.id+'">--</span></span>';}).join('');tk.innerHTML='<div class="cp-tk-lbl"><span class="cp-tk-dot"></span>LIVE</div><div class="cp-tk-vp"><div class="cp-tk-tr">'+html+html+'</div></div>';nav.parentNode.insertBefore(tk,nav);(async function(){try{var d=await(await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin,cardano,avalanche-2,chainlink,polkadot,matic-network,cosmos&vs_currencies=usd&include_24hr_change=true',{cache:'no-store'})).json();var map={btc:d.bitcoin,eth:d.ethereum,sol:d.solana,bnb:d.binancecoin,ada:d.cardano,avax:d['avalanche-2'],link:d.chainlink,dot:d.polkadot,matic:d['matic-network'],atom:d.cosmos};function fmt(v){return '$'+(v>=1000?v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','):v.toFixed(2));}Object.entries(map).forEach(function([k,v]){if(!v)return;var el=document.getElementById('cptk-'+k);if(el){var ch=v.usd_24h_change||0;el.textContent=fmt(v.usd)+' '+(ch>=0?'\u25b2':'\u25bc')+(Math.abs(ch).toFixed(1))+'%';el.style.color=ch>=0?'#00e676':'#ff5252';}});}catch(e){}})();})()</script>
 </body></html>
