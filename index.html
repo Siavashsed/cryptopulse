@@ -1367,10 +1367,8 @@ async function loadPosts(){
     var h0=posts[0];
     var hi=document.getElementById('pxl-img');
     if(hi&&h0.image){hi.onload=function(){hi.style.opacity='1';};hi.src=h0.image;}
-    var ht=document.getElementById('hero-title'),hd=document.getElementById('hero-desc'),hl=document.getElementById('hero-feat-link');
-    if(ht)ht.textContent=h0.title;
-    if(hd)hd.textContent=h0.meta_description||'';
-    if(hl)hl.href='./'+h0.slug+'/';
+    var hl=document.getElementById('hero-feat-link');
+    if(hl)hl.href='./'+h0.slug+'/'; // point CTA to latest article; headline stays as brand text
     if(posts.length>1){
       posts.slice(1,4).forEach(function(p,i){
         var ttl=document.getElementById('si-ttl-'+i),dt=document.getElementById('si-dt-'+i),sl=document.getElementById('sub-link-'+i);
