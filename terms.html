@@ -435,7 +435,7 @@ img{display:block;max-width:100%}
   <div class="nav-inner">
     <a href="./" class="nav-logo">CryptoPulse<span>crypto intelligence</span></a>
     <div class="nav-links" id="nav-links-d">
-      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" class="active">Latest</a>
+      <a href="./" class="active">Latest</a>
       <a href="#analysis">Analysis</a>
       <a href="#topics">On-Chain</a>
       <a href="#market">Algo Signals</a>
@@ -527,7 +527,7 @@ img{display:block;max-width:100%}
     </div>
     <div class="foot-col">
       <div class="foot-col-title">Tools</div>
-      <a href="#tools" onclick="document.querySelector('.tool-card').scrollIntoView({behavior:'smooth'});return false">Position Size Calc</a>
+      <a href="#tools">Position Size Calc</a>
       <a href="#tools">Risk / Reward Calc</a>
       <a href="#tools">Liquidation Calc</a>
       <a href="about.html">Methodology</a>
@@ -537,7 +537,6 @@ img{display:block;max-width:100%}
       <a href="about.html">About</a>
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms of Use</a>
-      <a href="disclaimer.html">Full Disclaimer</a>
     </div>
   </div>
   </div><!-- /foot-bottom -->
@@ -1049,9 +1048,13 @@ if(ocEl)ocIo.observe(ocEl);
 
 // ── ARTICLES.JSON LOADER ──────────────────────────────────────────────────
 async function loadPosts(){
+  if(!document.getElementById('main-feed'))return;
   try{
     var r=await fetch('./articles.json'); if(!r.ok)throw 0;
-    var posts=await r.json(); if(!posts||!posts.length)throw 0;
+    var posts=await r.json();
+    if(!Array.isArray(posts))throw 0;
+    posts=posts.filter(function(p){return p&&p.slug&&p.title;});
+    if(!posts.length)throw 0;
     var h0=posts[0];
     var hi=document.getElementById('pxl-img');
     if(hi&&h0.image){hi.onload=function(){hi.style.opacity='1';};hi.src=h0.image;}
@@ -1094,7 +1097,12 @@ async function loadPosts(){
       var ttl=document.getElementById('td-ttl-'+i); if(ttl)ttl.textContent=p.title;
       if(p.image){var em=el.querySelector('.mkt-ed-img');if(em){var ei=document.createElement('img');ei.src=p.image;ei.style.cssText='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2';em.style.position='relative';em.appendChild(ei);}}
     });
-  }catch(e){}
+  }catch(e){
+    var mf=document.getElementById('main-feed');
+    if(mf)mf.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:48px 20px;color:#3a6a48;font-family:var(--fm);font-size:13px">New analysis coming soon.</div>';
+    var sf=document.getElementById('side-feed');
+    if(sf)sf.innerHTML='<div style="padding:20px 4px;color:#3a6a48;font-family:var(--fm);font-size:12px">New posts coming soon.</div>';
+  }
 }
 loadPosts();
 
