@@ -1,0 +1,52 @@
+[
+  {
+    "id": "c1344",
+    "name": "Marcus T.",
+    "initials": "MT",
+    "color": "#ec4899",
+    "date_iso": "2026-05-19",
+    "date_display": "May 19, 2026",
+    "text": "Finally someone breaks down the math properly. I've been DCA'ing into BTC for 18 months and this explains exactly why my average entry is so much better than if I'd gone all-in during the 2021 peak.",
+    "likes": 11
+  },
+  {
+    "id": "c2934",
+    "name": "Sarah K.",
+    "initials": "SK",
+    "color": "#ef4444",
+    "date_iso": "2026-05-22",
+    "date_display": "May 22, 2026",
+    "text": "Interesting analysis, but doesn't this assume you have consistent capital to invest each month? Most retail traders I know struggle with that discipline.",
+    "likes": 7
+  },
+  {
+    "id": "c3348",
+    "name": "David R.",
+    "initials": "DR",
+    "color": "#3ecf8e",
+    "date_iso": "2026-05-25",
+    "date_display": "May 25, 2026",
+    "text": "Been using an algo to execute DCA orders for 2 years now. The timing variance is negligible compared to the psychological benefit of removing emotion from entry points. Worth it just for that.",
+    "likes": 9
+  },
+  {
+    "id": "c4372",
+    "name": "Jennifer M.",
+    "initials": "JM",
+    "color": "#ec4899",
+    "date_iso": "2026-05-28",
+    "date_display": "May 28, 2026",
+    "text": "Question: does the standard deviation model in your calculations account for flash crashes and low liquidity altcoins? Because I feel like this works great for BTC/ETH but not much else.",
+    "likes": 5
+  },
+  {
+    "id": "c5946",
+    "name": "Alex C.",
+    "initials": "AC",
+    "color": "#14b8a6",
+    "date_iso": "2026-06-02",
+    "date_display": "Jun 2, 2026",
+    "text": "DCA works but the real edge is combining it with technical levels and volume analysis. Blind monthly investing leaves a lot of alpha on the table if you know what to look for.",
+    "likes": 8
+  }
+]
