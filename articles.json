@@ -1,5 +1,59 @@
 [
   {
+    "title": "Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works",
+    "slug": "dollar-cost-averaging-crypto-math",
+    "meta_description": "Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.",
+    "date": "May 17, 2026",
+    "date_iso": "2026-05-17",
+    "author": "David Kim",
+    "image": "https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "chainalysis.com",
+      "river.com"
+    ]
+  },
+  {
+    "title": "Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)",
+    "slug": "open-source-trading-bots-worth-using",
+    "meta_description": "Alex Rivera reviews the open-source trading bots that hold up in production \u2014 with honest takes on Freqtrade, Hummingbot, Jesse, and more.",
+    "date": "May 17, 2026",
+    "date_iso": "2026-05-17",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/6424586/pexels-photo-6424586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "freqtrade.io",
+      "hummingbot.io",
+      "jesse.trade"
+    ],
+    "syndicated_from": "tradingtechreview"
+  },
+  {
+    "title": "Funding Rates Explained: What Every Futures Trader Actually Needs to Know",
+    "slug": "funding-rates-crypto-futures-traders",
+    "meta_description": "Funding rates silently drain or reward crypto futures traders. Marcus Chen breaks down the mechanics, the traps, and how to trade them intelligently.",
+    "date": "May 16, 2026",
+    "date_iso": "2026-05-16",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/6777564/pexels-photo-6777564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "glassnode.com",
+      "binance.com"
+    ]
+  },
+  {
+    "title": "How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test)",
+    "slug": "trading-desks-evaluate-new-tools",
+    "meta_description": "Alex Rivera breaks down how serious trading desks evaluate new tools \u2014 from latency benchmarks to integration reality checks. No vendor hype allowed.",
+    "date": "May 16, 2026",
+    "date_iso": "2026-05-16",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/5833752/pexels-photo-5833752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "cfainstitute.org"
+    ],
+    "syndicated_from": "tradingtechreview"
+  },
+  {
     "title": "Why Algorithmic Trading Beats Emotional Trading When Crypto Markets Go Haywire",
     "slug": "algorithmic-vs-emotional-crypto-trading",
     "meta_description": "Ex-quant trader Marcus Chen explains why algorithmic trading consistently outperforms emotional decision-making in volatile crypto markets, with real data.",
@@ -65,29 +119,74 @@
     ]
   },
   {
-    "title": "Funding Rates Explained: What Every Futures Trader Actually Needs to Know",
-    "slug": "funding-rates-crypto-futures-traders",
-    "meta_description": "Funding rates silently drain or reward crypto futures traders. Marcus Chen breaks down the mechanics, the traps, and how to trade them intelligently.",
-    "date": "May 16, 2026",
-    "date_iso": "2026-05-16",
+    "title": "The Best Python Libraries for Backtesting Trading Strategies (And What Nobody Tells You About Them)",
+    "slug": "python-backtesting-libraries-trading-strategies",
+    "meta_description": "Alex Rivera reviews the top Python backtesting libraries for algorithmic traders \u2014 what actually works, what breaks in prod, and which one to start with.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
     "author": "Siavash Sadighi",
-    "image": "https://images.pexels.com/photos/6777564/pexels-photo-6777564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "image": "https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
-      "glassnode.com",
-      "binance.com"
-    ]
+      "vectorbt.pro",
+      "kernc.github.io/backtesting.py",
+      "zipline-reloaded.readthedocs.io"
+    ],
+    "syndicated_from": "tradingtechreview"
   },
   {
-    "title": "Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works",
-    "slug": "dollar-cost-averaging-crypto-math",
-    "meta_description": "Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.",
-    "date": "May 17, 2026",
-    "date_iso": "2026-05-17",
-    "author": "David Kim",
-    "image": "https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "title": "How to Connect to Binance API Without Getting Rate-Limited: A Practitioner's Guide",
+    "slug": "binance-api-rate-limit-guide",
+    "meta_description": "Connect to Binance API without hitting rate limits. Practical strategies from an algorithmic trader who's been banned and learned from it.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/4960438/pexels-photo-4960438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
-      "chainalysis.com",
-      "river.com"
-    ]
+      "binance-docs.github.io",
+      "redis.io"
+    ],
+    "syndicated_from": "tradingtechreview"
+  },
+  {
+    "title": "Pine Script vs Python: Which Should Traders Learn First (And Why the Answer Isn't Obvious)",
+    "slug": "pine-script-vs-python-traders",
+    "meta_description": "Alex Rivera breaks down Pine Script vs Python for traders \u2014 which to learn first, what each does well, and where most people waste months of effort.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "stackoverflow.com",
+      "tradingview.com"
+    ],
+    "syndicated_from": "tradingtechreview"
+  },
+  {
+    "title": "Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap",
+    "slug": "real-time-crypto-screener-websockets",
+    "meta_description": "Learn how to build a real-time crypto screener using WebSockets. Alex Rivera breaks down architecture, latency traps, and what actually works in production.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/29885479/pexels-photo-29885479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "kaiko.com",
+      "binance-docs.github.io",
+      "websockets.readthedocs.io"
+    ],
+    "syndicated_from": "tradingtechreview"
+  },
+  {
+    "title": "Backtest vs Live Trading: Why Your Results Will Always Differ (And What To Do About It)",
+    "slug": "backtest-vs-live-trading-results-differ",
+    "meta_description": "Alex Rivera explains the real technical reasons backtest and live trading results diverge \u2014 and how to close the gap without fooling yourself.",
+    "date": "May 15, 2026",
+    "date_iso": "2026-05-15",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/16902140/pexels-photo-16902140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "aqr.com"
+    ],
+    "syndicated_from": "tradingtechreview"
   }
 ]
