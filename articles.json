@@ -5,7 +5,7 @@
     "meta_description": "Ex-quant trader Marcus Chen explains why algorithmic trading consistently outperforms emotional decision-making in volatile crypto markets, with real data.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
-    "author": "Siavash Sadighi",
+    "author": "Jordan Osei",
     "image": "https://images.pexels.com/photos/6478886/pexels-photo-6478886.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "jfe.journals.elsevier.com",
@@ -15,10 +15,10 @@
   {
     "title": "How Exchange APIs Power Fully Automated Crypto Trading Strategies",
     "slug": "exchange-apis-automated-crypto-trading",
-    "meta_description": "Ex-quant trader Marcus Chen breaks down how exchange APIs enable automated crypto strategies — the mechanics, the limits, and what actually works.",
+    "meta_description": "Ex-quant trader Marcus Chen breaks down how exchange APIs enable automated crypto strategies \u2014 the mechanics, the limits, and what actually works.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
-    "author": "Siavash Sadighi",
+    "author": "Elena Vasquez",
     "image": "https://images.pexels.com/photos/5831512/pexels-photo-5831512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "binance.com",
@@ -44,7 +44,7 @@
     "meta_description": "Ex-quant trader Marcus Chen breaks down the on-chain signals that flashed before Bitcoin's 2018, 2021, and 2022 tops. Numbers don't lie.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
-    "author": "Siavash Sadighi",
+    "author": "David Kim",
     "image": "https://images.pexels.com/photos/8370426/pexels-photo-8370426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "glassnode.com",
@@ -57,7 +57,7 @@
     "meta_description": "Marcus Chen breaks down grid bots vs trend-following bots with real data, trade-offs, and a clear verdict for algorithmic crypto traders.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
-    "author": "Siavash Sadighi",
+    "author": "Elena Vasquez",
     "image": "https://images.pexels.com/photos/7807839/pexels-photo-7807839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "binance.com",
@@ -83,7 +83,7 @@
     "meta_description": "Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.",
     "date": "May 17, 2026",
     "date_iso": "2026-05-17",
-    "author": "Siavash Sadighi",
+    "author": "David Kim",
     "image": "https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "chainalysis.com",
