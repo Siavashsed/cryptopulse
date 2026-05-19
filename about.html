@@ -391,27 +391,6 @@ img{display:block;max-width:100%}
   .nl-form button{border-radius:2px;padding:14px;margin-top:2px}
   .foot-top{grid-template-columns:1fr}
 }
-/* page */
-.ab{max-width:840px;margin:0 auto;padding:56px 24px 88px}
-.ab-kicker{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:#00e676;margin-bottom:14px}
-.ab-title{font-family:system-ui,sans-serif;font-size:clamp(28px,5vw,42px);font-weight:800;line-height:1.15;color:#d8f0e0;margin:0 0 16px}
-.ab-lead{font-size:17px;line-height:1.7;color:#5a8468;margin-bottom:40px}
-.ab-author{display:flex;gap:16px;align-items:center;background:#081009;border:1px solid #122216;border-radius:10px;padding:20px 22px;margin-bottom:32px}
-.ab-avatar{width:56px;height:56px;border-radius:50%;background:#00e676;color:#050908;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ab-name{font-size:17px;font-weight:700;color:#d8f0e0}
-.ab-role{font-size:13px;color:#00e676;font-weight:600;margin-top:2px}
-.ab-h2{font-family:system-ui,sans-serif;font-size:20px;font-weight:700;color:#d8f0e0;margin:40px 0 14px}
-.ab-p{font-size:15px;line-height:1.85;color:#5a8468;margin-bottom:14px}
-.ab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:14px}
-.ab-card{background:#081009;border:1px solid #122216;border-radius:10px;padding:18px}
-.ab-card-av{width:38px;height:38px;border-radius:50%;background:#00e676;color:#050908;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
-.ab-card-name{font-size:14px;font-weight:700;color:#d8f0e0}
-.ab-card-role{font-size:11px;font-weight:600;color:#00e676;margin:2px 0 7px}
-.ab-card-bio{font-size:12px;line-height:1.65;color:#5a8468}
-.ab-cta{margin-top:44px;background:#081009;border:1px solid #122216;border-radius:12px;padding:30px 26px;text-align:center}
-.ab-cta h3{font-family:system-ui,sans-serif;font-size:19px;font-weight:700;color:#d8f0e0;margin:0 0 8px}
-.ab-cta p{font-size:14px;color:#5a8468;margin:0 0 18px}
-.ab-cta a{display:inline-block;background:#00e676;color:#050908;padding:11px 28px;border-radius:7px;font-size:14px;font-weight:700;text-decoration:none}
 </style>
 </head>
 <body>
@@ -466,51 +445,125 @@ img{display:block;max-width:100%}
     <a href="#newsletter" onclick="document.getElementById('nav-mobile').classList.remove('open')">Subscribe Free</a>
   </div>
 </nav>
-<main class="ab">
-  <div class="ab-kicker">About CryptoPulse</div>
-  <h1 class="ab-title">Algorithmic Trading Intelligence</h1>
-  <p class="ab-lead">On-chain data, systematic signals, and algo trade breakdowns for serious crypto traders.</p>
-  <div class="ab-author">
-    <div class="ab-avatar">SS</div>
-    <div>
-      <div class="ab-name">Siavash Sadighi</div>
-      <div class="ab-role">Crypto Analyst & Algorithmic Trading Strategist</div>
+<style>
+.ab-main{--ab-pri:#00e676;--ab-pri2:#00b85a;--ab-bg:#050908;--ab-bg2:#081009;--ab-bg3:#0c1710;--ab-txt:#d8f0e0;--ab-mut:#5a8468;--ab-brd:#122216;--ab-fh:'Space Grotesk',system-ui,sans-serif;--ab-fm:'Space Mono',monospace;background:var(--ab-bg);color:var(--ab-txt);font-family:var(--ab-fh)}
+.ab-main *{box-sizing:border-box}
+@keyframes ab-blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+.ab-hero{padding:92px 24px 76px;border-bottom:1px solid var(--ab-brd);position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% -20%,rgba(0,230,118,.08) 0%,transparent 60%)}
+.ab-wrap{max-width:920px;margin:0 auto}
+.ab-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--ab-fm);font-size:10px;font-weight:700;color:var(--ab-pri);text-transform:uppercase;letter-spacing:2px;border:1px solid var(--ab-brd);background:var(--ab-bg3);padding:6px 12px;border-radius:4px;margin-bottom:24px}
+.ab-tag span{width:6px;height:6px;border-radius:50%;background:var(--ab-pri);animation:ab-blink 1.2s ease-in-out infinite}
+.ab-h1{font-size:clamp(32px,4.8vw,52px);font-weight:700;line-height:1.1;letter-spacing:-1px;margin-bottom:18px;max-width:720px}
+.ab-h1 .ab-hl{color:var(--ab-pri)}
+.ab-lede{font-size:17px;color:var(--ab-mut);line-height:1.75;max-width:600px}
+
+.ab-section{padding:74px 24px}
+.ab-alt{background:var(--ab-bg2);border-top:1px solid var(--ab-brd);border-bottom:1px solid var(--ab-brd)}
+.ab-kicker{font-family:var(--ab-fm);font-size:10px;font-weight:700;color:var(--ab-pri);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
+.ab-h2{font-size:clamp(23px,3.2vw,32px);font-weight:700;letter-spacing:-.6px;margin-bottom:18px}
+.ab-p{font-size:15px;color:var(--ab-mut);line-height:1.82;margin-bottom:14px;max-width:670px}
+.ab-p strong{color:var(--ab-txt);font-weight:600}
+
+.ab-console{margin-top:32px;background:var(--ab-bg3);border:1px solid var(--ab-brd);border-radius:6px;overflow:hidden;max-width:600px}
+.ab-console-bar{font-family:var(--ab-fm);font-size:10px;color:var(--ab-mut);padding:9px 14px;border-bottom:1px solid var(--ab-brd);background:var(--ab-bg2);letter-spacing:1px}
+.ab-console-body{padding:16px 18px;font-family:var(--ab-fm);font-size:12px;line-height:1.95}
+.ab-cl{color:var(--ab-mut)}
+.ab-cl .ab-gr{color:var(--ab-pri)}
+.ab-cl .ab-dn{color:#ff5252}
+
+.ab-prin{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--ab-brd);border:1px solid var(--ab-brd);margin-top:32px}
+.ab-pcard{background:var(--ab-bg);padding:28px}
+.ab-pnum{font-family:var(--ab-fm);font-size:11px;font-weight:700;color:var(--ab-pri);margin-bottom:10px}
+.ab-ptitle{font-size:16px;font-weight:700;margin-bottom:8px}
+.ab-pdesc{font-size:13px;color:var(--ab-mut);line-height:1.7}
+
+.ab-author{display:grid;grid-template-columns:96px 1fr;gap:32px;background:var(--ab-bg3);border:1px solid var(--ab-brd);border-radius:8px;padding:40px;max-width:840px;margin:30px auto 0}
+.ab-avatar{width:96px;height:96px;border-radius:8px;background:linear-gradient(140deg,var(--ab-pri2),var(--ab-pri));display:flex;align-items:center;justify-content:center;font-family:var(--ab-fm);font-size:30px;font-weight:700;color:#020d06}
+.ab-author-name{font-size:23px;font-weight:700;letter-spacing:-.4px;margin-bottom:4px}
+.ab-author-role{font-family:var(--ab-fm);font-size:11px;color:var(--ab-pri);margin-bottom:16px;letter-spacing:.5px}
+.ab-author-bio{font-size:14px;color:var(--ab-mut);line-height:1.8;margin-bottom:11px}
+.ab-author-bio strong{color:var(--ab-txt);font-weight:600}
+.ab-disc{margin-top:28px;font-family:var(--ab-fm);font-size:11px;color:#3a6a48;line-height:1.7;border-top:1px solid var(--ab-brd);padding-top:20px;max-width:760px}
+.ab-disc strong{color:var(--ab-mut)}
+
+.ab-cta{text-align:center}
+.ab-cta .ab-h2,.ab-cta .ab-p{margin-left:auto;margin-right:auto}
+.ab-cta-btn{display:inline-block;margin-top:22px;font-family:var(--ab-fm);font-size:12px;font-weight:700;color:#020d06;background:var(--ab-pri);padding:14px 28px;border-radius:5px;text-transform:uppercase;letter-spacing:1px;transition:transform .2s}
+.ab-cta-btn:hover{transform:translateY(-2px)}
+
+@media(max-width:680px){.ab-prin{grid-template-columns:1fr}.ab-author{grid-template-columns:1fr;padding:30px}.ab-avatar{width:70px;height:70px;font-size:22px}}
+</style>
+<main class="ab-main">
+  <section class="ab-hero">
+    <div class="ab-wrap">
+      <div class="ab-tag"><span></span>About CryptoPulse</div>
+      <h1 class="ab-h1">Crypto research written by a quant, <span class="ab-hl">not a marketing team.</span></h1>
+      <p class="ab-lede">CryptoPulse publishes evidence-based analysis for systematic traders and crypto researchers - on-chain data, market structure, and signals, with no hype and no price calls.</p>
     </div>
-  </div>
-  <div class="ab-h2">Why this site exists</div>
-  <p class="ab-p">I grew up in a household where money was taken seriously. My parents had immigrated and built everything from nothing, and that shaped how I thought about risk before I ever traded a single position. Not as something to avoid, but as something to size correctly.</p>
-    <p class="ab-p">My path into trading started through software. I studied mathematics at university and got hired by a small prop trading firm in Vancouver as a data analyst. Within eight months I was running my own book. Within two years I had blown it up, rebuilt it, and finally started making consistent returns.</p>
-    <p class="ab-p">Crypto entered my world in 2016. I spent about six months watching on-chain data before building my first automated strategy. It lost money for four months before I understood the gap between what I thought I was measuring and what actually drove price. That gap is the real curriculum in this space.</p>
-    <p class="ab-p">Running automated strategies at a prop desk for eight years gave me perspective on the full lifecycle of a trading idea - conception, backtesting, live deployment, degradation, and retirement. Most edges have a shelf life. The discipline is recognizing when to retire a strategy rather than explaining away its losses.</p>
-    <p class="ab-p">I went independent three years ago. CryptoPulse is where I publish the longer analysis - on-chain research, strategy breakdowns, and market structure observations that take more than a short post to explain properly. No hype, no calls, no FOMO. Just the systematic work.</p>
-  <div class="ab-h2">Who contributes</div>
-  <p class="ab-p">Alongside Siavash Sadighi, a small group of practitioners review and pressure-test what gets published here.</p>
-  <div class="ab-grid">
-      <div class="ab-card">
-        <div class="ab-card-av">LF</div>
-        <div class="ab-card-name">Lena Fischer</div>
-        <div class="ab-card-role">International Contributor</div>
-        <div class="ab-card-bio">Based in Frankfurt. Covers European regulatory developments, cross-border market dynamics, and emerging market capital flows.</div>
+  </section>
+
+  <section class="ab-section ab-alt">
+    <div class="ab-wrap">
+      <div class="ab-kicker">// why this exists</div>
+      <h2 class="ab-h2">The crypto media problem</h2>
+      <p class="ab-p">Most crypto content is engineered to make you trade. It runs on engagement: bold predictions, fear, FOMO, and affiliate links to exchanges. The incentive is attention, not accuracy - and that costs readers real money.</p>
+      <p class="ab-p">CryptoPulse was built as the opposite of that. It is <strong>independent, unsponsored, and conflict-free</strong>. The analysis follows the data: on-chain flows, holder behavior, liquidity, and volatility regimes. When the evidence is inconclusive, that is what gets published.</p>
+      <div class="ab-console">
+        <div class="ab-console-bar">cryptopulse@research:~ -- editorial-standard</div>
+        <div class="ab-console-body">
+          <div class="ab-cl">$ check --policy price-predictions</div>
+          <div class="ab-cl">> status: <span class="ab-dn">disabled</span> -- we do not publish calls</div>
+          <div class="ab-cl">$ check --policy sponsored-content</div>
+          <div class="ab-cl">> status: <span class="ab-dn">disabled</span> -- zero paid placements</div>
+          <div class="ab-cl">$ check --policy evidence-required</div>
+          <div class="ab-cl">> status: <span class="ab-gr">enforced</span> -- every claim sourced</div>
+        </div>
       </div>
-      <div class="ab-card">
-        <div class="ab-card-av">JT</div>
-        <div class="ab-card-name">James Thorne</div>
-        <div class="ab-card-role">Technical Contributor</div>
-        <div class="ab-card-bio">Full-stack developer who switched to financial writing. Covers the engineering reality behind products and platforms.</div>
+    </div>
+  </section>
+
+  <section class="ab-section">
+    <div class="ab-wrap">
+      <div class="ab-kicker">// the method</div>
+      <h2 class="ab-h2">How the analysis is built</h2>
+      <p class="ab-p">Every piece on CryptoPulse follows the same systematic process - the same one used to run real strategies.</p>
+      <div class="ab-prin">
+        <div class="ab-pcard"><div class="ab-pnum">01</div><div class="ab-ptitle">On-Chain First</div><div class="ab-pdesc">Wallet flows, exchange balances, and holder cohorts read before any narrative is formed.</div></div>
+        <div class="ab-pcard"><div class="ab-pnum">02</div><div class="ab-ptitle">Market Structure</div><div class="ab-pdesc">Liquidity, funding, and volatility regimes mapped to understand the conditions, not just the price.</div></div>
+        <div class="ab-pcard"><div class="ab-pnum">03</div><div class="ab-ptitle">Systematic, Not Discretionary</div><div class="ab-pdesc">Setups defined by rules and backtested logic - no gut-feel commentary dressed up as research.</div></div>
+        <div class="ab-pcard"><div class="ab-pnum">04</div><div class="ab-ptitle">Honest About Uncertainty</div><div class="ab-pdesc">Probabilities, not promises. Past performance is reported as exactly that - past.</div></div>
       </div>
-      <div class="ab-card">
-        <div class="ab-card-av">DO</div>
-        <div class="ab-card-name">Daniel Osei</div>
-        <div class="ab-card-role">Field Correspondent</div>
-        <div class="ab-card-bio">On the ground covering conferences, product launches, and industry events. Focuses on what the press releases leave out.</div>
+    </div>
+  </section>
+
+  <section class="ab-section ab-alt">
+    <div class="ab-wrap">
+      <div class="ab-kicker">// the analyst</div>
+      <h2 class="ab-h2">Who is behind CryptoPulse</h2>
+      <div class="ab-author">
+        <div class="ab-avatar">MC</div>
+        <div>
+          <div class="ab-author-name">Marcus Chen</div>
+          <div class="ab-author-role">Quant Trader · Market Analyst · Vancouver, BC</div>
+          <p class="ab-author-bio">I trade systematically and I have watched too many people get burned by crypto content that exists to sell exchange referrals. CryptoPulse is the publication I wanted to read - one that treats analysis as a discipline, not a content funnel.</p>
+          <p class="ab-author-bio">Everything here is the same workflow I apply to my own positions: <strong>data in, hypothesis tested, conclusion stated plainly</strong>. No filler, no calls, no bot-written summaries. Just research from someone who actually has to live with the results.</p>
+        </div>
       </div>
-  </div>
-  <div class="ab-cta">
-    <h3>The Weekly Alpha Report</h3>
-    <p>Systematic signals, on-chain data, and trade setups - no filler, no hype.</p>
-    <a href="./">Read the latest</a>
-  </div>
+      <p class="ab-disc"><strong>IMPORTANT DISCLAIMER:</strong> CryptoPulse publishes independent research and educational content for informational purposes only. Nothing here constitutes financial, investment, or trading advice. Cryptocurrency trading involves substantial risk of loss. Always do your own research and consult a licensed advisor before making any investment decision.</p>
+    </div>
+  </section>
+
+  <section class="ab-section ab-cta">
+    <div class="ab-wrap">
+      <div class="ab-kicker">// stay sharp</div>
+      <h2 class="ab-h2">Systematic signals, no hype</h2>
+      <p class="ab-p">On-chain data, market structure, and trade setups - delivered straight, written by a quant and not a bot.</p>
+      <a href="#newsletter" class="ab-cta-btn">Subscribe to CryptoPulse</a>
+    </div>
+  </section>
 </main>
+
 <footer class="foot">
   <div class="foot-top">
     <div class="foot-col foot-about">
