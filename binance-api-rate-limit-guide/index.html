@@ -384,6 +384,54 @@ img{display:block;max-width:100%}
   --pri:#00e676;--pri2:#00e676;--bg:#050908;--bg2:#081009;--bg3:#0c1710;
   --txt:#d8f0e0;--mut:#5a8468;--brd:#122216;
   --fh:'Space Grotesk',system-ui,sans-serif;--fm:'Space Mono',monospace;
+}@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}@media(max-width:768px){.tk-track{animation-duration:18s}}@media(max-width:768px){.nav-links,.nav-right .nav-date,.nav-right .nav-subscribe{display:none}.nav-burger{display:flex}.nav-inner{justify-content:space-between}}@keyframes flash-line{0%{background:rgba(0,230,118,.12)}100%{background:transparent}}@keyframes sk-shimmer{0%{background-position:200% 0}to{background-position:-200% 0}}@media(max-width:900px){.tools-grid{grid-template-columns:1fr}}@media(max-width:1024px){
+  .analysis-section{grid-template-columns:1fr;gap:40px}
+  .cmd-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  .onchain-grid{grid-template-columns:1fr}
+  .sigterm-wrap{grid-template-columns:1fr}
+  .mkt-editorial{grid-template-columns:repeat(2,1fr)}
+  .foot-top{grid-template-columns:1fr 1fr;gap:32px}
+}@media(max-width:768px){
+  /* Hero */
+  .hero-section{min-height:380px}
+  .hero-center{padding:32px 18px 36px}
+  .hero-h1{letter-spacing:-.5px}
+  .hero-price-row{gap:0}
+  .hero-price-item{padding:6px 10px}
+  /* Sub row */
+  .sub-row-inner{grid-template-columns:1fr}
+  .sub-story{border-right:none;border-bottom:1px solid #0d2b18}
+  /* Layout */
+  .vp-wrap{grid-template-columns:repeat(2,1fr)}
+  .cmd-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  .sigterm-wrap{grid-template-columns:1fr}
+  .mkt-editorial{grid-template-columns:1fr}
+  .topics-grid{grid-template-columns:1fr}
+  .tools-grid{grid-template-columns:1fr}
+  .art-card{grid-template-columns:1fr}
+  .art-card-img{width:100%;height:160px}
+  /* Footer */
+  .foot-top{grid-template-columns:1fr;gap:28px;padding:32px 18px 24px}
+  /* About strip */
+  .about-strip-inner{grid-template-columns:1fr}
+  .about-avatar{display:none}
+}@media(max-width:480px){
+  .hero-section{min-height:320px}
+  .hero-price-row{display:none}
+  .vp-wrap{grid-template-columns:1fr}
+  .cmd-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  .nl-form{flex-direction:column;border:none;gap:10px}
+  .nl-form input{border:1px solid #0d2b18;border-radius:2px;margin-bottom:0}
+  .nl-form button{border-radius:2px;padding:14px;margin-top:2px}
+  .foot-top{grid-template-columns:1fr}
+}
+:root{
+  --pri:#00e676;--pri2:#00e676;--bg:#050908;--bg2:#081009;--bg3:#0c1710;
+  --txt:#d8f0e0;--mut:#5a8468;--brd:#122216;
+  --fh:'Space Grotesk',system-ui,sans-serif;--fm:'Space Mono',monospace;
 }@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}@media(max-width:768px){.tk-track{animation-duration:18s}}@media(max-width:768px){.nav-links,.nav-right .nav-date,.nav-right .nav-subscribe{display:none}.nav-burger{display:flex}.nav-inner{justify-content:space-between}}@keyframes flash-line{0%{background:rgba(0,230,118,.12)}100%{background:transparent}}
 .art-card-img{width:180px;height:130px;object-fit:cover;display:block;background:#020d06}@keyframes sk-shimmer{0%{background-position:200% 0}to{background-position:-200% 0}}@media(max-width:900px){.tools-grid{grid-template-columns:1fr}}@media(max-width:1024px){
   .analysis-section{grid-template-columns:1fr;gap:40px}
@@ -1186,7 +1234,7 @@ p{margin-bottom:18px;color:#aaa;line-height:1.75}
 </nav>
 <article itemscope itemtype="https://schema.org/Article"><div class="wrap">
   <section>
-    <div style="font-size:13px;color:#555;margin-bottom:20px"><a href="../" style="color:#555">← Home</a> &nbsp;·&nbsp; <time datetime="2026-05-15"><time datetime="2026-05-15"><time datetime="2026-05-15"><time datetime="2026-05-15">May 15, 2026</time></time></time></time></div>
+    <div style="font-size:13px;color:#555;margin-bottom:20px"><a href="../" style="color:#555">← Home</a> &nbsp;·&nbsp; <time datetime="2026-05-15"><time datetime="2026-05-15"><time datetime="2026-05-15"><time datetime="2026-05-15"><time datetime="2026-05-15">May 15, 2026</time></time></time></time></time></div>
     <h1>How to Connect to Binance API Without Getting Rate-Limited: A Practitioner's Guide</h1>
     <div style="font-size:13px;color:#555;margin-bottom:20px">By <strong style="color:#aaa">Alex Rivera</strong></div>
     <img src="https://images.pexels.com/photos/4960438/pexels-photo-4960438.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Developer reviewing API request logs on multiple monitors with cryptocurrency trading charts in background" loading="lazy" style="width:100%;height:380px;object-fit:cover;border-radius:8px;margin:24px 0"><p style="font-size:11px;color:#555;margin-top:-12px">Photo: George Morina / Pexels</p>
@@ -1323,7 +1371,7 @@ p{margin-bottom:18px;color:#aaa;line-height:1.75}
     }).catch(function(){allComments=[];rerender();});
   }
 })();
-</script></article></article></article></article>
+</script></article></article></article></article></article>
 <footer class="foot">
   <div class="foot-top">
     <div class="foot-col foot-about">
