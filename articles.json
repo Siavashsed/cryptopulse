@@ -5,7 +5,7 @@
     "meta_description": "Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.",
     "date": "May 17, 2026",
     "date_iso": "2026-05-17",
-    "author": "David Kim",
+    "author": "Jordan Osei",
     "image": "https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "chainalysis.com",
@@ -19,7 +19,7 @@
     "meta_description": "Alex Rivera reviews the open-source trading bots that hold up in production \u2014 with honest takes on Freqtrade, Hummingbot, Jesse, and more.",
     "date": "May 17, 2026",
     "date_iso": "2026-05-17",
-    "author": "Siavash Sadighi",
+    "author": "Elena Vasquez",
     "image": "https://images.pexels.com/photos/6424586/pexels-photo-6424586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "freqtrade.io",
@@ -35,7 +35,7 @@
     "meta_description": "Funding rates silently drain or reward crypto futures traders. Marcus Chen breaks down the mechanics, the traps, and how to trade them intelligently.",
     "date": "May 16, 2026",
     "date_iso": "2026-05-16",
-    "author": "Siavash Sadighi",
+    "author": "David Kim",
     "image": "https://images.pexels.com/photos/6777564/pexels-photo-6777564.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "glassnode.com",
@@ -49,7 +49,7 @@
     "meta_description": "Alex Rivera breaks down how serious trading desks evaluate new tools \u2014 from latency benchmarks to integration reality checks. No vendor hype allowed.",
     "date": "May 16, 2026",
     "date_iso": "2026-05-16",
-    "author": "Siavash Sadighi",
+    "author": "Elena Vasquez",
     "image": "https://images.pexels.com/photos/5833752/pexels-photo-5833752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "cfainstitute.org"
@@ -63,7 +63,7 @@
     "meta_description": "Ex-quant trader Marcus Chen explains why algorithmic trading consistently outperforms emotional decision-making in volatile crypto markets, with real data.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
-    "author": "Jordan Osei",
+    "author": "David Kim",
     "image": "https://images.pexels.com/photos/6478886/pexels-photo-6478886.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "jfe.journals.elsevier.com",
@@ -77,7 +77,7 @@
     "meta_description": "Ex-quant trader Marcus Chen breaks down how exchange APIs enable automated crypto strategies \u2014 the mechanics, the limits, and what actually works.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
-    "author": "Elena Vasquez",
+    "author": "David Kim",
     "image": "https://images.pexels.com/photos/5831512/pexels-photo-5831512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "binance.com",
@@ -91,7 +91,7 @@
     "meta_description": "Ex-quant Marcus Chen breaks down the real Bitcoin volatility signals institutional desks monitor, with data and direct trading experience.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
-    "author": "Siavash Sadighi",
+    "author": "Elena Vasquez",
     "image": "https://images.pexels.com/photos/30268013/pexels-photo-30268013.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "deribit.com",
@@ -105,7 +105,7 @@
     "meta_description": "Ex-quant trader Marcus Chen breaks down the on-chain signals that flashed before Bitcoin's 2018, 2021, and 2022 tops. Numbers don't lie.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
-    "author": "David Kim",
+    "author": "Jordan Osei",
     "image": "https://images.pexels.com/photos/8370426/pexels-photo-8370426.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "glassnode.com",
@@ -119,7 +119,7 @@
     "meta_description": "Marcus Chen breaks down grid bots vs trend-following bots with real data, trade-offs, and a clear verdict for algorithmic crypto traders.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
-    "author": "Elena Vasquez",
+    "author": "Marcus Webb",
     "image": "https://images.pexels.com/photos/7807839/pexels-photo-7807839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "binance.com",
@@ -179,7 +179,7 @@
     "meta_description": "Learn how to build a real-time crypto screener using WebSockets. Alex Rivera breaks down architecture, latency traps, and what actually works in production.",
     "date": "May 15, 2026",
     "date_iso": "2026-05-15",
-    "author": "Siavash Sadighi",
+    "author": "David Kim",
     "image": "https://images.pexels.com/photos/29885479/pexels-photo-29885479.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     "outbound_links": [
       "kaiko.com",
