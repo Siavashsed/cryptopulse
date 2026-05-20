@@ -10,7 +10,8 @@
     "outbound_links": [
       "chainalysis.com",
       "river.com"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)",
@@ -25,7 +26,8 @@
       "hummingbot.io",
       "jesse.trade"
     ],
-    "syndicated_from": "tradingtechreview"
+    "syndicated_from": "tradingtechreview",
+    "category": "Algorithmic Trading"
   },
   {
     "title": "Funding Rates Explained: What Every Futures Trader Actually Needs to Know",
@@ -38,7 +40,8 @@
     "outbound_links": [
       "glassnode.com",
       "binance.com"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "How Professional Trading Desks Actually Evaluate New Tools (And Why Most Vendors Fail the Test)",
@@ -51,7 +54,8 @@
     "outbound_links": [
       "cfainstitute.org"
     ],
-    "syndicated_from": "tradingtechreview"
+    "syndicated_from": "tradingtechreview",
+    "category": "Algorithmic Trading"
   },
   {
     "title": "Why Algorithmic Trading Beats Emotional Trading When Crypto Markets Go Haywire",
@@ -64,7 +68,8 @@
     "outbound_links": [
       "jfe.journals.elsevier.com",
       "ssrn.com"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "How Exchange APIs Power Fully Automated Crypto Trading Strategies",
@@ -77,7 +82,8 @@
     "outbound_links": [
       "binance.com",
       "jfinancialmarkets.com"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "Bitcoin Volatility Patterns Institutional Traders Actually Track (Not the Ones You Read About)",
@@ -90,7 +96,8 @@
     "outbound_links": [
       "deribit.com",
       "papers.ssrn.com"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "On-Chain Metrics That Preceded the Last Three Crypto Market Tops",
@@ -103,7 +110,8 @@
     "outbound_links": [
       "glassnode.com",
       "lookintobitcoin.com"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "Grid Bots vs Trend-Following Bots: A Real Head-to-Head Comparison",
@@ -116,7 +124,8 @@
     "outbound_links": [
       "binance.com",
       "coghlan-capital.com"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "The Best Python Libraries for Backtesting Trading Strategies (And What Nobody Tells You About Them)",
@@ -131,7 +140,8 @@
       "kernc.github.io/backtesting.py",
       "zipline-reloaded.readthedocs.io"
     ],
-    "syndicated_from": "tradingtechreview"
+    "syndicated_from": "tradingtechreview",
+    "category": "Algorithmic Trading"
   },
   {
     "title": "How to Connect to Binance API Without Getting Rate-Limited: A Practitioner's Guide",
@@ -145,7 +155,8 @@
       "binance-docs.github.io",
       "redis.io"
     ],
-    "syndicated_from": "tradingtechreview"
+    "syndicated_from": "tradingtechreview",
+    "category": "Algorithmic Trading"
   },
   {
     "title": "Pine Script vs Python: Which Should Traders Learn First (And Why the Answer Isn't Obvious)",
@@ -159,7 +170,8 @@
       "stackoverflow.com",
       "tradingview.com"
     ],
-    "syndicated_from": "tradingtechreview"
+    "syndicated_from": "tradingtechreview",
+    "category": "Algorithmic Trading"
   },
   {
     "title": "Building a Real-Time Crypto Screener with WebSockets: Skip the REST Polling Trap",
@@ -174,7 +186,8 @@
       "binance-docs.github.io",
       "websockets.readthedocs.io"
     ],
-    "syndicated_from": "tradingtechreview"
+    "syndicated_from": "tradingtechreview",
+    "category": "Algorithmic Trading"
   },
   {
     "title": "Backtest vs Live Trading: Why Your Results Will Always Differ (And What To Do About It)",
@@ -187,6 +200,7 @@
     "outbound_links": [
       "aqr.com"
     ],
-    "syndicated_from": "tradingtechreview"
+    "syndicated_from": "tradingtechreview",
+    "category": "Algorithmic Trading"
   }
 ]
