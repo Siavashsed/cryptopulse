@@ -7,7 +7,7 @@
     "date_iso": "2026-05-20",
     "date_display": "May 20, 2026",
     "text": "Been DCA-ing into BTC for 18 months now and the math checks out. The emotional discipline part is harder than people think though.",
-    "likes": 8
+    "likes": 0
   },
   {
     "id": "c2411",
@@ -17,36 +17,6 @@
     "date_iso": "2026-05-23",
     "date_display": "May 23, 2026",
     "text": "Great breakdown of the volatility smoothing effect. Question: does this strategy still hold if you're automating buys across multiple altcoins, or is that just amplifying risk?",
-    "likes": 5
-  },
-  {
-    "id": "c3208",
-    "name": "David R.",
-    "initials": "DR",
-    "color": "#3ecf8e",
-    "date_iso": "2026-05-26",
-    "date_display": "May 26, 2026",
-    "text": "The problem with DCA is opportunity cost. You could've dumped everything at the local bottom instead of spreading buys. This article glosses over that.",
-    "likes": 11
-  },
-  {
-    "id": "c4875",
-    "name": "Elena G.",
-    "initials": "EG",
-    "color": "#a78bfa",
-    "date_iso": "2026-06-01",
-    "date_display": "Jun 1, 2026",
-    "text": "Finally someone doing the actual math instead of just cheerleading. The comparison to traditional index funds was helpful for context.",
-    "likes": 9
-  },
-  {
-    "id": "c5943",
-    "name": "James P.",
-    "initials": "JP",
-    "color": "#6366f1",
-    "date_iso": "2026-06-03",
-    "date_display": "Jun 3, 2026",
-    "text": "Curious if your model accounts for exchange fees eroding returns on smaller purchases. That's killed my DCA returns more than volatility has.",
-    "likes": 3
+    "likes": 1
   }
 ]
