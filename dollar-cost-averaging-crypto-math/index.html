@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Dollar-Cost Averaging Into Crypto: The Math Behind Why It...</title>
 <meta name="description" content="Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.">
-<link rel="canonical" href="https://siavashsed.github.io/cryptopulse/dollar-cost-averaging-crypto-math/"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"><meta name="googlebot" content="index,follow"><meta name="keywords" content="Algorithmic Trading"><meta name="author" content="Jordan Osei"><meta property="article:author" content="Jordan Osei"><meta name="twitter:creator" content="Jordan Osei"><meta property="og:site_name" content="Cryptopulse"><meta property="og:title" content="Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works"><meta property="og:description" content="Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict."><meta property="og:url" content="https://siavashsed.github.io/cryptopulse/dollar-cost-averaging-crypto-math/"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works"><meta name="twitter:description" content="Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict."><meta property="og:image" content="https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"><meta property="og:image:alt" content="Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works"><meta name="twitter:image" content="https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"><meta property="article:published_time" content="2026-05-17T09:00:00+00:00"><meta property="article:modified_time" content="2026-05-24T09:00:00+00:00"><meta property="article:section" content="Algorithmic Trading"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works", "description": "Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.", "datePublished": "2026-05-17T09:00:00+00:00", "dateModified": "2026-05-24T09:00:00+00:00", "url": "https://siavashsed.github.io/cryptopulse/dollar-cost-averaging-crypto-math/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://siavashsed.github.io/cryptopulse/dollar-cost-averaging-crypto-math/"}, "inLanguage": "en", "image": ["https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"], "author": {"@type": "Person", "name": "Jordan Osei", "url": "https://siavashsed.github.io/cryptopulse/about.html", "jobTitle": "ex-quant trader and algorithmic crypto researcher", "description": "This site is where I publish the analysis that takes longer than 280 characters to explain: on-chain signals, bot logic, and the setups I'm actually watching."}, "publisher": {"@type": "Organization", "name": "Cryptopulse", "url": "https://siavashsed.github.io/cryptopulse/", "logo": {"@type": "ImageObject", "url": "https://siavashsed.github.io/cryptopulse/favicon.ico"}}, "articleSection": "Algorithmic Trading", "wordCount": 339, "keywords": "Algorithmic Trading"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://siavashsed.github.io/cryptopulse/"}, {"@type": "ListItem", "position": 2, "name": "Algorithmic Trading", "item": "https://siavashsed.github.io/cryptopulse/"}, {"@type": "ListItem", "position": 3, "name": "Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works", "item": "https://siavashsed.github.io/cryptopulse/dollar-cost-averaging-crypto-math/"}]}</script>
+<link rel="canonical" href="https://siavashsed.github.io/cryptopulse/dollar-cost-averaging-crypto-math/"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"><meta name="googlebot" content="index,follow"><meta name="keywords" content="Algorithmic Trading"><meta name="author" content="David Kim"><meta property="article:author" content="David Kim"><meta name="twitter:creator" content="David Kim"><meta property="og:site_name" content="Cryptopulse"><meta property="og:title" content="Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works"><meta property="og:description" content="Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict."><meta property="og:url" content="https://siavashsed.github.io/cryptopulse/dollar-cost-averaging-crypto-math/"><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works"><meta name="twitter:description" content="Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict."><meta property="og:image" content="https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"><meta property="og:image:alt" content="Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works"><meta name="twitter:image" content="https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"><meta property="article:published_time" content="2026-05-17T09:00:00+00:00"><meta property="article:modified_time" content="2026-05-25T09:00:00+00:00"><meta property="article:section" content="Algorithmic Trading"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works", "description": "Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.", "datePublished": "2026-05-17T09:00:00+00:00", "dateModified": "2026-05-25T09:00:00+00:00", "url": "https://siavashsed.github.io/cryptopulse/dollar-cost-averaging-crypto-math/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://siavashsed.github.io/cryptopulse/dollar-cost-averaging-crypto-math/"}, "inLanguage": "en", "image": ["https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"], "author": {"@type": "Person", "name": "David Kim", "url": "https://siavashsed.github.io/cryptopulse/about.html", "jobTitle": "ex-quant trader and algorithmic crypto researcher", "description": "This site is where I publish the analysis that takes longer than 280 characters to explain: on-chain signals, bot logic, and the setups I'm actually watching."}, "publisher": {"@type": "Organization", "name": "Cryptopulse", "url": "https://siavashsed.github.io/cryptopulse/", "logo": {"@type": "ImageObject", "url": "https://siavashsed.github.io/cryptopulse/favicon.ico"}}, "articleSection": "Algorithmic Trading", "wordCount": 528, "keywords": "Algorithmic Trading"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://siavashsed.github.io/cryptopulse/"}, {"@type": "ListItem", "position": 2, "name": "Algorithmic Trading", "item": "https://siavashsed.github.io/cryptopulse/"}, {"@type": "ListItem", "position": 3, "name": "Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works", "item": "https://siavashsed.github.io/cryptopulse/dollar-cost-averaging-crypto-math/"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -385,11 +385,6 @@ img{display:block;max-width:100%}
 .ap-kicker .ap-sep{opacity:.4;font-weight:400;letter-spacing:1px;color:#5a8468}
 .ap h1{font-family:'Space Grotesk',system-ui,sans-serif;font-size:clamp(32px,5.4vw,54px);font-weight:800;line-height:1.05;letter-spacing:-.6px;color:#d8f0e0;margin:0 0 22px;max-width:680px}
 .ap-deck{font-family:'Lora',Georgia,serif;font-size:20px;font-style:italic;line-height:1.5;color:#8ab898;margin:0 0 36px;max-width:620px}
-.ap-byline{display:flex;align-items:center;gap:14px;padding:18px 0;border-top:1px solid #122216;border-bottom:1px solid #122216;margin:0 0 40px;font-family:'Space Grotesk',system-ui,sans-serif}
-.ap-byline-author{font-size:14px;font-weight:600;color:#d8f0e0}
-.ap-byline-author strong{font-weight:700;color:#d8f0e0}
-.ap-byline-meta{font-size:12.5px;color:#5a8468;display:flex;align-items:center;gap:8px;margin-top:3px;letter-spacing:.2px}
-.ap-byline-meta .dot{width:3px;height:3px;border-radius:50%;background:#5a8468;opacity:.6;display:inline-block}
 .ap-hero{margin:0 0 44px}
 .ap-hero img{width:100%;height:auto;max-height:560px;object-fit:cover;display:block;border-radius:2px}
 .ap-hero figcaption{font-family:'Lora',Georgia,serif;font-style:italic;font-size:13px;color:#5a8468;text-align:center;margin-top:12px}
@@ -487,36 +482,12 @@ img{display:block;max-width:100%}
   <div class="ap-kicker"><span>Algorithmic Trading</span><span class="ap-sep">&middot;</span><span>May 17, 2026</span></div>
   <h1>Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works</h1>
   <p class="ap-deck">Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.</p>
-  <div class="ap-byline">
-    <div>
-      <div class="ap-byline-author">By <strong>David Kim</strong></div>
-      <div class="ap-byline-meta">ex-quant trader and algorithmic crypto researcher<span class="dot"></span>1 min read</div>
-    </div>
-  </div>
   <figure class="ap-hero">  <img src="https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works" loading="eager">  <figcaption>Photograph &middot; Staff / Pexels</figcaption></figure>
   <div class="ap-body">
     <p class="ap-lede">Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.</p>
     <p>Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.</p>
-    
-    <div class="ap-concl"></div>
-    
-  </div>
-</div><div style="max-width:760px;margin:48px auto 0;padding:0 24px">
-  <div style="border:1px solid #122216;border-radius:12px;padding:22px 24px;display:flex;gap:18px;align-items:flex-start;background:#081009">
-    <div style="width:54px;height:54px;border-radius:50%;background:#00e676;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#fff;flex-shrink:0;letter-spacing:-1px">DK</div>
-    <div style="flex:1">
-      <div style="font-size:14px;font-weight:700;color:#d8f0e0;margin-bottom:2px">David Kim</div>
-      <div style="font-size:12px;color:#00e676;margin-bottom:8px;font-weight:600">ex-quant trader and algorithmic crypto researcher</div>
-      <p style="font-size:13px;color:#8ab898;line-height:1.65;margin:0">This site is where I publish the analysis that takes longer than 280 characters to explain: on-chain signals, bot logic, and the setups I'm actually watching.</p>
-    </div>
-  </div>
-</div>
-
-<section id="comments" itemscope itemtype="https://schema.org/WebPage" data-total="2" style="max-width:760px;margin:64px auto 0;padding:0 24px 48px">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:22px">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00e676" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    <h2 id="comments-heading" style="font-size:21px;font-weight:800;color:#d8f0e0;margin:0;letter-spacing:-.4px">Comments (2)</h2>
-  </div>
+    <h2 class="art-h2">Comments (2)</h2>
+<div></div>
   <div id="comment-form" style="display:flex;gap:14px;margin-bottom:32px;scroll-margin-top:90px">
     <div style="width:44px;height:44px;border-radius:50%;background:#00e676;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;flex-shrink:0;line-height:1">+</div>
     <div style="flex:1;min-width:0;background:#081009;border:1px solid #122216;border-radius:16px;padding:16px 16px 12px;transition:border-color .2s" id="c-box">
@@ -582,6 +553,114 @@ img{display:block;max-width:100%}
           '<span style="font-size:11px;color:'+META+'">'+c.date_display+'</span></div>'+
         '<p style="font-size:14px;line-height:1.7;margin:0;color:'+TXT2+'">'+text+'</p>'+
       '</div></div>';
+  }
+
+  function paintLocal(){
+    var el=document.getElementById('user-comments-list');
+    if(!el)return;
+    el.innerHTML=getLocal().map(renderUserComment).join('');
+  }
+  paintLocal();
+
+  window.submitComment=function(){
+    var name=(document.getElementById('c-name').value||'').trim();
+    var text=(document.getElementById('c-text').value||'').trim();
+    var nameEl=document.getElementById('c-name'),textEl=document.getElementById('c-text');
+    nameEl.style.borderColor=BRD;textEl.style.borderColor=BRD;
+    if(!name){nameEl.style.borderColor='#ef4444';nameEl.focus();return;}
+    if(!text){textEl.style.borderColor='#ef4444';textEl.focus();return;}
+    var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var now=new Date();
+    var ds=mo[now.getMonth()]+' '+now.getDate()+', '+now.getFullYear();
+    var c={name:name,text:text,date_display:ds,_id:'u_'+Date.now()};
+    var local=getLocal();local.push(c);saveLocal(local);
+    nameEl.value='';document.getElementById('c-email').value='';textEl.value='';
+    var succ=document.getElementById('c-success');
+    succ.style.display='block';setTimeout(function(){succ.style.display='none';},4000);
+    paintLocal();
+    var empty=document.getElementById('c-empty');if(empty)empty.style.display='none';
+  };
+})();
+</script></div>
+    <div class="ap-concl"></div>
+    
+  </div>
+  
+</div><div style="max-width:760px;margin:48px auto 0;padding:0 24px">
+  <div style="border:1px solid #122216;border-radius:12px;padding:22px 24px;display:flex;gap:18px;align-items:flex-start;background:#081009">
+    <div style="width:54px;height:54px;border-radius:50%;background:#00e676;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#fff;flex-shrink:0;letter-spacing:-1px">MW</div>
+    <div style="flex:1">
+      <div style="font-size:14px;font-weight:700;color:#d8f0e0;margin-bottom:2px">Marcus Webb</div>
+      <div style="font-size:12px;color:#00e676;margin-bottom:8px;font-weight:600">ex-quant trader and algorithmic crypto researcher</div>
+      <p style="font-size:13px;color:#8ab898;line-height:1.65;margin:0">This site is where I publish the analysis that takes longer than 280 characters to explain: on-chain signals, bot logic, and the setups I'm actually watching.</p>
+    </div>
+  </div>
+</div>
+
+<section id="comments" itemscope itemtype="https://schema.org/WebPage" data-total="2" style="max-width:760px;margin:72px auto 0;padding:0 24px 56px">
+  <div style="margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid #122216">
+    <h2 id="comments-heading" style="font-family:'Lora',Georgia,serif;font-size:24px;font-weight:600;color:#d8f0e0;margin:0;letter-spacing:-.012em">Discussion <span style="font-weight:400;color:#5a8468;font-size:18px"> &middot; 2</span></h2>
+  </div>
+  <form id="comment-form" onsubmit="event.preventDefault();submitComment();" style="margin:0 0 36px;scroll-margin-top:90px">
+    <textarea id="c-text" placeholder="Share your thoughts..." rows="3" style="width:100%;padding:14px 16px;border:1px solid #122216;border-radius:8px;font-size:15px;background:#050908;color:#d8f0e0;outline:none;font-family:'Lora',Georgia,serif;line-height:1.6;resize:vertical;min-height:90px;box-sizing:border-box;transition:border-color .15s" onfocus="this.style.borderColor='#00e676'" onblur="this.style.borderColor='#122216'"></textarea>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px">
+      <input id="c-name" placeholder="Your name" style="flex:1;min-width:140px;padding:10px 14px;border:1px solid #122216;border-radius:8px;font-size:13.5px;background:#050908;color:#d8f0e0;outline:none;font-family:inherit;box-sizing:border-box;transition:border-color .15s" onfocus="this.style.borderColor='#00e676'" onblur="this.style.borderColor='#122216'">
+      <input id="c-email" placeholder="Email (private)" style="flex:1;min-width:140px;padding:10px 14px;border:1px solid #122216;border-radius:8px;font-size:13.5px;background:#050908;color:#d8f0e0;outline:none;font-family:inherit;box-sizing:border-box;transition:border-color .15s" onfocus="this.style.borderColor='#00e676'" onblur="this.style.borderColor='#122216'">
+      <button type="submit" onclick="submitComment()" style="background:#00e676;color:#fff;border:none;border-radius:8px;padding:10px 22px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;letter-spacing:.02em;transition:opacity .15s" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">Post comment</button>
+    </div>
+    <div id="c-success" style="display:none;margin-top:12px;padding:10px 14px;background:#00e67614;border:1px solid #00e67644;border-radius:8px;font-size:13px;color:#00e676;font-weight:600">Posted. Thanks for joining the discussion.</div>
+  </form>
+  <div id="comments-list"><section itemprop="comment" itemscope itemtype="https://schema.org/Comment" data-key="c1396" data-likes="0" style="margin:0 0 14px;padding:22px 24px;background:transparent;border:1px solid #122216;border-radius:10px;"><header style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px"><span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Marcus T."><span style="font-size:14px;font-weight:600;color:#d8f0e0;letter-spacing:-.005em">Marcus T.</span></span><time itemprop="dateCreated" datetime="2026-05-20" style="font-size:12px;color:#5a8468;opacity:.85">May 20, 2026</time></header><p itemprop="text" style="font-family:'Lora',Georgia,serif;font-size:15.5px;line-height:1.7;margin:0;color:#8ab898;max-width:56ch">Been DCA-ing into BTC for 18 months now and the math checks out. The emotional discipline part is harder than people think though.</p></section><section itemprop="comment" itemscope itemtype="https://schema.org/Comment" data-key="c2411" data-likes="1" style="margin:0 0 14px;padding:22px 24px;background:transparent;border:1px solid #122216;border-radius:10px;"><header style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px"><span itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="Sarah K."><span style="font-size:14px;font-weight:600;color:#d8f0e0;letter-spacing:-.005em">Sarah K.</span></span><time itemprop="dateCreated" datetime="2026-05-23" style="font-size:12px;color:#5a8468;opacity:.85">May 23, 2026</time><span style="font-size:12px;color:#5a8468;opacity:.85"> &middot; 1 like</span></header><p itemprop="text" style="font-family:'Lora',Georgia,serif;font-size:15.5px;line-height:1.7;margin:0;color:#8ab898;max-width:56ch">Great breakdown of the volatility smoothing effect. Question: does this strategy still hold if you're automating buys across multiple altcoins, or is that just amplifying risk?</p></section></div>
+  <div id="user-comments-list"></div>
+</section>
+<script>
+(function(){
+  var ACCENT='#00e676';
+  var BRD='#122216';
+  var META='#5a8468';
+  var TXT='#d8f0e0';
+  var TXT2='#8ab898';
+  var BG2='#081009';
+  var slug=location.pathname.split('/').filter(Boolean).join('-')||'home';
+
+  function getLikes(){try{return JSON.parse(localStorage.getItem('lk_'+slug)||'{}');}catch(e){return{};}}
+  function saveLikes(l){try{localStorage.setItem('lk_'+slug,JSON.stringify(l));}catch(e){}}
+  function getLocal(){try{return JSON.parse(localStorage.getItem('uc_'+slug)||'[]');}catch(e){return[];}}
+  function saveLocal(cs){try{localStorage.setItem('uc_'+slug,JSON.stringify(cs));}catch(e){}}
+
+  // Apply persisted like state to server-rendered buttons.
+  var likes=getLikes();
+  document.querySelectorAll('#comments-list [data-key]').forEach(function(node){
+    var key=node.getAttribute('data-key');
+    var btn=node.querySelector('button[onclick^="toggleLike"]');
+    if(!btn)return;
+    var liked=!!likes[key];
+    if(liked){
+      btn.style.borderColor=ACCENT;btn.style.color=ACCENT;
+      var svg=btn.querySelector('svg');if(svg)svg.setAttribute('fill',ACCENT);
+      var lc=btn.querySelector('.lc');if(lc){lc.textContent=parseInt(lc.textContent||'0')+1;}
+    }
+  });
+
+  window.toggleLike=function(key,btn){
+    var l=getLikes();l[key]=!l[key];var liked=l[key];saveLikes(l);
+    btn.style.borderColor=liked?ACCENT:BRD;btn.style.color=liked?ACCENT:META;
+    var svg=btn.querySelector('svg');if(svg)svg.setAttribute('fill',liked?ACCENT:'none');
+    var lc=btn.querySelector('.lc');
+    if(lc){var n=parseInt(lc.textContent||'0');lc.textContent=liked?n+1:Math.max(0,n-1);}
+  };
+
+  function renderUserComment(c){
+    var name=(c.name||'You').replace(/</g,'&lt;');
+    var text=(c.text||'').replace(/</g,'&lt;');
+    return '<section style="margin:0 0 14px;padding:22px 24px;background:transparent;border:1px solid '+BRD+';border-radius:10px">'+
+      '<header style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:10px">'+
+        '<span style="font-size:14px;font-weight:600;color:'+TXT+';letter-spacing:-.005em">'+name+'</span>'+
+        '<span style="display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.04em;background:'+ACCENT+'1a;color:'+ACCENT+';border:1px solid '+ACCENT+'55;border-radius:100px;padding:2px 10px;margin-left:4px;line-height:1.4">You</span>'+
+        '<span style="font-size:12px;color:'+META+';opacity:.85">'+c.date_display+'</span>'+
+      '</header>'+
+      '<p style="font-family:\'Lora\',Georgia,serif;font-size:15.5px;line-height:1.7;margin:0;color:'+TXT2+';max-width:56ch">'+text+'</p>'+
+      '</section>';
   }
 
   function paintLocal(){
