@@ -202,5 +202,66 @@
     ],
     "syndicated_from": "tradingtechreview",
     "category": "Algorithmic Trading"
+  },
+  {
+    "title": "The Bitcoin ETF Launch Actually Changed Algo Trading in 2024 (Here's the Data)",
+    "slug": "bitcoin-spot-etf-algo-trading-2024",
+    "meta_description": "Marcus Webb breaks down how Bitcoin spot ETFs reshaped algorithmic crypto trading in 2024 - with real data, market impact, and what quants actually noticed.",
+    "date": "November 14, 2024",
+    "date_iso": "2024-11-14",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/5831268/pexels-photo-5831268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "reuters.com",
+      "bloomberg.com",
+      "coindesk.com",
+      "ssrn.com"
+    ],
+    "posted_iso": "2026-05-28",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "How Coinbase's Direct Listing in April 2021 Redrew the Lines for Algo Traders",
+    "slug": "coinbase-direct-listing-2021-algo-trading",
+    "meta_description": "Coinbase's April 2021 Nasdaq direct listing wasn't just a milestone. It reshaped how algo traders priced crypto exchange risk and market structure forever.",
+    "date": "April 11, 2021",
+    "date_iso": "2021-04-11",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5912325/pexels-photo-5912325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "wsj.com",
+      "sec.gov",
+      "investor.coinbase.com",
+      "papers.ssrn.com"
+    ],
+    "posted_iso": "2026-05-28",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "DeFi Summer 2020 Changed Algorithmic Crypto Trading Forever. Here's What Actually Happened",
+    "slug": "defi-summer-2020-algorithmic-trading",
+    "meta_description": "Marcus Webb breaks down DeFi Summer 2020: what Uniswap v2 and yield farming meant for algorithmic traders, with real numbers and a clear editorial position.",
+    "date": "November 25, 2020",
+    "date_iso": "2020-11-25",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5561923/pexels-photo-5561923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "uniswap.org",
+      "defipulse.com",
+      "etherscan.io",
+      "arxiv.org",
+      "ssrn.com"
+    ],
+    "posted_iso": "2026-05-28",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
