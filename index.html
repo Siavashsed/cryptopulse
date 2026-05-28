@@ -375,6 +375,7 @@ img{display:block;max-width:100%}
   .nl-form button{border-radius:2px;padding:14px;margin-top:2px}
   .foot-top{grid-template-columns:1fr}
 }</style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"><style>.site-nav{background:#081009!important;border-bottom:1px solid #0d2b18!important}.site-nav-logo{font-family:'Space Grotesk',system-ui,sans-serif!important;color:#00e676!important;font-size:18px!important;font-weight:700!important;letter-spacing:-.3px!important}.site-nav-links a{color:#5a8468!important;font-weight:600!important;font-size:13px!important}.site-nav-links a:hover{color:#d8f0e0!important;border-bottom-color:#00e676!important}.site-nav-back{color:#5a8468!important}.site-nav-back:hover{color:#00e676!important}.cp-tk{background:#020d06;border-bottom:1px solid #0d2b18;height:36px;display:flex;align-items:center;overflow:hidden;width:100%}.cp-tk-lbl{background:#00e676;color:#020d06;padding:0 14px;height:100%;display:flex;align-items:center;flex-shrink:0;letter-spacing:2px;text-transform:uppercase;font-size:9px;font-weight:700;gap:5px}.cp-tk-dot{width:6px;height:6px;border-radius:50%;background:#020d06;animation:cptk-blink 1.2s ease-in-out infinite}@keyframes cptk-blink{0%,100%{opacity:1}50%{opacity:.2}}.cp-tk-vp{flex:1;overflow:hidden}.cp-tk-tr{display:flex;white-space:nowrap;animation:cptk-scroll 40s linear infinite;gap:28px}@keyframes cptk-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}.cp-tk-it{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:#d8f0e0;font-family:'Space Grotesk',system-ui,sans-serif}.cp-tk-sy{color:#5a8468;font-size:10px}</style>
 </head>
 <body>
 <!--SHELL:ACCENT:#00e676-->
@@ -413,7 +414,7 @@ img{display:block;max-width:100%}
       <a href="#analysis">Analysis</a>
       <a href="#topics">On-Chain</a>
       <a href="#market">Algo Signals</a>
-      <a href="about">About</a>
+      <a href="about.html">About</a>
     </div>
     <div class="nav-right">
       <div class="nav-date" id="nav-date"></div>
@@ -427,7 +428,7 @@ img{display:block;max-width:100%}
     <a href="#analysis" onclick="document.getElementById('nav-mobile').classList.remove('open')">Latest Analysis</a>
     <a href="#topics" onclick="document.getElementById('nav-mobile').classList.remove('open')">On-Chain Signals</a>
     <a href="#market" onclick="document.getElementById('nav-mobile').classList.remove('open')">Algo Breakdowns</a>
-    <a href="about">About</a>
+    <a href="about.html">About</a>
     <a href="#newsletter" onclick="document.getElementById('nav-mobile').classList.remove('open')">Subscribe Free</a>
   </div>
 </nav>
@@ -809,7 +810,7 @@ img{display:block;max-width:100%}
 <!-- FOOTER -->
 
 <!-- VIEW_ALL_ARTICLES_LINK -->
-<div class="view-all" style="text-align:center;padding:28px 24px 40px;font-family:inherit"><a href="./articles" style="display:inline-block;color:currentColor;border:1px solid currentColor;padding:10px 22px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;opacity:.85;transition:opacity .15s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">View all articles -&gt;</a></div>
+<div class="view-all" style="text-align:center;padding:28px 24px 40px;font-family:inherit"><a href="./articles.html" style="display:inline-block;color:currentColor;border:1px solid currentColor;padding:10px 22px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;opacity:.85;transition:opacity .15s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">View all articles -&gt;</a></div>
 <!--SHELL:FOOTER-->
 <footer class="foot">
   <div class="foot-top">
@@ -835,13 +836,13 @@ img{display:block;max-width:100%}
       <a href="#tools">Position Size Calc</a>
       <a href="#tools">Risk / Reward Calc</a>
       <a href="#tools">Liquidation Calc</a>
-      <a href="about">Methodology</a>
+      <a href="about.html">Methodology</a>
     </div>
     <div class="foot-col">
       <div class="foot-col-title">Legal</div>
-      <a href="about">About</a>
-      <a href="privacy">Privacy Policy</a>
-      <a href="terms">Terms of Use</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
     </div>
   </div>
   </div><!-- /foot-bottom -->
@@ -1489,5 +1490,6 @@ document.querySelectorAll('.tool-inp').forEach(function(inp){
 });
 </script>
 <!--/SHELL:FOOTER-->
+<script>(function(){var nav=document.querySelector('.site-nav');if(!nav)return;var tk=document.createElement('div');tk.className='cp-tk';var items=[{sy:'BTC',id:'cptk-btc'},{sy:'ETH',id:'cptk-eth'},{sy:'SOL',id:'cptk-sol'},{sy:'BNB',id:'cptk-bnb'},{sy:'ADA',id:'cptk-ada'},{sy:'AVAX',id:'cptk-avax'},{sy:'LINK',id:'cptk-link'},{sy:'DOT',id:'cptk-dot'},{sy:'MATIC',id:'cptk-matic'},{sy:'ATOM',id:'cptk-atom'}];var html=items.map(function(i){return '<span class="cp-tk-it"><span class="cp-tk-sy">'+i.sy+'</span><span id="'+i.id+'">--</span></span>';}).join('');tk.innerHTML='<div class="cp-tk-lbl"><span class="cp-tk-dot"></span>LIVE</div><div class="cp-tk-vp"><div class="cp-tk-tr">'+html+html+'</div></div>';nav.parentNode.insertBefore(tk,nav);(async function(){try{var d=await(await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin,cardano,avalanche-2,chainlink,polkadot,matic-network,cosmos&vs_currencies=usd&include_24hr_change=true',{cache:'no-store'})).json();var map={btc:d.bitcoin,eth:d.ethereum,sol:d.solana,bnb:d.binancecoin,ada:d.cardano,avax:d['avalanche-2'],link:d.chainlink,dot:d.polkadot,matic:d['matic-network'],atom:d.cosmos};function fmt(v){return '$'+(v>=1000?v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','):v.toFixed(2));}Object.entries(map).forEach(function([k,v]){if(!v)return;var el=document.getElementById('cptk-'+k);if(el){var ch=v.usd_24h_change||0;el.textContent=fmt(v.usd)+' '+(ch>=0?'\u25b2':'\u25bc')+(Math.abs(ch).toFixed(1))+'%';el.style.color=ch>=0?'#00e676':'#ff5252';}});}catch(e){}})();})()</script>
 </body>
 </html>
