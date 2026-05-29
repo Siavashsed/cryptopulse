@@ -220,7 +220,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Market Structure"
   },
   {
     "title": "How Coinbase's Direct Listing in April 2021 Redrew the Lines for Algo Traders",
@@ -239,7 +240,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "DeFi Summer 2020 Changed Algorithmic Crypto Trading Forever. Here's What Actually Happened",
@@ -259,6 +261,7 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   }
 ]
