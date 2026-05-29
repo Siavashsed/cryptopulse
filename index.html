@@ -375,7 +375,6 @@ img{display:block;max-width:100%}
   .nl-form button{border-radius:2px;padding:14px;margin-top:2px}
   .foot-top{grid-template-columns:1fr}
 }</style>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"><style>.site-nav{background:#081009!important;border-bottom:1px solid #0d2b18!important}.site-nav-logo{font-family:'Space Grotesk',system-ui,sans-serif!important;color:#00e676!important;font-size:18px!important;font-weight:700!important;letter-spacing:-.3px!important}.site-nav-links a{color:#5a8468!important;font-weight:600!important;font-size:13px!important}.site-nav-links a:hover{color:#d8f0e0!important;border-bottom-color:#00e676!important}.site-nav-back{color:#5a8468!important}.site-nav-back:hover{color:#00e676!important}.cp-tk{background:#020d06;border-bottom:1px solid #0d2b18;height:36px;display:flex;align-items:center;overflow:hidden;width:100%}.cp-tk-lbl{background:#00e676;color:#020d06;padding:0 14px;height:100%;display:flex;align-items:center;flex-shrink:0;letter-spacing:2px;text-transform:uppercase;font-size:9px;font-weight:700;gap:5px}.cp-tk-dot{width:6px;height:6px;border-radius:50%;background:#020d06;animation:cptk-blink 1.2s ease-in-out infinite}@keyframes cptk-blink{0%,100%{opacity:1}50%{opacity:.2}}.cp-tk-vp{flex:1;overflow:hidden}.cp-tk-tr{display:flex;white-space:nowrap;animation:cptk-scroll 40s linear infinite;gap:28px}@keyframes cptk-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}.cp-tk-it{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:#d8f0e0;font-family:'Space Grotesk',system-ui,sans-serif}.cp-tk-sy{color:#5a8468;font-size:10px}</style>
 </head>
 <body>
 <!--SHELL:ACCENT:#00e676-->
@@ -414,7 +413,7 @@ img{display:block;max-width:100%}
       <a href="#analysis">Analysis</a>
       <a href="#topics">On-Chain</a>
       <a href="#market">Algo Signals</a>
-      <a href="about.html">About</a>
+      <a href="about">About</a>
     </div>
     <div class="nav-right">
       <div class="nav-date" id="nav-date"></div>
@@ -428,7 +427,7 @@ img{display:block;max-width:100%}
     <a href="#analysis" onclick="document.getElementById('nav-mobile').classList.remove('open')">Latest Analysis</a>
     <a href="#topics" onclick="document.getElementById('nav-mobile').classList.remove('open')">On-Chain Signals</a>
     <a href="#market" onclick="document.getElementById('nav-mobile').classList.remove('open')">Algo Breakdowns</a>
-    <a href="about.html">About</a>
+    <a href="about">About</a>
     <a href="#newsletter" onclick="document.getElementById('nav-mobile').classList.remove('open')">Subscribe Free</a>
   </div>
 </nav>
@@ -448,13 +447,111 @@ img{display:block;max-width:100%}
       <a class="hero-cta-outline" href="#tools">Trading Calculators</a>
     </div>
     <div class="hero-price-row">
-      <div class="hero-price-item"><span class="hero-price-sym">BTC</span><span class="hero-price-val" id="hs-btc">$67,234</span><span class="hero-price-chg up" id="hs-btc-ch">▲ 2.31%</span></div>
-      <div class="hero-price-item"><span class="hero-price-sym">ETH</span><span class="hero-price-val" id="hs-eth">$3,421</span><span class="hero-price-chg dn" id="hs-eth-ch">▼ 0.84%</span></div>
-      <div class="hero-price-item"><span class="hero-price-sym">SOL</span><span class="hero-price-val" id="hs-sol">$142.50</span><span class="hero-price-chg up" id="hs-sol-ch">▲ 4.12%</span></div>
-      <div class="hero-price-item"><span class="hero-price-sym">F&amp;G</span><span class="hero-price-val">72</span><span class="hero-price-chg up">Greed</span></div>
+      <div class="hero-price-item"><span class="hero-price-sym">BTC</span><span class="hero-price-val" id="hs-btc">-</span><span class="hero-price-chg" id="hs-btc-ch">-</span></div>
+      <div class="hero-price-item"><span class="hero-price-sym">ETH</span><span class="hero-price-val" id="hs-eth">-</span><span class="hero-price-chg" id="hs-eth-ch">-</span></div>
+      <div class="hero-price-item"><span class="hero-price-sym">SOL</span><span class="hero-price-val" id="hs-sol">-</span><span class="hero-price-chg" id="hs-sol-ch">-</span></div>
+      <div class="hero-price-item"><span class="hero-price-sym">F&amp;G</span><span class="hero-price-val" id="hs-fg">-</span><span class="hero-price-chg" id="hs-fg-lbl">-</span></div>
     </div>
   </div>
 </section>
+
+<!-- LIVE MARKET DASHBOARD ============================== -->
+<section style="background:#020d06;border-bottom:1px solid #0d2b18;padding:48px 0 56px;color:#e8f5ec">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid #0d2b18">
+      <h2 style="font-family:'Inter',sans-serif;font-size:clamp(20px,2vw,28px);font-weight:700;letter-spacing:-.015em;color:#e8f5ec;margin:0">Live market</h2>
+      <div style="display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#5a8a6e"><span style="width:6px;height:6px;border-radius:50%;background:#3ecf8e;box-shadow:0 0 8px #3ecf8e;animation:cp-pulse 2s ease-in-out infinite"></span><span id="mkt-updated">Loading from CoinGecko</span></div>
+    </div>
+    <style>@keyframes cp-pulse{0%,100%{opacity:1}50%{opacity:.4}}</style>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:#0d2b18;border:1px solid #0d2b18;border-radius:6px;overflow:hidden" id="mkt-grid">
+      <!-- Top coin cards injected here -->
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px" id="mkt-extras">
+      <div style="background:#062215;border:1px solid #0d2b18;border-radius:6px;padding:20px 22px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.22em;color:#5a8a6e;text-transform:uppercase;margin-bottom:10px">Fear &amp; Greed Index</div>
+        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:6px"><span id="fg-val" style="font-family:'Inter',sans-serif;font-size:38px;font-weight:700;letter-spacing:-.025em;line-height:1;color:#e8f5ec">-</span><span id="fg-lbl" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#3ecf8e">-</span></div>
+        <div style="height:6px;background:linear-gradient(90deg,#dc2626 0%,#f59e0b 25%,#eab308 50%,#3ecf8e 75%,#16a34a 100%);border-radius:3px;position:relative"><div id="fg-marker" style="position:absolute;top:-3px;width:2px;height:12px;background:#e8f5ec;left:0%;transition:left .8s ease"></div></div>
+        <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.16em;color:#5a8a6e;margin-top:6px"><span>EXTREME FEAR</span><span>EXTREME GREED</span></div>
+      </div>
+      <div style="background:#062215;border:1px solid #0d2b18;border-radius:6px;padding:20px 22px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.22em;color:#5a8a6e;text-transform:uppercase;margin-bottom:10px">Global market cap</div>
+        <div style="font-family:'Inter',sans-serif;font-size:32px;font-weight:700;letter-spacing:-.025em;line-height:1;color:#e8f5ec" id="mc-val">-</div>
+        <div style="display:flex;gap:18px;margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#5a8a6e;letter-spacing:.08em"><span><span id="mc-chg" style="color:#3ecf8e">-</span> 24h</span><span>BTC dominance <span id="btc-dom" style="color:#e8f5ec">-</span></span></div>
+      </div>
+    </div>
+    <div style="margin-top:18px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#3a5a48;text-align:right">Data: CoinGecko · Fear &amp; Greed by Alternative.me · Updates every 5 min</div>
+  </div>
+</section>
+<script>
+(function(){
+  var COINS = ['bitcoin','ethereum','solana','binancecoin','ripple','cardano','dogecoin','tron'];
+  function fmt(n){ if (n==null) return '-'; var v=+n; if (v>=1e9) return '$'+(v/1e9).toFixed(2)+'B'; if (v>=1e6) return '$'+(v/1e6).toFixed(2)+'M'; if (v>=1000) return '$'+v.toLocaleString('en',{maximumFractionDigits:0}); if (v>=1) return '$'+v.toFixed(2); return '$'+v.toFixed(4); }
+  function pct(n){ if (n==null) return '-'; var v=+n; var s=v>=0?'▲ ':'▼ '; return s+Math.abs(v).toFixed(2)+'%'; }
+  function spark(prices, up){
+    var w=140, h=36, n=prices.length;
+    if (!n) return '';
+    var min=Math.min.apply(null,prices), max=Math.max.apply(null,prices), rng=max-min||1;
+    var pts=prices.map(function(p,i){ return (i/(n-1)*w)+','+(h-(p-min)/rng*h); }).join(' ');
+    var color = up ? '#3ecf8e' : '#dc2626';
+    return '<svg width="'+w+'" height="'+h+'" viewBox="0 0 '+w+' '+h+'" style="display:block;margin-top:8px"><polyline points="'+pts+'" fill="none" stroke="'+color+'" stroke-width="1.5"/></svg>';
+  }
+  function render(coins){
+    var grid=document.getElementById('mkt-grid');
+    grid.innerHTML = coins.map(function(c){
+      var up = c.price_change_percentage_24h >= 0;
+      return '<a href="https://www.coingecko.com/en/coins/'+c.id+'" rel="nofollow noopener" target="_blank" style="background:#062215;padding:18px 18px;text-decoration:none;color:inherit;transition:background .2s" onmouseover="this.style.background=\'#082b1b\'" onmouseout="this.style.background=\'#062215\'">'+
+        '<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><img src="'+c.image+'" alt="" width="20" height="20" style="border-radius:50%"><span style="font-family:\'JetBrains Mono\',monospace;font-size:10.5px;letter-spacing:.18em;color:#5a8a6e;text-transform:uppercase">'+c.symbol+'</span></div>'+
+        '<div style="font-family:\'Inter\',sans-serif;font-size:18px;font-weight:700;letter-spacing:-.015em;color:#e8f5ec">'+fmt(c.current_price)+'</div>'+
+        '<div style="font-family:\'JetBrains Mono\',monospace;font-size:11px;letter-spacing:.06em;color:'+(up?'#3ecf8e':'#dc2626')+'">'+pct(c.price_change_percentage_24h)+'</div>'+
+        spark((c.sparkline_in_7d||{}).price||[], up)+
+      '</a>';
+    }).join('');
+    // Update hero strip with first 3 + F&G
+    function setHero(id, idCh, c){
+      var el=document.getElementById(id); if(el) el.textContent=fmt(c.current_price);
+      var elc=document.getElementById(idCh); if(elc){ elc.textContent=pct(c.price_change_percentage_24h); elc.className='hero-price-chg ' + (c.price_change_percentage_24h>=0?'up':'dn'); }
+    }
+    var byId = {}; coins.forEach(function(c){ byId[c.id]=c; });
+    if (byId.bitcoin)  setHero('hs-btc','hs-btc-ch',byId.bitcoin);
+    if (byId.ethereum) setHero('hs-eth','hs-eth-ch',byId.ethereum);
+    if (byId.solana)   setHero('hs-sol','hs-sol-ch',byId.solana);
+    document.getElementById('mkt-updated').textContent='Updated ' + new Date().toLocaleTimeString();
+  }
+  function loadMarkets(){
+    var url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids='+COINS.join(',')+'&sparkline=true&price_change_percentage=24h';
+    fetch(url).then(function(r){ return r.json(); }).then(function(data){ if(Array.isArray(data)){
+      // Preserve order from COINS
+      var idx={}; COINS.forEach(function(id,i){ idx[id]=i; });
+      data.sort(function(a,b){ return idx[a.id]-idx[b.id]; });
+      render(data);
+    }}).catch(function(){});
+  }
+  function loadFG(){
+    fetch('https://api.alternative.me/fng/?limit=1').then(function(r){ return r.json(); }).then(function(j){
+      if (!j.data || !j.data.length) return;
+      var v=parseInt(j.data[0].value,10), lbl=j.data[0].value_classification;
+      var vEl=document.getElementById('fg-val'); if(vEl) vEl.textContent=v;
+      var lblEl=document.getElementById('fg-lbl'); if(lblEl) lblEl.textContent=lbl;
+      var mk=document.getElementById('fg-marker'); if(mk) mk.style.left=Math.max(0,Math.min(100,v))+'%';
+      // Mirror to hero strip
+      var hv=document.getElementById('hs-fg'); if(hv) hv.textContent=v;
+      var hl=document.getElementById('hs-fg-lbl'); if(hl) hl.textContent=lbl;
+    }).catch(function(){});
+  }
+  function loadGlobal(){
+    fetch('https://api.coingecko.com/api/v3/global').then(function(r){ return r.json(); }).then(function(j){
+      var d=j.data; if(!d) return;
+      var mc=document.getElementById('mc-val'); if(mc) mc.textContent=fmt(d.total_market_cap.usd);
+      var ch=document.getElementById('mc-chg'); if(ch){ var v=d.market_cap_change_percentage_24h_usd; ch.textContent=pct(v); ch.style.color=v>=0?'#3ecf8e':'#dc2626'; }
+      var bd=document.getElementById('btc-dom'); if(bd) bd.textContent=(d.market_cap_percentage.btc||0).toFixed(1)+'%';
+    }).catch(function(){});
+  }
+  loadMarkets(); loadFG(); loadGlobal();
+  setInterval(loadMarkets, 5*60*1000);
+  setInterval(loadFG,      5*60*1000);
+  setInterval(loadGlobal,  5*60*1000);
+})();
+</script>
 
 <!-- SUB STORIES ROW -->
 <div class="sub-row">
@@ -810,7 +907,7 @@ img{display:block;max-width:100%}
 <!-- FOOTER -->
 
 <!-- VIEW_ALL_ARTICLES_LINK -->
-<div class="view-all" style="text-align:center;padding:28px 24px 40px;font-family:inherit"><a href="./articles.html" style="display:inline-block;color:currentColor;border:1px solid currentColor;padding:10px 22px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;opacity:.85;transition:opacity .15s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">View all articles -&gt;</a></div>
+<div style="text-align:center;padding:32px 24px 48px"><a href="./articles" style="display:inline-block;color:currentColor;border:1px solid currentColor;padding:11px 26px;border-radius:999px;text-decoration:none;font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.85" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.85">All Articles</a></div>
 <!--SHELL:FOOTER-->
 <footer class="foot">
   <div class="foot-top">
@@ -836,13 +933,13 @@ img{display:block;max-width:100%}
       <a href="#tools">Position Size Calc</a>
       <a href="#tools">Risk / Reward Calc</a>
       <a href="#tools">Liquidation Calc</a>
-      <a href="about.html">Methodology</a>
+      <a href="about">Methodology</a>
     </div>
     <div class="foot-col">
       <div class="foot-col-title">Legal</div>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Use</a>
+      <a href="about">About</a>
+      <a href="privacy">Privacy Policy</a>
+      <a href="terms">Terms of Use</a>
     </div>
   </div>
   </div><!-- /foot-bottom -->
@@ -1490,6 +1587,5 @@ document.querySelectorAll('.tool-inp').forEach(function(inp){
 });
 </script>
 <!--/SHELL:FOOTER-->
-<script>(function(){var nav=document.querySelector('.site-nav');if(!nav)return;var tk=document.createElement('div');tk.className='cp-tk';var items=[{sy:'BTC',id:'cptk-btc'},{sy:'ETH',id:'cptk-eth'},{sy:'SOL',id:'cptk-sol'},{sy:'BNB',id:'cptk-bnb'},{sy:'ADA',id:'cptk-ada'},{sy:'AVAX',id:'cptk-avax'},{sy:'LINK',id:'cptk-link'},{sy:'DOT',id:'cptk-dot'},{sy:'MATIC',id:'cptk-matic'},{sy:'ATOM',id:'cptk-atom'}];var html=items.map(function(i){return '<span class="cp-tk-it"><span class="cp-tk-sy">'+i.sy+'</span><span id="'+i.id+'">--</span></span>';}).join('');tk.innerHTML='<div class="cp-tk-lbl"><span class="cp-tk-dot"></span>LIVE</div><div class="cp-tk-vp"><div class="cp-tk-tr">'+html+html+'</div></div>';nav.parentNode.insertBefore(tk,nav);(async function(){try{var d=await(await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin,cardano,avalanche-2,chainlink,polkadot,matic-network,cosmos&vs_currencies=usd&include_24hr_change=true',{cache:'no-store'})).json();var map={btc:d.bitcoin,eth:d.ethereum,sol:d.solana,bnb:d.binancecoin,ada:d.cardano,avax:d['avalanche-2'],link:d.chainlink,dot:d.polkadot,matic:d['matic-network'],atom:d.cosmos};function fmt(v){return '$'+(v>=1000?v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','):v.toFixed(2));}Object.entries(map).forEach(function([k,v]){if(!v)return;var el=document.getElementById('cptk-'+k);if(el){var ch=v.usd_24h_change||0;el.textContent=fmt(v.usd)+' '+(ch>=0?'\u25b2':'\u25bc')+(Math.abs(ch).toFixed(1))+'%';el.style.color=ch>=0?'#00e676':'#ff5252';}});}catch(e){}})();})()</script>
 </body>
 </html>
