@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://siavashsed.github.io/cryptopulse/</loc><lastmod>2026-05-28</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://siavashsed.github.io/cryptopulse/about/</loc><lastmod>2026-05-28</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://siavashsed.github.io/cryptopulse/contact/</loc><lastmod>2026-05-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://siavashsed.github.io/cryptopulse/privacy/</loc><lastmod>2026-05-28</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://siavashsed.github.io/cryptopulse/</loc><lastmod>2026-05-29</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://siavashsed.github.io/cryptopulse/about/</loc><lastmod>2026-05-29</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://siavashsed.github.io/cryptopulse/contact/</loc><lastmod>2026-05-29</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://siavashsed.github.io/cryptopulse/privacy/</loc><lastmod>2026-05-29</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://siavashsed.github.io/cryptopulse/dollar-cost-averaging-crypto-math/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/cryptopulse/open-source-trading-bots-worth-using/</loc><lastmod>2026-05-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/cryptopulse/funding-rates-crypto-futures-traders/</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -21,4 +21,6 @@
   <url><loc>https://siavashsed.github.io/cryptopulse/bitcoin-spot-etf-algo-trading-2024/</loc><lastmod>2024-11-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/cryptopulse/coinbase-direct-listing-2021-algo-trading/</loc><lastmod>2021-04-11</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/cryptopulse/defi-summer-2020-algorithmic-trading/</loc><lastmod>2020-11-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://siavashsed.github.io/cryptopulse/regime-detection-algorithms-crypto-trading/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://siavashsed.github.io/cryptopulse/uniswap-uni-airdrop-2020-algorithmic-trading/</loc><lastmod>2020-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
