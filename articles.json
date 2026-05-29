@@ -263,5 +263,42 @@
       "en"
     ],
     "category": "Algorithmic Trading"
+  },
+  {
+    "title": "Regime Detection Algorithms: How to Stop Trading the Same Way in Every Market",
+    "slug": "regime-detection-algorithms-crypto-trading",
+    "meta_description": "Regime detection algorithms automatically adapt crypto trading strategies when markets shift. Marcus Webb explains how they work and why most traders ignore them.",
+    "date": "May 29, 2026",
+    "date_iso": "2026-05-29",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/7567222/pexels-photo-7567222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "nber.org",
+      "aqr.com",
+      "ssrn.com"
+    ],
+    "posted_iso": "2026-05-29",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Uniswap's UNI Airdrop in September 2020 Was a Turning Point for Algorithmic Traders",
+    "slug": "uniswap-uni-airdrop-2020-algorithmic-trading",
+    "meta_description": "Uniswap's September 2020 UNI airdrop reshaped DeFi trading. Here's what it meant for algorithmic traders and why it still matters.",
+    "date": "August 15, 2020",
+    "date_iso": "2020-08-15",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "uniswap.org",
+      "dune.com",
+      "papers.ssrn.com"
+    ],
+    "posted_iso": "2026-05-29",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
