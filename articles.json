@@ -302,5 +302,43 @@
       "en"
     ],
     "category": "Algorithmic Trading"
+  },
+  {
+    "title": "Regulatory Arbitrage in Crypto: How to Trade the Same Asset Across Jurisdictions Legally",
+    "slug": "crypto-regulatory-arbitrage-cross-jurisdiction-trading",
+    "meta_description": "Marcus Webb breaks down regulatory arbitrage strategies for crypto traders-legal, data-backed, and built on real cross-jurisdictional price gaps.",
+    "date": "May 31, 2026",
+    "date_iso": "2026-05-31",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5834204/pexels-photo-5834204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "bis.org",
+      "fatf-gafi.org",
+      "oecd.org"
+    ],
+    "posted_iso": "2026-05-31",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "The FTX Collapse of November 2022: What Algorithmic Traders Actually Lost (And Learned)",
+    "slug": "ftx-collapse-2022-algorithmic-traders",
+    "meta_description": "FTX imploded in 72 hours in November 2022. Here's what the collapse meant for algorithmic crypto traders, quant funds, and market structure.",
+    "date": "January 12, 2022",
+    "date_iso": "2022-01-12",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/14354107/pexels-photo-14354107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "reuters.com",
+      "bloomberg.com",
+      "kaiko.com",
+      "chainalysis.com"
+    ],
+    "posted_iso": "2026-05-31",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
