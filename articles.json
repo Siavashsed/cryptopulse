@@ -319,7 +319,8 @@
     "posted_iso": "2026-05-31",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "The FTX Collapse of November 2022: What Algorithmic Traders Actually Lost (And Learned)",
@@ -339,6 +340,7 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   }
 ]
