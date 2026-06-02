@@ -573,7 +573,7 @@ window.AA = {
   var P=new URLSearchParams(location.search), cat=P.get('cat')||'__all__', q=P.get('q')||'', page=1, all=[];
   if(q&&searchEl)searchEl.value=q;
   function esc(t){return String(t==null?'':t).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];});}
-  function href(p){return './'+encodeURIComponent(p.slug||'').replace(/%2F/g,'/')+'/';}
+  function href(p){return '../'+encodeURIComponent(p.slug||'').replace(/%2F/g,'/')+'/';}
   window.__AA_HELP={esc:esc,fallback:FB,siteCat:SC};
   function match(ac,fc){if(fc==='__all__')return true;if(!ac)return false;var a=(''+ac).toLowerCase(),f=(''+fc).toLowerCase();return a===f||a.indexOf(f)>-1||f.indexOf(a)>-1;}
   function filt(){var s=q.trim().toLowerCase();return all.filter(function(p){if(!match(p.category||SC,cat))return false;if(s&&(''+(p.title||'')).toLowerCase().indexOf(s)===-1)return false;return true;});}
