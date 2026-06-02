@@ -642,7 +642,11 @@ img{display:block;max-width:100%}
   searchEl.addEventListener('input',function(){clearTimeout(deb);deb=setTimeout(function(){query=searchEl.value;page=1;render();},200);});
   prevBtn.addEventListener('click',function(){if(page>1){page--;render();window.scrollTo({top:0,behavior:'smooth'});}});
   nextBtn.addEventListener('click',function(){page++;render();window.scrollTo({top:0,behavior:'smooth'});});
-  fetch('./articles.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(data){
+  // The archive lives at /articles/index.html, so the data file is one level
+  // up at ../articles.json. Try that first, fall back to ./articles.json for
+  // any older flat deploys.
+  function _loadAA(){return fetch('../articles.json',{cache:'no-store'}).then(function(r){if(r.ok)return r.json();return fetch('./articles.json',{cache:'no-store'}).then(function(r2){if(!r2.ok)throw 0;return r2.json();});});}
+  _loadAA().then(function(data){
     all=Array.isArray(data)?data.slice():[];
     all.sort(function(a,b){return String(b.date_iso||'').localeCompare(String(a.date_iso||''));});
     countEl.textContent=all.length+' published';
