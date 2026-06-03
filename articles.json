@@ -1,19 +1,5 @@
 [
   {
-    "title": "Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works",
-    "slug": "dollar-cost-averaging-crypto-math",
-    "meta_description": "Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.",
-    "date": "May 17, 2026",
-    "date_iso": "2026-05-17",
-    "author": "Siavash Sadighi",
-    "image": "https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "chainalysis.com",
-      "river.com"
-    ],
-    "category": "Algorithmic Trading"
-  },
-  {
     "title": "Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)",
     "slug": "open-source-trading-bots-worth-using",
     "meta_description": "Alex Rivera reviews the open-source trading bots that hold up in production - with honest takes on Freqtrade, Hummingbot, Jesse, and more.",
