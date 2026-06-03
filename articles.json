@@ -1,5 +1,43 @@
 [
   {
+    "title": "Regulatory Arbitrage in Crypto: How to Trade the Same Asset Across Jurisdictions Legally",
+    "slug": "crypto-regulatory-arbitrage-cross-jurisdiction-trading",
+    "meta_description": "Marcus Webb breaks down regulatory arbitrage strategies for crypto traders-legal, data-backed, and built on real cross-jurisdictional price gaps.",
+    "date": "May 31, 2026",
+    "date_iso": "2026-05-31",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5834204/pexels-photo-5834204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "bis.org",
+      "fatf-gafi.org",
+      "oecd.org"
+    ],
+    "posted_iso": "2026-05-31",
+    "available_languages": [
+      "en"
+    ],
+    "category": "Algorithmic Trading"
+  },
+  {
+    "title": "Regime Detection Algorithms: How to Stop Trading the Same Way in Every Market",
+    "slug": "regime-detection-algorithms-crypto-trading",
+    "meta_description": "Regime detection algorithms automatically adapt crypto trading strategies when markets shift. Marcus Webb explains how they work and why most traders ignore them.",
+    "date": "May 29, 2026",
+    "date_iso": "2026-05-29",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/7567222/pexels-photo-7567222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "nber.org",
+      "aqr.com",
+      "ssrn.com"
+    ],
+    "posted_iso": "2026-05-29",
+    "available_languages": [
+      "en"
+    ],
+    "category": "Algorithmic Trading"
+  },
+  {
     "title": "Open-Source Trading Bots Worth Actually Using (And the Ones to Skip)",
     "slug": "open-source-trading-bots-worth-using",
     "meta_description": "Alex Rivera reviews the open-source trading bots that hold up in production - with honest takes on Freqtrade, Hummingbot, Jesse, and more.",
@@ -14,6 +52,16 @@
     ],
     "syndicated_from": "tradingtechreview",
     "category": "Algorithmic Trading"
+  },
+  {
+    "slug": "dollar-cost-averaging-crypto-math",
+    "title": "Dollar-Cost Averaging Into Crypto: The Math Behind Why It Actually Works",
+    "meta_description": "Ex-quant trader Marcus Chen breaks down the real math behind dollar-cost averaging in crypto, with data, edge cases, and a clear verdict.",
+    "image": "https://images.pexels.com/photos/29930928/pexels-photo-29930928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "author": "Jordan Osei",
+    "category": "Algorithmic Trading",
+    "date_iso": "2026-05-17",
+    "date": ""
   },
   {
     "title": "Funding Rates Explained: What Every Futures Trader Actually Needs to Know",
@@ -210,6 +258,27 @@
     "category": "Market Structure"
   },
   {
+    "title": "The FTX Collapse of November 2022: What Algorithmic Traders Actually Lost (And Learned)",
+    "slug": "ftx-collapse-2022-algorithmic-traders",
+    "meta_description": "FTX imploded in 72 hours in November 2022. Here's what the collapse meant for algorithmic crypto traders, quant funds, and market structure.",
+    "date": "January 12, 2022",
+    "date_iso": "2022-01-12",
+    "author": "Siavash Sadighi",
+    "image": "https://images.pexels.com/photos/14354107/pexels-photo-14354107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "reuters.com",
+      "bloomberg.com",
+      "kaiko.com",
+      "chainalysis.com"
+    ],
+    "posted_iso": "2026-05-31",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ],
+    "category": "Algorithmic Trading"
+  },
+  {
     "title": "How Coinbase's Direct Listing in April 2021 Redrew the Lines for Algo Traders",
     "slug": "coinbase-direct-listing-2021-algo-trading",
     "meta_description": "Coinbase's April 2021 Nasdaq direct listing wasn't just a milestone. It reshaped how algo traders priced crypto exchange risk and market structure forever.",
@@ -251,25 +320,6 @@
     "category": "Algorithmic Trading"
   },
   {
-    "title": "Regime Detection Algorithms: How to Stop Trading the Same Way in Every Market",
-    "slug": "regime-detection-algorithms-crypto-trading",
-    "meta_description": "Regime detection algorithms automatically adapt crypto trading strategies when markets shift. Marcus Webb explains how they work and why most traders ignore them.",
-    "date": "May 29, 2026",
-    "date_iso": "2026-05-29",
-    "author": "Siavash Sadighi",
-    "image": "https://images.pexels.com/photos/7567222/pexels-photo-7567222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "nber.org",
-      "aqr.com",
-      "ssrn.com"
-    ],
-    "posted_iso": "2026-05-29",
-    "available_languages": [
-      "en"
-    ],
-    "category": "Algorithmic Trading"
-  },
-  {
     "title": "Uniswap's UNI Airdrop in September 2020 Was a Turning Point for Algorithmic Traders",
     "slug": "uniswap-uni-airdrop-2020-algorithmic-trading",
     "meta_description": "Uniswap's September 2020 UNI airdrop reshaped DeFi trading. Here's what it meant for algorithmic traders and why it still matters.",
@@ -283,46 +333,6 @@
       "papers.ssrn.com"
     ],
     "posted_iso": "2026-05-29",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ],
-    "category": "Algorithmic Trading"
-  },
-  {
-    "title": "Regulatory Arbitrage in Crypto: How to Trade the Same Asset Across Jurisdictions Legally",
-    "slug": "crypto-regulatory-arbitrage-cross-jurisdiction-trading",
-    "meta_description": "Marcus Webb breaks down regulatory arbitrage strategies for crypto traders-legal, data-backed, and built on real cross-jurisdictional price gaps.",
-    "date": "May 31, 2026",
-    "date_iso": "2026-05-31",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/5834204/pexels-photo-5834204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "bis.org",
-      "fatf-gafi.org",
-      "oecd.org"
-    ],
-    "posted_iso": "2026-05-31",
-    "available_languages": [
-      "en"
-    ],
-    "category": "Algorithmic Trading"
-  },
-  {
-    "title": "The FTX Collapse of November 2022: What Algorithmic Traders Actually Lost (And Learned)",
-    "slug": "ftx-collapse-2022-algorithmic-traders",
-    "meta_description": "FTX imploded in 72 hours in November 2022. Here's what the collapse meant for algorithmic crypto traders, quant funds, and market structure.",
-    "date": "January 12, 2022",
-    "date_iso": "2022-01-12",
-    "author": "Siavash Sadighi",
-    "image": "https://images.pexels.com/photos/14354107/pexels-photo-14354107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "reuters.com",
-      "bloomberg.com",
-      "kaiko.com",
-      "chainalysis.com"
-    ],
-    "posted_iso": "2026-05-31",
     "historical": true,
     "available_languages": [
       "en"
