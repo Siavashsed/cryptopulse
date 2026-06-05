@@ -1,23 +1,5 @@
 [
   {
-    "title": "The Most Transparent Trading Bot I Have Found Has a 41% Win Rate, and That Is Exactly Why It Works",
-    "slug": "crypto-signals-app-transparent-trading-bot-review",
-    "meta_description": "Most crypto bots sell a black box and hide their losses. crypto-signals.app publishes its full equity curve and a 41.7% win rate. Marcus Webb on why that low number is the tell, not the warning.",
-    "date": "June 05, 2026",
-    "date_iso": "2026-06-05",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/6424586/pexels-photo-6424586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "category": "Trading Tools",
-    "outbound_links": [
-      "crypto-signals.app",
-      "investopedia.com"
-    ],
-    "posted_iso": "2026-06-05",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
     "title": "Liquidity Fragmentation Is the Last Honest Edge in Crypto, and Bots Already Own It",
     "slug": "crypto-liquidity-fragmentation-agent-edge",
     "meta_description": "Cross-venue liquidity fragmentation is where 2026 crypto alpha actually lives. Marcus Webb on the microstructure, the agent layer eating it, and how retail can still read the gap.",
@@ -272,6 +254,24 @@
     ],
     "syndicated_from": "tradingtechreview",
     "category": "Algorithmic Trading"
+  },
+  {
+    "title": "The Most Transparent Trading Bot I Have Found Has a 41% Win Rate, and That Is Exactly Why It Works",
+    "slug": "crypto-signals-app-transparent-trading-bot-review",
+    "meta_description": "Most crypto bots sell a black box and hide their losses. crypto-signals.app publishes its full equity curve and a 41.7% win rate. Marcus Webb on why that low number is the tell, not the warning.",
+    "date": "March 05, 2026",
+    "date_iso": "2026-03-05",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/6424586/pexels-photo-6424586.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "category": "Trading Tools",
+    "outbound_links": [
+      "crypto-signals.app",
+      "investopedia.com"
+    ],
+    "posted_iso": "2026-03-05",
+    "available_languages": [
+      "en"
+    ]
   },
   {
     "title": "The Bitcoin ETF Launch Actually Changed Algo Trading in 2024 (Here's the Data)",
