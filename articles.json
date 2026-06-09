@@ -374,5 +374,27 @@
       "en"
     ],
     "category": "Algorithmic Trading"
+  },
+  {
+    "title": "FTX Collapsed in 72 Hours. Here's What the Algo Traders Saw First",
+    "slug": "ftx-collapse-2022-algo-trading",
+    "meta_description": "FTX's November 2022 collapse reshaped crypto algo trading forever. Marcus Webb breaks down what the on-chain data showed before the panic hit.",
+    "date": "February 27, 2022",
+    "date_iso": "2022-02-27",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5698697/pexels-photo-5698697.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "coindesk.com",
+      "nansen.ai",
+      "ft.com",
+      "chainalysis.com",
+      "copper.co",
+      "restructuring.ra.kroll.com"
+    ],
+    "posted_iso": "2026-06-09",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
