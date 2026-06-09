@@ -21,13 +21,10 @@ img{display:block;max-width:100%}
 /* ── TICKER ── */
 .tk-bar{background:#020d06;border-bottom:1px solid #0d2b18;height:38px;display:flex;align-items:center;overflow:hidden}
 .tk-label{font-family:var(--fm);font-size:9px;font-weight:700;color:#020d06;background:var(--pri);padding:0 14px;height:100%;display:flex;align-items:center;flex-shrink:0;letter-spacing:2px;text-transform:uppercase;gap:5px}
-.tk-dot{width:7px;height:7px;border-radius:50%;background:#020d06;animation:blink 1.2s ease-in-out infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.tk-dot{width:7px;height:7px;border-radius:50%;background:#020d06;animation:blink 1.2s ease-in-out infinite}@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 .tk-viewport{flex:1;overflow:hidden}
 .tk-track{display:flex;white-space:nowrap;animation:ticker-scroll 40s linear infinite}
-.tk-track:hover{animation-play-state:paused}
-@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(max-width:768px){.tk-track{animation-duration:18s}}
+.tk-track:hover{animation-play-state:paused}@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}@media(max-width:768px){.tk-track{animation-duration:18s}}
 .tk-item{font-family:var(--fm);font-size:11px;color:#4a7a5a;display:inline-flex;gap:7px;align-items:center;padding:0 22px;border-right:1px solid #0d2b18}
 .tk-sym{color:#a0cfb0;font-weight:700}
 .tk-up{color:var(--pri);font-weight:700}
@@ -49,8 +46,7 @@ img{display:block;max-width:100%}
 .nav-mobile{display:none;position:absolute;top:100%;left:0;right:0;background:#020d06;border-bottom:1px solid #0d2b18;flex-direction:column;padding:12px 0;z-index:99}
 .nav-mobile.open{display:flex}
 .nav-mobile a{font-family:var(--fm);font-size:12px;font-weight:700;color:#3a6a48;text-transform:uppercase;letter-spacing:1px;padding:12px 24px;border-bottom:1px solid #0a1e10}
-.nav-mobile a:hover{color:var(--pri);background:#030f07}
-@media(max-width:768px){.nav-links,.nav-right .nav-date,.nav-right .nav-subscribe{display:none}.nav-burger{display:flex}.nav-inner{justify-content:space-between}}
+.nav-mobile a:hover{color:var(--pri);background:#030f07}@media(max-width:768px){.nav-links,.nav-right .nav-date,.nav-right .nav-subscribe{display:none}.nav-burger{display:flex}.nav-inner{justify-content:space-between}}
 
 /* ── HERO BANNER ── */
 .hero-section{background:#020d06;border-bottom:1px solid #0d2b18;position:relative;overflow:hidden;min-height:500px;display:flex;align-items:flex-end}
@@ -178,8 +174,7 @@ img{display:block;max-width:100%}
 .tl-short{color:#ff7b72;font-weight:700}
 .tl-msg{color:#c9d1d9}
 .tl-conf{color:#f59e0b;margin-left:auto;flex-shrink:0}
-.tl-new{animation:flash-line .6s ease}
-@keyframes flash-line{0%{background:rgba(0,230,118,.12)}100%{background:transparent}}
+.tl-new{animation:flash-line .6s ease}@keyframes flash-line{0%{background:rgba(0,230,118,.12)}100%{background:transparent}}
 
 /* ── LATEST ANALYSIS ── */
 .analysis-section{max-width:1280px;margin:0 auto;padding:56px 20px;display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
@@ -198,10 +193,7 @@ img{display:block;max-width:100%}
 .art-card:hover .art-card-title{color:var(--pri)}
 .art-card-desc{font-size:12px;color:#3a6a48;line-height:1.65;flex:1}
 .art-card-meta{font-family:var(--fm);font-size:10px;color:#2a5a38;margin-top:3px}
-.art-card-read{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);margin-top:4px}
-
-/* skeleton */
-@keyframes sk-shimmer{0%{background-position:200% 0}to{background-position:-200% 0}}
+.art-card-read{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);margin-top:4px}@keyframes sk-shimmer{0%{background-position:200% 0}to{background-position:-200% 0}}
 .sk-card{pointer-events:none;border:1px solid #0d2b18;background:#030f07;margin-bottom:1px;overflow:hidden;display:grid;grid-template-columns:180px 1fr}
 .sk-img{width:180px;height:130px;flex-shrink:0;background:linear-gradient(90deg,#050f08 25%,#091a0d 50%,#050f08 75%);background-size:200% 100%;animation:sk-shimmer 1.8s ease-in-out infinite}
 .sk-body{padding:16px 20px;flex:1;display:flex;flex-direction:column;gap:10px}
@@ -254,8 +246,7 @@ img{display:block;max-width:100%}
 .tools-title{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:3px;margin-bottom:8px}
 .tools-title::before{content:'// ';color:#1a4a2a}
 .tools-sub{font-size:14px;color:#3a6a48}
-.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#0d2b18}
-@media(max-width:900px){.tools-grid{grid-template-columns:1fr}}
+.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#0d2b18}@media(max-width:900px){.tools-grid{grid-template-columns:1fr}}
 .tool-card{background:#020d06;padding:28px 24px}
 .tool-name{font-family:var(--fm);font-size:10px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
 .tool-name::before{content:'// ';color:#1a4a2a}
@@ -341,11 +332,7 @@ img{display:block;max-width:100%}
 .foot-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .foot-copy{font-family:var(--fm);font-size:10px;color:#1a4a2a}
 .foot-links{display:flex;gap:18px;flex-wrap:wrap}
-.foot-links a{font-family:var(--fm);font-size:10px;color:#1a4a2a;transition:color .2s}
-.foot-links a:hover{color:var(--pri)}
-
-/* ── RESPONSIVE ── */
-@media(max-width:1024px){
+.foot-links a{font-family:var(--fm);font-size:10px;color:#1a4a2a;transition:color .2s}@media(max-width:1024px){
   .analysis-section{grid-template-columns:1fr;gap:40px}
   .cmd-grid{grid-template-columns:repeat(2,1fr)}
   .stat-row{grid-template-columns:repeat(2,1fr)}
@@ -353,8 +340,7 @@ img{display:block;max-width:100%}
   .sigterm-wrap{grid-template-columns:1fr}
   .mkt-editorial{grid-template-columns:repeat(2,1fr)}
   .foot-top{grid-template-columns:1fr 1fr;gap:32px}
-}
-@media(max-width:768px){
+}@media(max-width:768px){
   /* Hero */
   .hero-section{min-height:380px}
   .hero-center{padding:32px 18px 36px}
@@ -379,8 +365,7 @@ img{display:block;max-width:100%}
   /* About strip */
   .about-strip-inner{grid-template-columns:1fr}
   .about-avatar{display:none}
-}
-@media(max-width:480px){
+}@media(max-width:480px){
   .hero-section{min-height:320px}
   .hero-price-row{display:none}
   .vp-wrap{grid-template-columns:1fr}
@@ -390,13 +375,10 @@ img{display:block;max-width:100%}
   .nl-form input{border:1px solid #0d2b18;border-radius:2px;margin-bottom:0}
   .nl-form button{border-radius:2px;padding:14px;margin-top:2px}
   .foot-top{grid-template-columns:1fr}
-}
-</style>
+}</style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"><style>.site-nav{background:#081009!important;border-bottom:1px solid #0d2b18!important}.site-nav-logo{font-family:'Space Grotesk',system-ui,sans-serif!important;color:#00e676!important;font-size:18px!important;font-weight:700!important;letter-spacing:-.3px!important}.site-nav-links a{color:#5a8468!important;font-weight:600!important;font-size:13px!important}.site-nav-links a:hover{color:#d8f0e0!important;border-bottom-color:#00e676!important}.site-nav-back{color:#5a8468!important}.site-nav-back:hover{color:#00e676!important}.cp-tk{background:#020d06;border-bottom:1px solid #0d2b18;height:36px;display:flex;align-items:center;overflow:hidden;width:100%}.cp-tk-lbl{background:#00e676;color:#020d06;padding:0 14px;height:100%;display:flex;align-items:center;flex-shrink:0;letter-spacing:2px;text-transform:uppercase;font-size:9px;font-weight:700;gap:5px}.cp-tk-dot{width:6px;height:6px;border-radius:50%;background:#020d06;animation:cptk-blink 1.2s ease-in-out infinite}@keyframes cptk-blink{0%,100%{opacity:1}50%{opacity:.2}}.cp-tk-vp{flex:1;overflow:hidden}.cp-tk-tr{display:flex;white-space:nowrap;animation:cptk-scroll 40s linear infinite;gap:28px}@keyframes cptk-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}.cp-tk-it{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:#d8f0e0;font-family:'Space Grotesk',system-ui,sans-serif}.cp-tk-sy{color:#5a8468;font-size:10px}</style>
 </head>
 <body>
-
-<!--SHELL:ACCENT:#00e676-->
-<!--SHELL:HEADER-->
 
 <!-- TICKER -->
 <div class="tk-bar">
@@ -449,8 +431,6 @@ img{display:block;max-width:100%}
     <a href="#newsletter" onclick="document.getElementById('nav-mobile').classList.remove('open')">Subscribe Free</a>
   </div>
 </nav>
-<!--/SHELL:HEADER-->
-
 <!-- HERO BANNER -->
 <section class="hero-section">
   <canvas id="hero-canvas"></canvas>
@@ -481,7 +461,7 @@ img{display:block;max-width:100%}
         <div class="sub-story-body"><div class="sub-badge">Crypto &amp; Trading</div><div class="sub-title" id="si-ttl-0">How On-Chain Data Predicted the Last Three Major Market Moves</div><div class="sub-date" id="si-dt-0">Analysis</div></div>
       </a>
       <a href="#analysis" class="sub-story" id="sub-link-1">
-        <div class="sub-story-img" id="si-1" style="width:90px;min-height:90px;background:#020d06"><svg viewBox="0 0 110 120" xmlns="http://www.w3.org/2000/svg" width="110" height="120"><rect width="110" height="120" fill="#020d06"/><line x1="0" y1="30" x2="110" y2="30" stroke="#0d2b18" stroke-width=".5"/><line x1="0" y1="60" x2="110" y2="60" stroke="#0d2b18" stroke-width=".5"/><line x1="0" y1="90" x2="110" y2="90" stroke="#0d2b18" stroke-width=".5"/><polyline points="0,90 15,80 22,84 35,65 45,70 60,48 72,52 85,32 95,28 110,20" fill="none" stroke="#00e676" stroke-width="2"/><polygon points="0,90 15,80 22,84 35,65 45,70 60,48 72,52 85,32 95,28 110,20 110,120 0,120" fill="rgba(0,230,118,.08)"/><text x="5" y="14" font-family="monospace" font-size="8" fill="#3a6a48">EQUITY CURVE</text><text x="65" y="14" font-family="monospace" font-size="8" fill="#00e676">+85.3%</text><text x="5" y="112" font-family="monospace" font-size="8" fill="#2a5a38">ALGO STRATEGY</text></svg></div>
+        <div class="sub-story-img" id="si-1" style="width:90px;min-height:90px;background:#020d06"><svg viewBox="0 0 110 120" xmlns="http://www.w3.org/2000/svg" width="110" height="120"><rect width="110" height="120" fill="#020d06"/><line x1="0" y1="30" x2="110" y2="30" stroke="#0d2b18" stroke-width=".5"/><line x1="0" y1="60" x2="110" y2="60" stroke="#0d2b18" stroke-width=".5"/><line x1="0" y1="90" x2="110" y2="90" stroke="#0d2b18" stroke-width=".5"/><polyline points="0,90 15,80 22,84 35,65 45,70 60,48 72,52 85,32 95,28 110,20" fill="none" stroke="#00e676" stroke-width="2"/><text x="5" y="14" font-family="monospace" font-size="8" fill="#3a6a48">EQUITY CURVE</text><text x="65" y="14" font-family="monospace" font-size="8" fill="#00e676">+85.3%</text><text x="5" y="112" font-family="monospace" font-size="8" fill="#2a5a38">ALGO STRATEGY</text></svg></div>
         <div class="sub-story-body"><div class="sub-badge">Algo Trading</div><div class="sub-title" id="si-ttl-1">Inside a Systematic BTC Strategy: Build, Backtest, Deploy</div><div class="sub-date" id="si-dt-1">Deep Dive</div></div>
       </a>
       <a href="#analysis" class="sub-story" id="sub-link-2">
@@ -494,7 +474,7 @@ img{display:block;max-width:100%}
 <!-- VALUE PROPS -->
 <section class="vp-section reveal">
   <div class="vp-wrap">
-    <div class="vp-item"><div class="vp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M2 18.5a16 16 0 0 1 20 0"/><path d="M5.5 15a11 11 0 0 1 13 0"/><path d="M9 11.5a6 6 0 0 1 6 0"/><circle cx="12" cy="20" r="1.5" fill="currentColor"/></svg></div><div><div class="vp-label">Live Market Data</div><div class="vp-desc">Real-time prices from CoinGecko, refreshed every 90 seconds</div></div></div>
+    <div class="vp-item"><div class="vp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M2 18.5a16 16 0 0 1 20 0"/><circle cx="12" cy="20" r="1.5" fill="currentColor"/></svg></div><div><div class="vp-label">Live Market Data</div><div class="vp-desc">Real-time prices from CoinGecko, refreshed every 90 seconds</div></div></div>
     <div class="vp-item"><div class="vp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="5" height="6" rx="1"/><rect x="9.5" y="9" width="5" height="6" rx="1"/><rect x="17" y="9" width="5" height="6" rx="1"/><line x1="7" y1="12" x2="9.5" y2="12"/><line x1="14.5" y1="12" x2="17" y2="12"/></svg></div><div><div class="vp-label">On-Chain Intelligence</div><div class="vp-desc">Whale moves, exchange inflows, miner behavior decoded into plain language</div></div></div>
     <div class="vp-item"><div class="vp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div><div><div class="vp-label">Algo Trade Breakdowns</div><div class="vp-desc">Build, test, deploy, retire  -  the full lifecycle of systematic strategies</div></div></div>
     <div class="vp-item"><div class="vp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><line x1="12" y1="3" x2="12" y2="8.5"/><line x1="12" y1="15.5" x2="12" y2="21"/><line x1="3" y1="12" x2="8.5" y2="12"/><line x1="15.5" y1="12" x2="21" y2="12"/></svg></div><div><div class="vp-label">No Hype, No Calls</div><div class="vp-desc">Written by a quant trader, not a marketing team. No price predictions</div></div></div>
@@ -546,7 +526,6 @@ img{display:block;max-width:100%}
         <div class="cmd-fg-label">Fear &amp; Greed Index</div>
         <svg width="120" height="70" viewBox="0 0 120 70">
           <path d="M10,65 A50,50 0 0,1 110,65" fill="none" stroke="#0d2b18" stroke-width="8" stroke-linecap="round"/>
-          <path id="fg-arc" d="M10,65 A50,50 0 0,1 110,65" fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round" stroke-dasharray="157" stroke-dashoffset="47" style="transition:stroke-dashoffset 1.5s ease,stroke 1.5s ease"/>
           <text x="60" y="58" text-anchor="middle" font-family="Space Mono" font-size="18" font-weight="700" fill="#e8f5ec" id="fg-num">72</text>
         </svg>
         <div class="cmd-fg-val" style="margin-top:-4px;font-size:13px" id="fg-word">Greed</div>
@@ -564,7 +543,7 @@ img{display:block;max-width:100%}
         <div><div class="stat-num" id="stat-mcap" data-count="2410">$2.41T</div><div class="stat-lbl">Global Market Cap</div></div>
       </div>
       <div class="stat-cell">
-        <svg class="stat-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <svg class="stat-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
         <div><div class="stat-num" id="stat-dom">54.2%</div><div class="stat-lbl">BTC Dominance</div></div>
       </div>
       <div class="stat-cell">
@@ -688,11 +667,11 @@ img{display:block;max-width:100%}
         <div class="mkt-ed-body"><div class="mkt-ed-tag">On-Chain</div><div class="mkt-ed-title">Reading Blockchain Data for Trade Signals</div><div class="mkt-ed-desc">Exchange inflows, whale accumulation patterns, and what they historically precede.</div></div>
       </a>
       <a class="mkt-ed-card" href="#analysis" id="mkt-ed-2">
-        <div class="mkt-ed-img" style="height:180px;background:#020d06"><svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="600" height="180" fill="#020d06"/><line x1="0" y1="35" x2="600" y2="35" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="90" x2="600" y2="90" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="145" x2="600" y2="145" stroke="#0d2b18" stroke-width="1"/><polyline points="40,145 80,128 110,133 150,108 180,115 220,88 255,95 295,68 330,75 370,52 405,58 440,38 470,45 510,32 545,40 580,28" fill="none" stroke="#00e676" stroke-width="2.5"/><polygon points="40,145 80,128 110,133 150,108 180,115 220,88 255,95 295,68 330,75 370,52 405,58 440,38 470,45 510,32 545,40 580,28 580,180 40,180" fill="rgba(0,230,118,.07)"/><polyline points="40,145 80,135 110,138 150,120 180,125 220,105 255,110 295,88 330,94 370,75 405,80 440,62 470,68 510,58 545,64 580,55" fill="none" stroke="#1a6a30" stroke-width="1.5" stroke-dasharray="5,4"/><line x1="490" y1="30" x2="490" y2="150" stroke="rgba(255,82,82,0.5)" stroke-width="1.5" stroke-dasharray="3,3"/><text x="494" y="26" font-family="monospace" font-size="9" fill="rgba(255,82,82,.8)">EDGE DECAY</text><text x="12" y="20" font-family="monospace" font-size="9" fill="#3a6a48" letter-spacing="1.5">STRATEGY EQUITY CURVE · BACKTESTED</text><text x="12" y="170" font-family="monospace" font-size="11" fill="#00e676" font-weight="bold">+143.2%</text><text x="90" y="170" font-family="monospace" font-size="9" fill="#3a6a48">PEAK RETURN</text><text x="290" y="170" font-family="monospace" font-size="9" fill="#ff5252">MAX DD: −18.4%</text></svg></div>
+        <div class="mkt-ed-img" style="height:180px;background:#020d06"><svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="600" height="180" fill="#020d06"/><line x1="0" y1="35" x2="600" y2="35" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="90" x2="600" y2="90" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="145" x2="600" y2="145" stroke="#0d2b18" stroke-width="1"/><polyline points="40,145 80,128 110,133 150,108 180,115 220,88 255,95 295,68 330,75 370,52 405,58 440,38 470,45 510,32 545,40 580,28" fill="none" stroke="#00e676" stroke-width="2.5"/><line x1="490" y1="30" x2="490" y2="150" stroke="rgba(255,82,82,0.5)" stroke-width="1.5" stroke-dasharray="3,3"/><text x="494" y="26" font-family="monospace" font-size="9" fill="rgba(255,82,82,.8)">EDGE DECAY</text><text x="12" y="20" font-family="monospace" font-size="9" fill="#3a6a48" letter-spacing="1.5">STRATEGY EQUITY CURVE · BACKTESTED</text><text x="12" y="170" font-family="monospace" font-size="11" fill="#00e676" font-weight="bold">+143.2%</text><text x="90" y="170" font-family="monospace" font-size="9" fill="#3a6a48">PEAK RETURN</text><text x="290" y="170" font-family="monospace" font-size="9" fill="#ff5252">MAX DD: −18.4%</text></svg></div>
         <div class="mkt-ed-body"><div class="mkt-ed-tag">Algo Trading</div><div class="mkt-ed-title">How Systematic Strategies Degrade Over Time</div><div class="mkt-ed-desc">Every edge has a shelf life. Knowing when to retire a strategy is harder than building it.</div></div>
       </a>
       <a class="mkt-ed-card" href="#analysis" id="mkt-ed-3">
-        <div class="mkt-ed-img" style="height:180px;background:#020d06"><svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="600" height="180" fill="#020d06"/><line x1="0" y1="35" x2="600" y2="35" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="90" x2="600" y2="90" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="145" x2="600" y2="145" stroke="#0d2b18" stroke-width="1"/><line x1="300" y1="0" x2="300" y2="180" stroke="#1a4a2a" stroke-width="1.5"/><polygon points="300,90 240,90 215,80 195,68 178,55 165,44 155,35 148,28 300,28" fill="rgba(0,230,118,.55)"/><polygon points="300,90 260,90 238,82 220,72 205,60 195,50 188,40 183,32 300,32" fill="rgba(0,230,118,.35)"/><polygon points="300,90 280,90 268,84 258,76 250,66 300,66" fill="rgba(0,230,118,.2)"/><polygon points="300,90 360,90 385,80 405,68 422,55 435,44 445,35 452,28 300,28" fill="rgba(255,82,82,.55)"/><polygon points="300,90 340,90 362,82 380,72 395,60 405,50 412,40 417,32 300,32" fill="rgba(255,82,82,.35)"/><polygon points="300,90 320,90 332,84 342,76 350,66 300,66" fill="rgba(255,82,82,.2)"/><text x="12" y="20" font-family="monospace" font-size="9" fill="#3a6a48" letter-spacing="1.5">ORDER BOOK DEPTH · BTC/USD</text><rect x="252" y="94" width="96" height="18" rx="2" fill="#051408"/><text x="300" y="107" font-family="monospace" font-size="11" fill="#c0ddc8" font-weight="bold" text-anchor="middle">$67,234</text><text x="12" y="170" font-family="monospace" font-size="9" fill="#00e676">■ BID DEPTH</text><text x="110" y="170" font-family="monospace" font-size="9" fill="#3a6a48">267.4 BTC</text><text x="400" y="170" font-family="monospace" font-size="9" fill="#ff5252">■ ASK DEPTH</text><text x="500" y="170" font-family="monospace" font-size="9" fill="#3a6a48">312.1 BTC</text></svg></div>
+        <div class="mkt-ed-img" style="height:180px;background:#020d06"><svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="600" height="180" fill="#020d06"/><line x1="0" y1="35" x2="600" y2="35" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="90" x2="600" y2="90" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="145" x2="600" y2="145" stroke="#0d2b18" stroke-width="1"/><line x1="300" y1="0" x2="300" y2="180" stroke="#1a4a2a" stroke-width="1.5"/><polygon points="300,90 240,90 215,80 195,68 178,55 165,44 155,35 148,28 300,28" fill="rgba(0,230,118,.55)"/><text x="12" y="20" font-family="monospace" font-size="9" fill="#3a6a48" letter-spacing="1.5">ORDER BOOK DEPTH · BTC/USD</text><rect x="252" y="94" width="96" height="18" rx="2" fill="#051408"/><text x="300" y="107" font-family="monospace" font-size="11" fill="#c0ddc8" font-weight="bold" text-anchor="middle">$67,234</text><text x="12" y="170" font-family="monospace" font-size="9" fill="#00e676">■ BID DEPTH</text><text x="110" y="170" font-family="monospace" font-size="9" fill="#3a6a48">267.4 BTC</text><text x="400" y="170" font-family="monospace" font-size="9" fill="#ff5252">■ ASK DEPTH</text><text x="500" y="170" font-family="monospace" font-size="9" fill="#3a6a48">312.1 BTC</text></svg></div>
         <div class="mkt-ed-body"><div class="mkt-ed-tag">Market Structure</div><div class="mkt-ed-title">Crypto Market Microstructure for Retail Traders</div><div class="mkt-ed-desc">Order books, liquidity gaps, and why price moves the way it does at key levels.</div></div>
       </a>
     </div>
@@ -709,11 +688,11 @@ img{display:block;max-width:100%}
         <div class="mkt-ed-body"><div class="mkt-ed-tag">On-Chain Analysis</div><div class="mkt-ed-title" id="td-ttl-0">Bitcoin On-Chain Intelligence</div><div class="mkt-ed-desc">Exchange inflows, whale accumulation, UTXO age bands, and cycle positioning signals.</div></div>
       </a>
       <a class="mkt-ed-card" href="#analysis" id="td-1">
-        <div class="mkt-ed-img" style="height:200px;background:#020d06"><svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="600" height="200" fill="#020d06"/><line x1="0" y1="40" x2="600" y2="40" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="100" x2="600" y2="100" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="160" x2="600" y2="160" stroke="#0d2b18" stroke-width="1"/><polyline points="30,150 70,130 100,135 140,105 170,112 210,82 245,88 285,60 320,66 360,44 395,50 435,32 465,38 505,24 535,30 570,20" fill="none" stroke="#00e676" stroke-width="2.5"/><polygon points="30,150 70,130 100,135 140,105 170,112 210,82 245,88 285,60 320,66 360,44 395,50 435,32 465,38 505,24 535,30 570,20 570,170 30,170" fill="rgba(0,230,118,.06)"/><polyline points="30,155 70,148 100,150 140,138 170,142 210,125 245,129 285,110 320,115 360,100 395,104 435,95 465,98 505,90 535,93 570,88" fill="none" stroke="#1a6a30" stroke-width="1.5" stroke-dasharray="4,4"/><polyline points="30,158 70,155 100,157 140,150 170,153 210,145 245,147 285,138 320,140 360,133 395,135 435,128 465,130 505,124 535,126 570,122" fill="none" stroke="#0d2b18" stroke-width="1.5" stroke-dasharray="3,5"/><text x="12" y="24" font-family="monospace" font-size="9" fill="#3a6a48" letter-spacing="1.5">MULTI-STRATEGY BACKTEST · EQUITY CURVES</text><text x="12" y="188" font-family="monospace" font-size="9" fill="#00e676"> -  Strategy A +143%</text><text x="190" y="188" font-family="monospace" font-size="9" fill="#1a6a30">-- Strategy B +58%</text><text x="360" y="188" font-family="monospace" font-size="9" fill="#2a5a38">·· Strategy C +22%</text></svg></div>
+        <div class="mkt-ed-img" style="height:200px;background:#020d06"><svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="600" height="200" fill="#020d06"/><line x1="0" y1="40" x2="600" y2="40" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="100" x2="600" y2="100" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="160" x2="600" y2="160" stroke="#0d2b18" stroke-width="1"/><polyline points="30,150 70,130 100,135 140,105 170,112 210,82 245,88 285,60 320,66 360,44 395,50 435,32 465,38 505,24 535,30 570,20" fill="none" stroke="#00e676" stroke-width="2.5"/><text x="12" y="24" font-family="monospace" font-size="9" fill="#3a6a48" letter-spacing="1.5">MULTI-STRATEGY BACKTEST · EQUITY CURVES</text><text x="12" y="188" font-family="monospace" font-size="9" fill="#00e676"> -  Strategy A +143%</text><text x="190" y="188" font-family="monospace" font-size="9" fill="#1a6a30">-- Strategy B +58%</text><text x="360" y="188" font-family="monospace" font-size="9" fill="#2a5a38">·· Strategy C +22%</text></svg></div>
         <div class="mkt-ed-body"><div class="mkt-ed-tag">Algo Trading</div><div class="mkt-ed-title" id="td-ttl-1">Systematic Strategy Breakdowns</div><div class="mkt-ed-desc">How quant strategies are built, tested under real conditions, and retired when edge degrades.</div></div>
       </a>
       <a class="mkt-ed-card" href="#analysis" id="td-2">
-        <div class="mkt-ed-img" style="height:200px;background:#020d06"><svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="600" height="200" fill="#020d06"/><line x1="300" y1="0" x2="300" y2="180" stroke="#122216" stroke-width="1"/><line x1="0" y1="40" x2="600" y2="40" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="100" x2="600" y2="100" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="160" x2="600" y2="160" stroke="#0d2b18" stroke-width="1"/><polygon points="300,100 250,100 228,90 210,78 196,65 185,54 177,44 172,36 300,36" fill="rgba(0,230,118,.65)"/><polygon points="300,100 258,100 240,92 225,82 213,70 204,60 198,50 195,42 300,42" fill="rgba(0,230,118,.45)"/><polygon points="300,100 270,100 258,93 248,84 241,74 300,74" fill="rgba(0,230,118,.28)"/><polygon points="300,100 350,100 372,90 390,78 404,65 415,54 423,44 428,36 300,36" fill="rgba(255,82,82,.65)"/><polygon points="300,100 342,100 360,92 375,82 387,70 396,60 402,50 405,42 300,42" fill="rgba(255,82,82,.45)"/><polygon points="300,100 330,100 342,93 352,84 359,74 300,74" fill="rgba(255,82,82,.28)"/><text x="12" y="24" font-family="monospace" font-size="9" fill="#3a6a48" letter-spacing="1.5">MARKET DEPTH / LIQUIDATION MAP · BTC</text><rect x="248" y="104" width="104" height="20" rx="2" fill="#030f07"/><text x="300" y="118" font-family="monospace" font-size="11" fill="#c0ddc8" font-weight="bold" text-anchor="middle">$67,234</text><text x="30" y="188" font-family="monospace" font-size="9" fill="#00e676">■ BIDS  267.4 BTC</text><text x="380" y="188" font-family="monospace" font-size="9" fill="#ff5252">■ ASKS  312.1 BTC</text></svg></div>
+        <div class="mkt-ed-img" style="height:200px;background:#020d06"><svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><rect width="600" height="200" fill="#020d06"/><line x1="300" y1="0" x2="300" y2="180" stroke="#122216" stroke-width="1"/><line x1="0" y1="40" x2="600" y2="40" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="100" x2="600" y2="100" stroke="#0d2b18" stroke-width="1"/><line x1="0" y1="160" x2="600" y2="160" stroke="#0d2b18" stroke-width="1"/><polygon points="300,100 250,100 228,90 210,78 196,65 185,54 177,44 172,36 300,36" fill="rgba(0,230,118,.65)"/><text x="12" y="24" font-family="monospace" font-size="9" fill="#3a6a48" letter-spacing="1.5">MARKET DEPTH / LIQUIDATION MAP · BTC</text><rect x="248" y="104" width="104" height="20" rx="2" fill="#030f07"/><text x="300" y="118" font-family="monospace" font-size="11" fill="#c0ddc8" font-weight="bold" text-anchor="middle">$67,234</text><text x="30" y="188" font-family="monospace" font-size="9" fill="#00e676">■ BIDS  267.4 BTC</text><text x="380" y="188" font-family="monospace" font-size="9" fill="#ff5252">■ ASKS  312.1 BTC</text></svg></div>
         <div class="mkt-ed-body"><div class="mkt-ed-tag">Market Structure</div><div class="mkt-ed-title" id="td-ttl-2">Crypto Microstructure for Retail</div><div class="mkt-ed-desc">Order books, liquidity voids, liquidation cascades, and key level behavior explained.</div></div>
       </a>
     </div>
@@ -829,7 +808,6 @@ img{display:block;max-width:100%}
 
 
 
-<!--SHELL:FOOTER-->
 <footer class="foot">
   <div class="foot-top">
     <div class="foot-col foot-about">
@@ -1507,6 +1485,6 @@ document.querySelectorAll('.tool-inp').forEach(function(inp){
   });
 });
 </script>
-<!--/SHELL:FOOTER-->
+<script>(function(){var nav=document.querySelector('.site-nav');if(!nav)return;var tk=document.createElement('div');tk.className='cp-tk';var items=[{sy:'BTC',id:'cptk-btc'},{sy:'ETH',id:'cptk-eth'},{sy:'SOL',id:'cptk-sol'},{sy:'BNB',id:'cptk-bnb'},{sy:'ADA',id:'cptk-ada'},{sy:'AVAX',id:'cptk-avax'},{sy:'LINK',id:'cptk-link'},{sy:'DOT',id:'cptk-dot'},{sy:'MATIC',id:'cptk-matic'},{sy:'ATOM',id:'cptk-atom'}];var html=items.map(function(i){return '<span class="cp-tk-it"><span class="cp-tk-sy">'+i.sy+'</span><span id="'+i.id+'">--</span></span>';}).join('');tk.innerHTML='<div class="cp-tk-lbl"><span class="cp-tk-dot"></span>LIVE</div><div class="cp-tk-vp"><div class="cp-tk-tr">'+html+html+'</div></div>';nav.parentNode.insertBefore(tk,nav);(async function(){try{var d=await(await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,binancecoin,cardano,avalanche-2,chainlink,polkadot,matic-network,cosmos&vs_currencies=usd&include_24hr_change=true',{cache:'no-store'})).json();var map={btc:d.bitcoin,eth:d.ethereum,sol:d.solana,bnb:d.binancecoin,ada:d.cardano,avax:d['avalanche-2'],link:d.chainlink,dot:d.polkadot,matic:d['matic-network'],atom:d.cosmos};function fmt(v){return '$'+(v>=1000?v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','):v.toFixed(2));}Object.entries(map).forEach(function([k,v]){if(!v)return;var el=document.getElementById('cptk-'+k);if(el){var ch=v.usd_24h_change||0;el.textContent=fmt(v.usd)+' '+(ch>=0?'\u25b2':'\u25bc')+(Math.abs(ch).toFixed(1))+'%';el.style.color=ch>=0?'#00e676':'#ff5252';}});}catch(e){}})();})()</script>
 </body>
 </html>
