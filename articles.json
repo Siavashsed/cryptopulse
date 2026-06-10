@@ -396,5 +396,25 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "BlackRock's Bitcoin ETF Pulled In $10 Billion. Here's What That Actually Did to Algo Trading",
+    "slug": "blackrock-bitcoin-etf-2024-algo-trading",
+    "meta_description": "The iShares Bitcoin ETF launch in January 2024 reshaped algorithmic crypto trading. Marcus Webb breaks down what changed and what traders missed.",
+    "date": "May 29, 2024",
+    "date_iso": "2024-05-29",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5980871/pexels-photo-5980871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "bloomberg.com",
+      "bis.org",
+      "sec.gov",
+      "coinglass.com"
+    ],
+    "posted_iso": "2026-06-10",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
