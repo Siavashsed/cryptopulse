@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://siavashsed.github.io/cryptopulse/</loc><lastmod>2026-06-09</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://siavashsed.github.io/cryptopulse/about/</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://siavashsed.github.io/cryptopulse/contact/</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://siavashsed.github.io/cryptopulse/privacy/</loc><lastmod>2026-06-09</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://siavashsed.github.io/cryptopulse/</loc><lastmod>2026-06-10</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://siavashsed.github.io/cryptopulse/about/</loc><lastmod>2026-06-10</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://siavashsed.github.io/cryptopulse/contact/</loc><lastmod>2026-06-10</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://siavashsed.github.io/cryptopulse/privacy/</loc><lastmod>2026-06-10</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://siavashsed.github.io/cryptopulse/crypto-liquidity-fragmentation-agent-edge/</loc><lastmod>2026-06-04</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/cryptopulse/crypto-regulatory-arbitrage-cross-jurisdiction-trading/</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/cryptopulse/regime-detection-algorithms-crypto-trading/</loc><lastmod>2026-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -28,4 +28,5 @@
   <url><loc>https://siavashsed.github.io/cryptopulse/defi-summer-2020-algorithmic-trading/</loc><lastmod>2020-11-25</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/cryptopulse/uniswap-uni-airdrop-2020-algorithmic-trading/</loc><lastmod>2020-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://siavashsed.github.io/cryptopulse/ftx-collapse-2022-algo-trading/</loc><lastmod>2022-02-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://siavashsed.github.io/cryptopulse/blackrock-bitcoin-etf-2024-algo-trading/</loc><lastmod>2024-05-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
