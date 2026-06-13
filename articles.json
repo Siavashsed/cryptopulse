@@ -395,7 +395,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "BlackRock's Bitcoin ETF Pulled In $10 Billion. Here's What That Actually Did to Algo Trading",
@@ -415,6 +416,7 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Market Structure"
   }
 ]
