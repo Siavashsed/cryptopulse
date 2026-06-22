@@ -418,5 +418,22 @@
       "en"
     ],
     "category": "Market Structure"
+  },
+  {
+    "title": "The Boring Math That Beats 90% of Crypto Traders",
+    "slug": "dollar-cost-averaging-crypto-math-2",
+    "meta_description": "Dollar-cost averaging into crypto isn't magic. It's variance reduction and convexity working in your favor. Here's the actual math, with numbers.",
+    "date": "June 22, 2026",
+    "date_iso": "2026-06-22",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/9169178/pexels-photo-9169178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "vanguard.com",
+      "coingecko.com"
+    ],
+    "posted_iso": "2026-06-22",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
