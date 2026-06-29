@@ -576,25 +576,11 @@ L.innerHTML=a.map(function(p){return '<a class="cpa-lat" href="../'+encodeURICom
     <div class="cpa-concl"><span class="cpa-concl-k">The takeaway</span><p><span class="cpa-concl-k">The takeaway</span><p><span class="cpa-concl-k">The takeaway</span><p>Run a full audit of your current exchange exposure right now, not as a percentage of your portfolio but in absolute dollar terms per venue. Then ask whether that number would hurt you if the exchange halted withdrawals tonight. If the answer is yes, restructure your settlement workflow before you add another position. The strategy can wait. The counterparty risk can't.</p></div>
     
   </div>
-  <section class="cpa-disc" id="cpa-discussion"><div class="cpa-disc-head"><span class="cpa-disc-k">Signal &amp; noise</span><span class="cpa-disc-c" id="cpa-cc"></span></div><p class="cpa-disc-sub">Trade ideas, not insults. Add your read on the market below.</p><div id="cpa-list"></div><form class="cpa-form" id="cpa-form"><input class="cpa-in" id="cpa-name" placeholder="Your name" maxlength="40" autocomplete="off"><textarea class="cpa-ta" id="cpa-msg" placeholder="Share your take" maxlength="800"></textarea><button class="cpa-btn" type="submit">Post</button></form></section><script>(function(){var L=document.getElementById('cpa-list'),CC=document.getElementById('cpa-cc'),F=document.getElementById('cpa-form');if(!L)return;var KEY='cpac:'+location.pathname;function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];});}function ini(n){n=(n||'R').trim().split(/\s+/);return((n[0]||'')[0]||'R').toUpperCase()+((n[1]||'')[0]||'').toUpperCase();}function row(c){return '<div class="cpa-cm"><div class="cpa-cm-av">'+esc(ini(c.name))+'</div><div class="cpa-cm-body"><div class="cpa-cm-top"><span class="cpa-cm-n">'+esc(c.name||'Reader')+'</span><span class="cpa-cm-d">'+esc(c.date_display||c.date_iso||'')+'</span></div><p class="cpa-cm-t">'+esc(c.text||'')+'</p></div></div>';}function render(a){L.innerHTML=a.length?a.map(row).join(''):'<div class="cpa-empty">No takes yet. Be the first to call it.</div>';if(CC)CC.textContent=a.length+(a.length===1?' reply':' replies');}var mine=[];try{mine=JSON.parse(localStorage.getItem(KEY))||[];}catch(e){}var seed=[];fetch('./comments.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():[];}).then(function(j){seed=Array.isArray(j)?j:[];render(seed.concat(mine));}).catch(function(){render(mine);});if(F)F.addEventListener('submit',function(e){e.preventDefault();var n=document.getElementById('cpa-name').value.trim(),m=document.getElementById('cpa-msg').value.trim();if(!m)return;mine.push({name:n||'Reader',text:m,date_display:'just now'});try{localStorage.setItem(KEY,JSON.stringify(mine));}catch(e){}render(seed.concat(mine));F.reset();});})();</script>
+  
   </main>
   <aside class="cpa-aside">
   <aside class="cpa-card"><div class="cpa-author-top"><div class="cpa-author-av" style="overflow:hidden;padding:0"><img src="https://api.dicebear.com/7.x/notionists/svg?seed=Marcus%20Webb" alt="Marcus Webb" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div><div><div class="cpa-author-k">Author</div><p class="cpa-author-n">Marcus Webb</p><p class="cpa-author-r">ex-quant trader and algorithmic crypto researcher</p></div></div><p class="cpa-author-b">This site is where I publish the analysis that takes longer than 280 characters to explain: on-chain signals, bot logic, and the setups I'm actually watching.</p></aside>
-  <div class="cpa-card"><div class="cpa-latest-k">Latest</div>
-<div id="cpa-latest-list"></div>
-<a class="cpa-viewall" href="../articles/">View all articles &rarr;</a></div>
-<script>(function(){
-var L=document.getElementById('cpa-latest-list');if(!L)return;
-var here=location.pathname.replace(/\/$/,'').split('/').pop();
-var FB='https://images.unsplash.com/photo-1640340434855-6084b1f4901c?w=200&q=70';
-function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];});}
-function load(){return fetch('../articles.json',{cache:'no-store'}).then(function(r){if(r.ok)return r.json();return fetch('./articles.json',{cache:'no-store'}).then(function(r2){return r2.ok?r2.json():[];});});}
-load().then(function(d){var a=(Array.isArray(d)?d:[]).slice();
-a.sort(function(x,y){return(''+(y.date_iso||'')).localeCompare(''+(x.date_iso||''));});
-a=a.filter(function(p){return (p.slug||'')!==here;}).slice(0,5);
-L.innerHTML=a.map(function(p){return '<a class="cpa-lat" href="../'+encodeURIComponent(p.slug||'')+'/"><img class="cpa-lat-img" loading="lazy" alt="" src="'+esc(p.image||FB)+'"><div><p class="cpa-lat-t">'+esc(p.title||'Untitled')+'</p><div class="cpa-lat-d">'+esc(p.date_iso||'')+'</div></div></a>';}).join('');
-}).catch(function(){});
-})();</script>
+  
   </aside>
 </div></div></div></article>
 <footer class="foot">
