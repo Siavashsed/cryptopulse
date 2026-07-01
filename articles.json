@@ -435,5 +435,42 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Grid Bots Printed Money in 2023. Trend Bots Ate Them Alive in 2024.",
+    "slug": "grid-bots-vs-trend-following-bots-2",
+    "meta_description": "Grid bots vs trend-following bots: Marcus Webb breaks down real performance data, hidden costs, and which strategy actually fits your market.",
+    "date": "July 01, 2026",
+    "date_iso": "2026-07-01",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/7567486/pexels-photo-7567486.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sciencedirect.com",
+      "papers.ssrn.com"
+    ],
+    "posted_iso": "2026-07-01",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "FTX Collapsed in 72 Hours. Here's What It Did to Algo Trading",
+    "slug": "ftx-collapse-2022-algo-trading-2",
+    "meta_description": "FTX's November 2022 collapse wiped $8B in customer funds. Marcus Webb breaks down what it meant for algorithmic crypto trading strategies.",
+    "date": "April 07, 2022",
+    "date_iso": "2022-04-07",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/8973993/pexels-photo-8973993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "coindesk.com",
+      "reuters.com",
+      "papers.ssrn.com",
+      "bis.org"
+    ],
+    "posted_iso": "2026-07-01",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
