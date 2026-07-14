@@ -472,5 +472,41 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "The DCA Math Most Crypto Bros Skip When They Time the Top",
+    "slug": "dca-crypto-math-volatility-edge",
+    "meta_description": "Dollar-cost averaging into crypto works because of the arithmetic of volatility, not discipline. Here is the actual math, with numbers.",
+    "date": "July 13, 2026",
+    "date_iso": "2026-07-13",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5831676/pexels-photo-5831676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "corporate.vanguard.com",
+      "nber.org"
+    ],
+    "posted_iso": "2026-07-13",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Bakkt Launched With 72 Bitcoin. The Algo Desks Noticed the Silence",
+    "slug": "bakkt-launch-2019-algo-trading",
+    "meta_description": "Bakkt's physically-settled Bitcoin futures went live in September 2019 to 72 contracts. Here's what that thin volume means for algorithmic crypto traders.",
+    "date": "September 29, 2019",
+    "date_iso": "2019-09-29",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5833802/pexels-photo-5833802.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "reuters.com",
+      "cftc.gov",
+      "coindesk.com"
+    ],
+    "posted_iso": "2026-07-13",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
