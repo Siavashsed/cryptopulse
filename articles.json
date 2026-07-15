@@ -508,5 +508,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "How Crypto Algorithms Turn Your FOMO Into Their Alpha",
+    "slug": "fomo-psychology-algorithms-crypto",
+    "meta_description": "FOMO isn't a personal weakness in crypto. It's a measurable signal that trading algorithms harvest. Here's how they do it and how to stop feeding them.",
+    "date": "July 15, 2026",
+    "date_iso": "2026-07-15",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/26762397/pexels-photo-26762397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "cftc.gov",
+      "sciencedirect.com",
+      "academic.oup.com"
+    ],
+    "posted_iso": "2026-07-15",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
