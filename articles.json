@@ -526,5 +526,24 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "On-Chain Data Called Every Bitcoin Top. The Headlines Never Did.",
+    "slug": "crypto-cycles-data-not-headlines",
+    "meta_description": "Crypto market cycles leave fingerprints in on-chain data long before headlines catch up. The four metrics an ex-quant actually watches, with thresholds.",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/1038916/pexels-photo-1038916.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "nber.org",
+      "insights.glassnode.com",
+      "coinmetrics.io",
+      "farside.co.uk"
+    ],
+    "posted_iso": "2026-07-16",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
