@@ -545,5 +545,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Why Your 200% Backtest Will Lose Money Live",
+    "slug": "backtesting-pitfalls-losing-strategies-look-profitable",
+    "meta_description": "The backtesting pitfalls that make losing crypto strategies look profitable: lookahead bias, overfitting, survivorship bias, and costs simulators skip.",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/6120171/pexels-photo-6120171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ams.org",
+      "academic.oup.com",
+      "coingecko.com"
+    ],
+    "posted_iso": "2026-07-17",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
