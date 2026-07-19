@@ -563,5 +563,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Most Crypto Market Makers Never Actually Capture the Spread",
+    "slug": "crypto-market-making-spread-capture",
+    "meta_description": "How crypto market making really works: why quoted spreads overstate profits, and where adverse selection, inventory risk, and fees eat the edge.",
+    "date": "July 19, 2026",
+    "date_iso": "2026-07-19",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5834243/pexels-photo-5834243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "papers.ssrn.com",
+      "kaiko.com",
+      "binance.com"
+    ],
+    "posted_iso": "2026-07-19",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
