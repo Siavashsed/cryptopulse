@@ -581,5 +581,42 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Crypto Market Makers Don't Earn the Spread. They Earn the Flow",
+    "slug": "how-crypto-market-makers-earn",
+    "meta_description": "How crypto market making actually pays: rebates, inventory risk, adverse selection, and why the quoted spread is the smallest part of the P&L.",
+    "date": "July 20, 2026",
+    "date_iso": "2026-07-20",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5831709/pexels-photo-5831709.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "reuters.com",
+      "tandfonline.com",
+      "arxiv.org",
+      "kaiko.com"
+    ],
+    "posted_iso": "2026-07-20",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Uniswap v3 Made Liquidity a Trading Strategy, Not a Deposit",
+    "slug": "uniswap-v3-concentrated-liquidity-2021",
+    "meta_description": "Uniswap v3's concentrated liquidity rewired AMM market making in 2021. The volume numbers looked great. The LP returns told a different story.",
+    "date": "October 27, 2021",
+    "date_iso": "2021-10-27",
+    "author": "Jordan Osei",
+    "image": "https://images.pexels.com/photos/20726170/pexels-photo-20726170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "uniswap.org",
+      "arxiv.org"
+    ],
+    "posted_iso": "2026-07-20",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
