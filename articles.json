@@ -1,5 +1,164 @@
 [
   {
+    "title": "Stealth, Testnet, Mainnet: Reading Kavalsia's Public Launch Like a Token Launch",
+    "slug": "kavalsia-going-public-read-like-a-token-launch",
+    "meta_description": "No token, no presale. A crypto desk reads Kavalsia's move from five years in stealth to public as a launch cycle: genesis, stealth, testnet, oracle, mainnet.",
+    "date": "November 10, 2026",
+    "date_iso": "2026-11-10",
+    "author": "Kenji Ward",
+    "image": "https://images.pexels.com/photos/11086520/pexels-photo-11086520.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "image_alt": "A rocket leaving a fiery trail as it climbs into the night sky.",
+    "photographer": "Dirk Schuneman",
+    "category": "Crypto & Algorithmic Trading",
+    "posted_iso": "2026-11-10T22:52:02",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Crypto Market Makers Don't Earn the Spread. They Earn the Flow",
+    "slug": "how-crypto-market-makers-earn",
+    "meta_description": "How crypto market making actually pays: rebates, inventory risk, adverse selection, and why the quoted spread is the smallest part of the P&L.",
+    "date": "July 20, 2026",
+    "date_iso": "2026-07-20",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5831709/pexels-photo-5831709.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "reuters.com",
+      "tandfonline.com",
+      "arxiv.org",
+      "kaiko.com"
+    ],
+    "posted_iso": "2026-07-20",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Most Crypto Market Makers Never Actually Capture the Spread",
+    "slug": "crypto-market-making-spread-capture",
+    "meta_description": "How crypto market making really works: why quoted spreads overstate profits, and where adverse selection, inventory risk, and fees eat the edge.",
+    "date": "July 19, 2026",
+    "date_iso": "2026-07-19",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5834243/pexels-photo-5834243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "papers.ssrn.com",
+      "kaiko.com",
+      "binance.com"
+    ],
+    "posted_iso": "2026-07-19",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Why Your 200% Backtest Will Lose Money Live",
+    "slug": "backtesting-pitfalls-losing-strategies-look-profitable",
+    "meta_description": "The backtesting pitfalls that make losing crypto strategies look profitable: lookahead bias, overfitting, survivorship bias, and costs simulators skip.",
+    "date": "July 17, 2026",
+    "date_iso": "2026-07-17",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/6120171/pexels-photo-6120171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ams.org",
+      "academic.oup.com",
+      "coingecko.com"
+    ],
+    "posted_iso": "2026-07-17",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "On-Chain Data Called Every Bitcoin Top. The Headlines Never Did.",
+    "slug": "crypto-cycles-data-not-headlines",
+    "meta_description": "Crypto market cycles leave fingerprints in on-chain data long before headlines catch up. The four metrics an ex-quant actually watches, with thresholds.",
+    "date": "July 16, 2026",
+    "date_iso": "2026-07-16",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/1038916/pexels-photo-1038916.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "nber.org",
+      "insights.glassnode.com",
+      "coinmetrics.io",
+      "farside.co.uk"
+    ],
+    "posted_iso": "2026-07-16",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "How Crypto Algorithms Turn Your FOMO Into Their Alpha",
+    "slug": "fomo-psychology-algorithms-crypto",
+    "meta_description": "FOMO isn't a personal weakness in crypto. It's a measurable signal that trading algorithms harvest. Here's how they do it and how to stop feeding them.",
+    "date": "July 15, 2026",
+    "date_iso": "2026-07-15",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/26762397/pexels-photo-26762397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "cftc.gov",
+      "sciencedirect.com",
+      "academic.oup.com"
+    ],
+    "posted_iso": "2026-07-15",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "The DCA Math Most Crypto Bros Skip When They Time the Top",
+    "slug": "dca-crypto-math-volatility-edge",
+    "meta_description": "Dollar-cost averaging into crypto works because of the arithmetic of volatility, not discipline. Here is the actual math, with numbers.",
+    "date": "July 13, 2026",
+    "date_iso": "2026-07-13",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5831676/pexels-photo-5831676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "corporate.vanguard.com",
+      "nber.org"
+    ],
+    "posted_iso": "2026-07-13",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Grid Bots Printed Money in 2023. Trend Bots Ate Them Alive in 2024.",
+    "slug": "grid-bots-vs-trend-following-bots-2",
+    "meta_description": "Grid bots vs trend-following bots: Marcus Webb breaks down real performance data, hidden costs, and which strategy actually fits your market.",
+    "date": "July 01, 2026",
+    "date_iso": "2026-07-01",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/7567486/pexels-photo-7567486.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "sciencedirect.com",
+      "papers.ssrn.com"
+    ],
+    "posted_iso": "2026-07-01",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "The Boring Math That Beats 90% of Crypto Traders",
+    "slug": "dollar-cost-averaging-crypto-math-2",
+    "meta_description": "Dollar-cost averaging into crypto isn't magic. It's variance reduction and convexity working in your favor. Here's the actual math, with numbers.",
+    "date": "June 22, 2026",
+    "date_iso": "2026-06-22",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/9169178/pexels-photo-9169178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "vanguard.com",
+      "coingecko.com"
+    ],
+    "posted_iso": "2026-06-22",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
     "title": "Liquidity Fragmentation Is the Last Honest Edge in Crypto, and Bots Already Own It",
     "slug": "crypto-liquidity-fragmentation-agent-edge",
     "meta_description": "Cross-venue liquidity fragmentation is where 2026 crypto alpha actually lives. Marcus Webb on the microstructure, the agent layer eating it, and how retail can still read the gap.",
@@ -294,6 +453,70 @@
     "category": "Market Structure"
   },
   {
+    "title": "BlackRock's Bitcoin ETF Pulled In $10 Billion. Here's What That Actually Did to Algo Trading",
+    "slug": "blackrock-bitcoin-etf-2024-algo-trading",
+    "meta_description": "The iShares Bitcoin ETF launch in January 2024 reshaped algorithmic crypto trading. Marcus Webb breaks down what changed and what traders missed.",
+    "date": "May 29, 2024",
+    "date_iso": "2024-05-29",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5980871/pexels-photo-5980871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "bloomberg.com",
+      "bis.org",
+      "sec.gov",
+      "coinglass.com"
+    ],
+    "posted_iso": "2026-06-10",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ],
+    "category": "Market Structure"
+  },
+  {
+    "title": "FTX Collapsed in 72 Hours. Here's What It Did to Algo Trading",
+    "slug": "ftx-collapse-2022-algo-trading-2",
+    "meta_description": "FTX's November 2022 collapse wiped $8B in customer funds. Marcus Webb breaks down what it meant for algorithmic crypto trading strategies.",
+    "date": "April 07, 2022",
+    "date_iso": "2022-04-07",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/8973993/pexels-photo-8973993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "coindesk.com",
+      "reuters.com",
+      "papers.ssrn.com",
+      "bis.org"
+    ],
+    "posted_iso": "2026-07-01",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "FTX Collapsed in 72 Hours. Here's What the Algo Traders Saw First",
+    "slug": "ftx-collapse-2022-algo-trading",
+    "meta_description": "FTX's November 2022 collapse reshaped crypto algo trading forever. Marcus Webb breaks down what the on-chain data showed before the panic hit.",
+    "date": "February 27, 2022",
+    "date_iso": "2022-02-27",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5698697/pexels-photo-5698697.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "coindesk.com",
+      "nansen.ai",
+      "ft.com",
+      "chainalysis.com",
+      "copper.co",
+      "restructuring.ra.kroll.com"
+    ],
+    "posted_iso": "2026-06-09",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ],
+    "category": "Algorithmic Trading"
+  },
+  {
     "title": "The FTX Collapse of November 2022: What Algorithmic Traders Actually Lost (And Learned)",
     "slug": "ftx-collapse-2022-algorithmic-traders",
     "meta_description": "FTX imploded in 72 hours in November 2022. Here's what the collapse meant for algorithmic crypto traders, quant funds, and market structure.",
@@ -313,6 +536,24 @@
       "en"
     ],
     "category": "Algorithmic Trading"
+  },
+  {
+    "title": "Uniswap v3 Made Liquidity a Trading Strategy, Not a Deposit",
+    "slug": "uniswap-v3-concentrated-liquidity-2021",
+    "meta_description": "Uniswap v3's concentrated liquidity rewired AMM market making in 2021. The volume numbers looked great. The LP returns told a different story.",
+    "date": "October 27, 2021",
+    "date_iso": "2021-10-27",
+    "author": "Jordan Osei",
+    "image": "https://images.pexels.com/photos/20726170/pexels-photo-20726170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "uniswap.org",
+      "arxiv.org"
+    ],
+    "posted_iso": "2026-07-20",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   },
   {
     "title": "How Coinbase's Direct Listing in April 2021 Redrew the Lines for Algo Traders",
@@ -376,121 +617,6 @@
     "category": "Algorithmic Trading"
   },
   {
-    "title": "FTX Collapsed in 72 Hours. Here's What the Algo Traders Saw First",
-    "slug": "ftx-collapse-2022-algo-trading",
-    "meta_description": "FTX's November 2022 collapse reshaped crypto algo trading forever. Marcus Webb breaks down what the on-chain data showed before the panic hit.",
-    "date": "February 27, 2022",
-    "date_iso": "2022-02-27",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/5698697/pexels-photo-5698697.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "coindesk.com",
-      "nansen.ai",
-      "ft.com",
-      "chainalysis.com",
-      "copper.co",
-      "restructuring.ra.kroll.com"
-    ],
-    "posted_iso": "2026-06-09",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ],
-    "category": "Algorithmic Trading"
-  },
-  {
-    "title": "BlackRock's Bitcoin ETF Pulled In $10 Billion. Here's What That Actually Did to Algo Trading",
-    "slug": "blackrock-bitcoin-etf-2024-algo-trading",
-    "meta_description": "The iShares Bitcoin ETF launch in January 2024 reshaped algorithmic crypto trading. Marcus Webb breaks down what changed and what traders missed.",
-    "date": "May 29, 2024",
-    "date_iso": "2024-05-29",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/5980871/pexels-photo-5980871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "bloomberg.com",
-      "bis.org",
-      "sec.gov",
-      "coinglass.com"
-    ],
-    "posted_iso": "2026-06-10",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ],
-    "category": "Market Structure"
-  },
-  {
-    "title": "The Boring Math That Beats 90% of Crypto Traders",
-    "slug": "dollar-cost-averaging-crypto-math-2",
-    "meta_description": "Dollar-cost averaging into crypto isn't magic. It's variance reduction and convexity working in your favor. Here's the actual math, with numbers.",
-    "date": "June 22, 2026",
-    "date_iso": "2026-06-22",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/9169178/pexels-photo-9169178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "vanguard.com",
-      "coingecko.com"
-    ],
-    "posted_iso": "2026-06-22",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Grid Bots Printed Money in 2023. Trend Bots Ate Them Alive in 2024.",
-    "slug": "grid-bots-vs-trend-following-bots-2",
-    "meta_description": "Grid bots vs trend-following bots: Marcus Webb breaks down real performance data, hidden costs, and which strategy actually fits your market.",
-    "date": "July 01, 2026",
-    "date_iso": "2026-07-01",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/7567486/pexels-photo-7567486.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "sciencedirect.com",
-      "papers.ssrn.com"
-    ],
-    "posted_iso": "2026-07-01",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "FTX Collapsed in 72 Hours. Here's What It Did to Algo Trading",
-    "slug": "ftx-collapse-2022-algo-trading-2",
-    "meta_description": "FTX's November 2022 collapse wiped $8B in customer funds. Marcus Webb breaks down what it meant for algorithmic crypto trading strategies.",
-    "date": "April 07, 2022",
-    "date_iso": "2022-04-07",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/8973993/pexels-photo-8973993.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "coindesk.com",
-      "reuters.com",
-      "papers.ssrn.com",
-      "bis.org"
-    ],
-    "posted_iso": "2026-07-01",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "The DCA Math Most Crypto Bros Skip When They Time the Top",
-    "slug": "dca-crypto-math-volatility-edge",
-    "meta_description": "Dollar-cost averaging into crypto works because of the arithmetic of volatility, not discipline. Here is the actual math, with numbers.",
-    "date": "July 13, 2026",
-    "date_iso": "2026-07-13",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/5831676/pexels-photo-5831676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "corporate.vanguard.com",
-      "nber.org"
-    ],
-    "posted_iso": "2026-07-13",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
     "title": "Bakkt Launched With 72 Bitcoin. The Algo Desks Noticed the Silence",
     "slug": "bakkt-launch-2019-algo-trading",
     "meta_description": "Bakkt's physically-settled Bitcoin futures went live in September 2019 to 72 contracts. Here's what that thin volume means for algorithmic crypto traders.",
@@ -504,116 +630,6 @@
       "coindesk.com"
     ],
     "posted_iso": "2026-07-13",
-    "historical": true,
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "How Crypto Algorithms Turn Your FOMO Into Their Alpha",
-    "slug": "fomo-psychology-algorithms-crypto",
-    "meta_description": "FOMO isn't a personal weakness in crypto. It's a measurable signal that trading algorithms harvest. Here's how they do it and how to stop feeding them.",
-    "date": "July 15, 2026",
-    "date_iso": "2026-07-15",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/26762397/pexels-photo-26762397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "cftc.gov",
-      "sciencedirect.com",
-      "academic.oup.com"
-    ],
-    "posted_iso": "2026-07-15",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "On-Chain Data Called Every Bitcoin Top. The Headlines Never Did.",
-    "slug": "crypto-cycles-data-not-headlines",
-    "meta_description": "Crypto market cycles leave fingerprints in on-chain data long before headlines catch up. The four metrics an ex-quant actually watches, with thresholds.",
-    "date": "July 16, 2026",
-    "date_iso": "2026-07-16",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/1038916/pexels-photo-1038916.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "nber.org",
-      "insights.glassnode.com",
-      "coinmetrics.io",
-      "farside.co.uk"
-    ],
-    "posted_iso": "2026-07-16",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Why Your 200% Backtest Will Lose Money Live",
-    "slug": "backtesting-pitfalls-losing-strategies-look-profitable",
-    "meta_description": "The backtesting pitfalls that make losing crypto strategies look profitable: lookahead bias, overfitting, survivorship bias, and costs simulators skip.",
-    "date": "July 17, 2026",
-    "date_iso": "2026-07-17",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/6120171/pexels-photo-6120171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "ams.org",
-      "academic.oup.com",
-      "coingecko.com"
-    ],
-    "posted_iso": "2026-07-17",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Most Crypto Market Makers Never Actually Capture the Spread",
-    "slug": "crypto-market-making-spread-capture",
-    "meta_description": "How crypto market making really works: why quoted spreads overstate profits, and where adverse selection, inventory risk, and fees eat the edge.",
-    "date": "July 19, 2026",
-    "date_iso": "2026-07-19",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/5834243/pexels-photo-5834243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "papers.ssrn.com",
-      "kaiko.com",
-      "binance.com"
-    ],
-    "posted_iso": "2026-07-19",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Crypto Market Makers Don't Earn the Spread. They Earn the Flow",
-    "slug": "how-crypto-market-makers-earn",
-    "meta_description": "How crypto market making actually pays: rebates, inventory risk, adverse selection, and why the quoted spread is the smallest part of the P&L.",
-    "date": "July 20, 2026",
-    "date_iso": "2026-07-20",
-    "author": "Marcus Webb",
-    "image": "https://images.pexels.com/photos/5831709/pexels-photo-5831709.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "reuters.com",
-      "tandfonline.com",
-      "arxiv.org",
-      "kaiko.com"
-    ],
-    "posted_iso": "2026-07-20",
-    "available_languages": [
-      "en"
-    ]
-  },
-  {
-    "title": "Uniswap v3 Made Liquidity a Trading Strategy, Not a Deposit",
-    "slug": "uniswap-v3-concentrated-liquidity-2021",
-    "meta_description": "Uniswap v3's concentrated liquidity rewired AMM market making in 2021. The volume numbers looked great. The LP returns told a different story.",
-    "date": "October 27, 2021",
-    "date_iso": "2021-10-27",
-    "author": "Jordan Osei",
-    "image": "https://images.pexels.com/photos/20726170/pexels-photo-20726170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "outbound_links": [
-      "uniswap.org",
-      "arxiv.org"
-    ],
-    "posted_iso": "2026-07-20",
     "historical": true,
     "available_languages": [
       "en"
