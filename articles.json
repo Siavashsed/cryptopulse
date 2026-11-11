@@ -32,7 +32,8 @@
     "posted_iso": "2026-07-20",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Market Structure"
   },
   {
     "title": "Most Crypto Market Makers Never Actually Capture the Spread",
@@ -50,7 +51,8 @@
     "posted_iso": "2026-07-19",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "Why Your 200% Backtest Will Lose Money Live",
@@ -68,7 +70,8 @@
     "posted_iso": "2026-07-17",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "On-Chain Data Called Every Bitcoin Top. The Headlines Never Did.",
@@ -87,7 +90,8 @@
     "posted_iso": "2026-07-16",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "How Crypto Algorithms Turn Your FOMO Into Their Alpha",
@@ -105,7 +109,8 @@
     "posted_iso": "2026-07-15",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "The DCA Math Most Crypto Bros Skip When They Time the Top",
@@ -122,7 +127,8 @@
     "posted_iso": "2026-07-13",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "Grid Bots Printed Money in 2023. Trend Bots Ate Them Alive in 2024.",
@@ -139,7 +145,8 @@
     "posted_iso": "2026-07-01",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "The Boring Math That Beats 90% of Crypto Traders",
@@ -156,7 +163,8 @@
     "posted_iso": "2026-06-22",
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "Liquidity Fragmentation Is the Last Honest Edge in Crypto, and Bots Already Own It",
@@ -491,7 +499,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Market Structure"
   },
   {
     "title": "FTX Collapsed in 72 Hours. Here's What the Algo Traders Saw First",
@@ -553,7 +562,8 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   },
   {
     "title": "How Coinbase's Direct Listing in April 2021 Redrew the Lines for Algo Traders",
@@ -633,6 +643,7 @@
     "historical": true,
     "available_languages": [
       "en"
-    ]
+    ],
+    "category": "Algorithmic Trading"
   }
 ]
