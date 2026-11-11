@@ -11,14 +11,14 @@
 <link rel="alternate icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 :root{
   --pri:#00e676;--pri2:#00b85a;--bg:#050908;--bg2:#081009;--bg3:#0c1710;
   --txt:#d8f0e0;--mut:#5a8468;--brd:#122216;
-  --fh:'Space Grotesk',system-ui,sans-serif;--fm:'Space Mono',monospace;
+  --fh:'Space Grotesk',system-ui,sans-serif;--fm:Inter,system-ui,sans-serif;
 }
 body{background:var(--bg);color:var(--txt);font-family:var(--fh);font-size:15px;line-height:1.65;min-height:100vh;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
@@ -382,6 +382,29 @@ img{display:block;max-width:100%}
   .nl-form button{border-radius:2px;padding:14px;margin-top:2px}
   .foot-top{grid-template-columns:1fr}
 }</style>
+<!-- Meta Pixel (Kavalsia network) -->
+<script>
+(function(){
+if(window.__KAVALSIA_META_LOADED)return;window.__KAVALSIA_META_LOADED=true;
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', "3117791381934109");
+var FIRE_PV=true,SITE_ID="cryptopulse",SITE_NAME="Cryptopulse",VIEW_EVT="Viewed Cryptopulse",SIGNUP_EVT="Cryptopulse NewsletterSignup",MIRROR_CAPI=false;
+var segs=location.pathname.split('/').filter(Boolean);var SLUG=segs.length?segs[segs.length-1].replace(/\.html$/,''):'home';if(SLUG==='index')SLUG='home';
+var BASE={site_id:SITE_ID,site_name:SITE_NAME,content_name:SLUG,page_path:location.pathname};
+function P(x){var o={};for(var k in BASE)o[k]=BASE[k];for(var j in x)o[j]=x[j];return o;}
+if(FIRE_PV){try{fbq('track','PageView');}catch(e){}}
+try{fbq('trackCustom',VIEW_EVT,P({page_title:document.title,referrer:document.referrer||''}));}catch(e){}
+function mirrorCAPI(evtName,payload){if(!MIRROR_CAPI)return;try{var hub=(window.KAVALSIA_HUB_URL||'').replace(/\/$/,'');if(!hub)return;fetch(hub+'/api/meta-capi',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({site_id:SITE_ID,event_name:evtName,payload:payload})}).catch(function(){});}catch(e){}}
+mirrorCAPI(VIEW_EVT,P({}));
+var MARKS=[30,60,120],fired={},acc=0,last=document.hidden?0:Date.now();
+function tick(){var now=Date.now();if(last){acc+=(now-last)/1000;}last=document.hidden?0:now;for(var i=0;i<MARKS.length;i++){var m=MARKS[i];if(!fired[m]&&acc>=m){fired[m]=1;var ev='TimeSpent'+m+'s';try{fbq('trackCustom',ev,P({seconds:m}));}catch(e){}mirrorCAPI(ev,P({seconds:m}));}}if(fired[120])clearInterval(iv);}
+var iv=setInterval(tick,1000);document.addEventListener('visibilitychange',tick);
+function sha256Hex(str){if(!window.crypto||!crypto.subtle)return Promise.resolve('');var buf=new TextEncoder().encode(String(str||'').trim().toLowerCase());return crypto.subtle.digest('SHA-256',buf).then(function(h){return Array.prototype.map.call(new Uint8Array(h),function(b){return ('00'+b.toString(16)).slice(-2);}).join('');});}
+document.addEventListener('submit',function(ev){try{var f=ev.target;if(!f||!f.tagName||f.tagName.toLowerCase()!=='form')return;var emailEl=f.querySelector('input[type=email], input[name*=email i]');if(!emailEl||!emailEl.value)return;var email=emailEl.value;sha256Hex(email).then(function(h){try{fbq('trackCustom',SIGNUP_EVT,P({email_hashed:h}));}catch(e){}mirrorCAPI(SIGNUP_EVT,P({email_hashed:h}));});}catch(e){}},true);
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=3117791381934109&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
 </head>
 <body data-page-depth="0">
 <!-- TICKER -->
@@ -436,7 +459,7 @@ img{display:block;max-width:100%}
   </div>
 </nav>
 <style>
-.ab-main{--ab-pri:#00e676;--ab-pri2:#00b85a;--ab-bg:#050908;--ab-bg2:#081009;--ab-bg3:#0c1710;--ab-txt:#d8f0e0;--ab-mut:#5a8468;--ab-brd:#122216;--ab-fh:'Space Grotesk',system-ui,sans-serif;--ab-fm:'Space Mono',monospace;background:var(--ab-bg);color:var(--ab-txt);font-family:var(--ab-fh)}
+.ab-main{--ab-pri:#00e676;--ab-pri2:#00b85a;--ab-bg:#050908;--ab-bg2:#081009;--ab-bg3:#0c1710;--ab-txt:#d8f0e0;--ab-mut:#5a8468;--ab-brd:#122216;--ab-fh:'Space Grotesk',system-ui,sans-serif;--ab-fm:Inter,system-ui,sans-serif;background:var(--ab-bg);color:var(--ab-txt);font-family:var(--ab-fh)}
 .ab-main *{box-sizing:border-box}@keyframes ab-blink{0%,100%{opacity:1}50%{opacity:.25}}
 
 .ab-hero{padding:92px 24px 76px;border-bottom:1px solid var(--ab-brd);position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% -20%,rgba(0,230,118,.08) 0%,transparent 60%)}
@@ -949,11 +972,11 @@ if(ocEl)ocIo.observe(ocEl);
     ctx.fillRect(0,hdr,W,1);
     // Header text
     ctx.fillStyle='#00e676';
-    ctx.font='bold 10px Space Mono,monospace';
+    ctx.font='bold 10px Inter,system-ui,sans-serif';
     ctx.textAlign='left';
     ctx.fillText('BTC / USD',pL+2,hdr-8);
     ctx.fillStyle='#2a5a38';
-    ctx.font='9px Space Mono,monospace';
+    ctx.font='9px Inter,system-ui,sans-serif';
     ctx.fillText('1m · LIVE',pL+76,hdr-8);
     // Blink dot
     var alpha=0.5+0.5*Math.sin(Date.now()/400);
@@ -965,11 +988,11 @@ if(ocEl)ocIo.observe(ocEl);
     var priceStr='$'+(Math.round(lastP)).toLocaleString();
     var chgStr=(lastChg>=0?'+':'')+lastChg.toFixed(2)+'%';
     ctx.fillStyle='#c0ddc8';
-    ctx.font='bold 11px Space Mono,monospace';
+    ctx.font='bold 11px Inter,system-ui,sans-serif';
     ctx.textAlign='right';
     ctx.fillText(priceStr,W-pR-4,hdr-8);
     ctx.fillStyle=lastChg>=0?'#00e676':'#ff5252';
-    ctx.font='9px Space Mono,monospace';
+    ctx.font='9px Inter,system-ui,sans-serif';
     ctx.fillText(chgStr,W-6,hdr-8);
 
     // Subtle radial glow
@@ -989,7 +1012,7 @@ if(ocEl)ocIo.observe(ocEl);
       ctx.setLineDash([]);
       var lbl='$'+(Math.round((mn+(g/4)*range)/200)*200).toLocaleString();
       ctx.fillStyle='#1e4a2a';
-      ctx.font='8px Space Mono,monospace';
+      ctx.font='8px Inter,system-ui,sans-serif';
       ctx.textAlign='left';
       ctx.fillText(lbl,W-pR+5,gy+3);
     }
@@ -1049,7 +1072,7 @@ if(ocEl)ocIo.observe(ocEl);
     ctx.fillStyle='#00e676';
     ctx.beginPath();ctx.roundRect(W-pR+2,ly-9,pR-4,18,2);ctx.fill();
     ctx.fillStyle='#010a04';
-    ctx.font='bold 9px Space Mono,monospace';
+    ctx.font='bold 9px Inter,system-ui,sans-serif';
     ctx.textAlign='center';
     ctx.fillText('$'+(Math.round(lastP)).toLocaleString(),W-pR/2+1,ly+3);
 
@@ -1058,13 +1081,13 @@ if(ocEl)ocIo.observe(ocEl);
       var x2=pL+idx*slot+slot/2;
       var mins=data.length-1-idx;
       var lbl=mins===0?'now':'-'+mins+'m';
-      ctx.fillStyle='#1e3a26';ctx.font='8px Space Mono,monospace';ctx.textAlign='center';
+      ctx.fillStyle='#1e3a26';ctx.font='8px Inter,system-ui,sans-serif';ctx.textAlign='center';
       ctx.fillText(lbl,x2,H-8);
     });
 
     // MA legend (small, bottom-right of chart area)
     ctx.fillStyle='rgba(0,160,80,0.65)';ctx.fillRect(pL,pT+cH+vH+6,14,1.5);
-    ctx.fillStyle='#1e4a2a';ctx.font='7px Space Mono,monospace';ctx.textAlign='left';
+    ctx.fillStyle='#1e4a2a';ctx.font='7px Inter,system-ui,sans-serif';ctx.textAlign='left';
     ctx.fillText('MA20',pL+17,pT+cH+vH+9);
     ctx.fillStyle='rgba(15,55,28,0.95)';ctx.fillRect(pL+50,pT+cH+vH+6,14,1.5);
     ctx.fillText('MA50',pL+67,pT+cH+vH+9);
