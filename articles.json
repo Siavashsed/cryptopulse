@@ -645,5 +645,44 @@
       "en"
     ],
     "category": "Algorithmic Trading"
+  },
+  {
+    "title": "Most CEX-DEX Arbitrage Profit Goes to Block Builders, Not You",
+    "slug": "cex-dex-statistical-arbitrage-explained",
+    "meta_description": "Statistical arbitrage between centralized and decentralized exchanges explained by an ex-quant: where the edge lives, who keeps it, what it costs.",
+    "date": "November 15, 2026",
+    "date_iso": "2026-11-15",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5789881/pexels-photo-5789881.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "arxiv.org",
+      "ethereum.org",
+      "docs.uniswap.org",
+      "docs.flashbots.net"
+    ],
+    "posted_iso": "2026-11-15",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "USDC Hit 87 Cents and Exposed Every Lazy Stablecoin Bot",
+    "slug": "usdc-depeg-2023-trading-bots",
+    "meta_description": "USDC's SVB depeg in March 2023 broke the $1 assumption inside crypto trading bots. An ex-quant explains what failed and what to fix.",
+    "date": "March 13, 2023",
+    "date_iso": "2023-03-13",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5831261/pexels-photo-5831261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "circle.com",
+      "federalreserve.gov",
+      "dfpi.ca.gov",
+      "reuters.com"
+    ],
+    "posted_iso": "2026-11-15",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
