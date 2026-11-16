@@ -684,5 +684,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Liquidation Cascades Leave Fingerprints Hours Before the Crash Hits",
+    "slug": "liquidation-cascades-crypto-futures-detect-early",
+    "meta_description": "Liquidation cascades in crypto futures show up in open interest, funding and order book depth before price breaks. Here's how to read them and trade around them.",
+    "date": "November 16, 2026",
+    "date_iso": "2026-11-16",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/4911663/pexels-photo-4911663.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "coinglass.com",
+      "reuters.com",
+      "bis.org"
+    ],
+    "posted_iso": "2026-11-16",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
