@@ -702,5 +702,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Tether Mints Aren't a Buy Signal. Exchange Inflows Are.",
+    "slug": "stablecoin-flows-leading-indicator-dry-powder",
+    "meta_description": "Stablecoin flows work as a leading indicator only when you track exchange netflows, not headline mints. An ex-quant explains where the dry powder really goes.",
+    "date": "November 17, 2026",
+    "date_iso": "2026-11-17",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/32219704/pexels-photo-32219704.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "defillama.com",
+      "onlinelibrary.wiley.com",
+      "bis.org"
+    ],
+    "posted_iso": "2026-11-17",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
