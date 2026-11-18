@@ -720,5 +720,24 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Volatility Targeting Keeps Crypto Risk Steady, Until the Gap Hits",
+    "slug": "volatility-targeting-crypto-portfolios",
+    "meta_description": "Volatility targeting for crypto portfolios, from an ex-quant: the sizing math, what the research shows, and where it breaks when markets gap.",
+    "date": "November 18, 2026",
+    "date_iso": "2026-11-18",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5716051/pexels-photo-5716051.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "nber.org",
+      "papers.ssrn.com",
+      "sciencedirect.com",
+      "coinmetrics.io"
+    ],
+    "posted_iso": "2026-11-18",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
