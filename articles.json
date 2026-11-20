@@ -757,5 +757,22 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Your Paper Trading Bot Lies About Fills, and It Costs Real Money",
+    "slug": "paper-trading-vs-live-trading-bots",
+    "meta_description": "Paper trading vs live trading: why a bot that wins in simulation bleeds with real money, and how to measure the gap before you fund it.",
+    "date": "November 20, 2026",
+    "date_iso": "2026-11-20",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/39020469/pexels-photo-39020469.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "ams.org",
+      "academic.oup.com"
+    ],
+    "posted_iso": "2026-11-20",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
