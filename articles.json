@@ -774,5 +774,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "The $19 Billion Liquidation Day Showed Why Bots Beat Nerves",
+    "slug": "algorithmic-trading-beats-emotional-volatility",
+    "meta_description": "Algorithmic trading beats emotional trading in volatile markets because rules don't flinch. Real numbers, a costly mistake, and one fix to run today.",
+    "date": "November 21, 2026",
+    "date_iso": "2026-11-21",
+    "author": "Marcus Webb",
+    "image": "https://images.pexels.com/photos/5831257/pexels-photo-5831257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "jstor.org",
+      "wiley.com",
+      "coinglass.com"
+    ],
+    "posted_iso": "2026-11-21",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
