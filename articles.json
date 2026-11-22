@@ -792,5 +792,43 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Your Exchange API Is Doing Less Than You Think",
+    "slug": "exchange-apis-fully-automated-trading",
+    "meta_description": "Exchange APIs enable fully automated trading, but the API is the easy part. Here's what breaks at 3 a.m. and how to build for it.",
+    "date": "November 22, 2026",
+    "date_iso": "2026-11-22",
+    "author": "Hiroshi Fujita",
+    "image": "",
+    "outbound_links": [
+      "developers.binance.com",
+      "github.com",
+      "sciencedirect.com"
+    ],
+    "posted_iso": "2026-11-22",
+    "available_languages": [
+      "en"
+    ]
+  },
+  {
+    "title": "Black Thursday 2020 Halved Bitcoin in a Day and Broke Every Lazy Bot",
+    "slug": "black-thursday-2020-crypto-bots",
+    "meta_description": "On March 12, 2020 Bitcoin lost about half its value in a day. Here's what failed, which bots survived, and what it taught algorithmic traders.",
+    "date": "September 05, 2020",
+    "date_iso": "2020-09-05",
+    "author": "Hiroshi Fujita",
+    "image": "https://images.pexels.com/photos/5831337/pexels-photo-5831337.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "coindesk.com",
+      "blog.bitmex.com",
+      "blog.makerdao.com",
+      "arxiv.org"
+    ],
+    "posted_iso": "2026-11-22",
+    "historical": true,
+    "available_languages": [
+      "en"
+    ]
   }
 ]
