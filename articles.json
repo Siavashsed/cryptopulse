@@ -848,5 +848,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Grid Bots Win in Chop, Trend Bots Win in Years",
+    "slug": "grid-bots-vs-trend-following-bots-test",
+    "meta_description": "A grid bot vs trend-following bot comparison from live testing: where each wins, where each bleeds, and which one fits your capital.",
+    "date": "November 24, 2026",
+    "date_iso": "2026-11-24",
+    "author": "Hiroshi Fujita",
+    "image": "",
+    "outbound_links": [
+      "academy.binance.com",
+      "sciencedirect.com",
+      "academic.oup.com"
+    ],
+    "posted_iso": "2026-11-24",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
