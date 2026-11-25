@@ -866,5 +866,23 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "Funding Rates Quietly Cost Me $1,900 in One Week",
+    "slug": "funding-rates-futures-traders-cost-signal",
+    "meta_description": "Funding rates are the hidden fee and the best crowding gauge in perpetual futures. Here's how they work, what they cost, and how to read them.",
+    "date": "November 25, 2026",
+    "date_iso": "2026-11-25",
+    "author": "Hiroshi Fujita",
+    "image": "https://images.pexels.com/photos/6771607/pexels-photo-6771607.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "binance.com",
+      "bis.org",
+      "coinglass.com"
+    ],
+    "posted_iso": "2026-11-25",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
