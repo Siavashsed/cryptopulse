@@ -884,5 +884,22 @@
     "available_languages": [
       "en"
     ]
+  },
+  {
+    "title": "DCA Won't Beat a Lump Sum, But It Beats Your Nerves",
+    "slug": "dca-crypto-math-beats-nerves",
+    "meta_description": "The math behind dollar-cost averaging into crypto: why it lowers your average cost, where lump sums win, and how to set a schedule you'll keep.",
+    "date": "November 26, 2026",
+    "date_iso": "2026-11-26",
+    "author": "Jordan Osei",
+    "image": "https://images.pexels.com/photos/5833756/pexels-photo-5833756.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "outbound_links": [
+      "corporate.vanguard.com",
+      "coindesk.com"
+    ],
+    "posted_iso": "2026-11-26",
+    "available_languages": [
+      "en"
+    ]
   }
 ]
